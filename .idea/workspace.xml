@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ee506010-b818-4dde-951c-064802f3fe80" name="Default Changelist" comment="Initial commit">
+      <change afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/blythefamily-plugin.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/composerJson.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acf-json/group_5f1320f0f01e2.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acf-json/group_5f135464842f9.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acf-json/group_5f17579653dcc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acf-json/group_5f358eddbe761.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/acf-json/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/dist/images/google_pod_bw_32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/dist/images/weekly-devotions-bg-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/dist/images/weekly-devotions-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/dist/styles/blythe-studio-pro.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/dist/styles/blythe-studio-pro.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/src/images/google_pod_bw_32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/src/images/weekly-devotions-bg-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/src/images/weekly-devotions-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/src/styles/studio-pro/_blythe_episode.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/src/styles/studio-pro/_front-page.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/src/styles/studio-pro/_gallery.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/src/styles/studio-pro/_getwid.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/src/styles/studio-pro/_google.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/src/styles/studio-pro/_header.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/src/styles/studio-pro/_hero.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/src/styles/studio-pro/_layout.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/src/styles/studio-pro/_lyrics.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/src/styles/studio-pro/_print.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/src/styles/studio-pro/_site-footer.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/src/styles/studio-pro/_utilities.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/src/styles/studio-pro/blythe-studio-pro.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blythefamily.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gulpfile.babel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/analytics.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/class-episode.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/class-lyrics.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/class-mailchimp.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/class-settings.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/powerpress.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/schedule.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/woocommerce.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/archive-lyrics.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/lyrics.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/single-blythe_episode.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/single-lyrics.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/single-unity3_gallery.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/single.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <executable path="composer" />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIEW_PUSH_PROTECTED_ONLY" value="true" />
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
+    <include_path>
+      <path value="$PROJECT_DIR$/../../../wp-admin" />
+      <path value="$PROJECT_DIR$/../../../wp-includes" />
+      <path value="$PROJECT_DIR$/../advanced-custom-fields-pro" />
+      <path value="$PROJECT_DIR$/../unity3" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/phpseclib/phpseclib" />
+      <path value="$PROJECT_DIR$/vendor/google/auth" />
+      <path value="$PROJECT_DIR$/vendor/firebase/php-jwt" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/google/apiclient-services" />
+      <path value="$PROJECT_DIR$/vendor/google/apiclient" />
+      <path value="$PROJECT_DIR$/vendor/drewm/mailchimp-api" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1Tc7rPwlIGv8tA4dM5PUVHkqoa4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\user\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ee506010-b818-4dde-951c-064802f3fe80" name="Default Changelist" comment="" />
+      <created>1573747727088</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1573747727088</updated>
+      <workItem from="1573747728231" duration="166000" />
+      <workItem from="1573747908335" duration="65000" />
+      <workItem from="1573749794847" duration="405000" />
+      <workItem from="1573750211386" duration="582000" />
+      <workItem from="1573928039004" duration="114000" />
+      <workItem from="1601754969566" duration="643000" />
+      <workItem from="1601755625308" duration="2178000" />
+      <workItem from="1601759794122" duration="681000" />
+    </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1601755942710</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1601755942710</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Initial commit">
+      <created>1601756004033</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1601756004033</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Initial commit">
+      <created>1601759213357</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1601759213357</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="Initial commit 2" />
+    <MESSAGE value="Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="184" y="73" key="DiffContextDialog" timestamp="1601756145888">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="184" y="73" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601756145888" />
+    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1601759869168">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1601759869168" />
+    <state x="813" y="418" key="Github.ShareDialog" timestamp="1601759839127">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="813" y="418" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601759839127" />
+    <state x="694" y="222" key="RollbackChangesDialog" timestamp="1601760436732">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="694" y="222" key="RollbackChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601760436732" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1601759716571">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1601759716571" />
+    <state x="552" y="240" key="Vcs.Push.Dialog.v2" timestamp="1601759723236">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="240" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601759723236" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1601755561512">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601755561512" />
+    <state x="769" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601759312915">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="769" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601759312915" />
+    <state x="694" y="308" key="git4idea.merge.GitMergeDialog" timestamp="1601759588072">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="694" y="308" key="git4idea.merge.GitMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601759588072" />
+    <state x="655" y="308" key="git4idea.merge.GitPullDialog" timestamp="1601756234432">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="655" y="308" key="git4idea.merge.GitPullDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601756234432" />
+    <state x="737" y="421" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1601759502659">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="737" y="421" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601759502659" />
+    <state x="790" y="311" key="svn.repositoryBrowser" timestamp="1601759880561">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="790" y="311" key="svn.repositoryBrowser/0.0.1920.1040@0.0.1920.1040" timestamp="1601759880561" />
+    <state x="754" y="294" key="svn4idea.import.options" timestamp="1601759871932">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="754" y="294" key="svn4idea.import.options/0.0.1920.1040@0.0.1920.1040" timestamp="1601759871932" />
+  </component>
+  <component name="WordPressConfiguration" doNotAskConfigAgain="true" enabled="true">
+    <wordpressPath>E:\WORDPRESS\blythefamily</wordpressPath>
+  </component>
+</project>

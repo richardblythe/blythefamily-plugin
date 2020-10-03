@@ -1,0 +1,98 @@
+@import "utilities";
+
+.home {
+  .hero-section {
+    padding: 40% 0 0;
+    display: none; //smartslider3
+  }
+
+  .content-sidebar-wrap {
+    padding-top: 0;
+  }
+
+  .page {
+    padding-top: 0;
+  }
+
+  .wp-block-nextend-smartslider3 {
+    margin-bottom: 20px;
+
+    //this is a hack for SmartSlider.  I need a responsive blur on the background image.
+    //So if the I have set the blur to "1" in SmartSlider, I turn the blur off here and apply a 10px blur
+    //only when a mobile screen size is active
+    .n2-ss-slide-background-image[data-blur="1"] {
+      @include filter(blur, 10px, !important);
+      margin: -20px !important;
+      padding: 20px !important;
+    }
+
+    @include breakpoint(xs) {
+      margin-bottom: 40px;
+
+      //see notes above.  A blur value of "1" is my flag for mobile only
+      .n2-ss-slide-background-image[data-blur="1"] {
+        @include filter(blur, 0, !important);
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+    }
+  }
+
+
+  .weekly-devotions .left-column {
+    h2 {
+      font-size: 2.5em;
+      margin-bottom: 0;
+    }
+
+    p.join-us {
+      font-weight: 500;
+
+      @include breakpoint(xs) {
+        margin-bottom: 80px;
+      }
+    }
+
+    p.podcast-intro-text {
+      margin-bottom: 0;
+    }
+
+  }
+
+}
+
+
+
+
+  .dark-container {
+    h1, a {
+      color: #fff;
+    }
+  }
+
+  .blocks-gallery-grid, .wp-block-gallery {
+    flex-wrap: nowrap;
+  }
+
+  //.home .wp-block-columns.weekly-devotions {
+  //  background: url('../images/weekly-devotions-bg-2.jpg') no-repeat left bottom;
+  //  background-size: contain;
+  //
+  //}
+
+  .home .recent-photos {
+
+    @include linear-gradient(#131319, #2a2b35);
+
+    .recent-photos-header {
+      padding-top: 40px;
+      a {
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+
+    .gallery-caption {
+      display: none;
+    }
+  }

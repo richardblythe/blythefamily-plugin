@@ -1,0 +1,48 @@
+{
+    "key": "group_5f358eddbe761",
+    "title": "Episode Taxonomy",
+    "fields": [
+        {
+            "key": "field_5f358f1c56e3f",
+            "label": "Featured Image",
+            "name": "_thumbnail_id",
+            "type": "image",
+            "instructions": "Specifies the featured image for the taxonomy",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "taxonomy",
+                "operator": "==",
+                "value": "blythe_episode_group"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1597345706
+}
