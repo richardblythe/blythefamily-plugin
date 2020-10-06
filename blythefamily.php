@@ -3,7 +3,7 @@
     Plugin Name: Blythe Family
     Plugin URI: http://www.blythefamily.com/
     Description: Structural components for the Blythe Family website
-    Version: 1.4
+    Version: 1.5
     Author: Richard Blythe
     Author URI: http://unity3software.com/richardblythe
     GitHub Plugin URI: https://github.com/richardblythe/blythefamily-plugin
@@ -76,6 +76,7 @@ class BF {
     function load_modules() {
         require_once (BF::$dir . 'includes/class-episode.php');
         require_once (BF::$dir . 'includes/class-lyrics.php');
+	    require_once (BF::$dir . 'includes/woocommerce.php');
 //        require_once (BF::$dir . 'includes/powerpress.php');
     }
 
@@ -90,13 +91,6 @@ class BF {
 
 	public function custom_stylesheet() {
 
-    	//remove default front-end style sheet from Revolution Pro
-//		wp_dequeue_style(genesis_get_theme_handle() . '-gutenberg' );
-//
-//		wp_enqueue_style(
-//			'blythefamily-front-end',
-//			BF::$assets_url . '/css/front-end.css', [genesis_get_theme_handle()], BF::$ver
-//		);
         wp_enqueue_style(
             'blythefamily-style',
             BF::$assets_url . '/dist/styles/blythe-studio-pro.css', [genesis_get_theme_handle()], BF::$ver
