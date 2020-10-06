@@ -3,7 +3,7 @@
     Plugin Name: Blythe Family
     Plugin URI: http://www.blythefamily.com/
     Description: Structural components for the Blythe Family website
-    Version: 1.6
+    Version: 1.7
     Author: Richard Blythe
     Author URI: http://unity3software.com/richardblythe
     GitHub Plugin URI: https://github.com/richardblythe/blythefamily-plugin
@@ -81,9 +81,18 @@ class BF {
     }
 
     function get_default_metadata( $value, $object_id, $meta_key, $single, $meta_type ) {
-        if ( self::$in_header && '_thumbnail_id' == $meta_key && 'unity3_gallery' == get_post_type( $object_id ) ) {
-            $value = get_header_image();
-        }
+
+	    if ( self::$in_header && '_thumbnail_id' == $meta_key) {
+
+	    	//any post, page, or cpt that wishes the hero to be the default set in: Customize -> Header Media
+		    $use_default_hero = array( 'unity3_gallery', 'product' );
+		    $post_type = get_post_type( $object_id );
+
+		    if ( in_array( get_post_type( $object_id ), $use_default_hero ) ) {
+			    $value = get_header_image();
+		    }
+	    }
+
 
         return $value;
     }
@@ -123,8 +132,6 @@ class BF {
                 $default = $image[0];
             }
 
-        } else if ( 'product' == get_post_type() ) {
-	        $default = get_header_image();
         }
 
         return $default;
