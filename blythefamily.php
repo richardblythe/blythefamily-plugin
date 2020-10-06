@@ -3,7 +3,7 @@
     Plugin Name: Blythe Family
     Plugin URI: http://www.blythefamily.com/
     Description: Structural components for the Blythe Family website
-    Version: 1.5
+    Version: 1.6
     Author: Richard Blythe
     Author URI: http://unity3software.com/richardblythe
     GitHub Plugin URI: https://github.com/richardblythe/blythefamily-plugin
@@ -123,6 +123,8 @@ class BF {
                 $default = $image[0];
             }
 
+        } else if ( 'product' == get_post_type() ) {
+	        $default = get_header_image();
         }
 
         return $default;
