@@ -102,6 +102,8 @@ class BF_Lyrics {
 
 			set_transient( 'bf_lyrics_init', 'true' );
 		}
+
+		add_shortcode('bf_album_tracks', array($this, 'album_tracks_shortcode') );
 	}
 
 
@@ -236,6 +238,71 @@ class BF_Lyrics {
 
 	function is_lyrics_tax() {
 		return is_tax( BF_Lyrics::TAX_GLOSSARY) || is_tax( BF_Lyrics::TAX_TOPIC );
+	}
+
+	function album_tracks_shortcode( $atts ) {
+
+		$attributes = shortcode_atts(
+			array(
+				'album_id' => get_the_ID(),
+				'exclude'  => null,
+			),
+			$atts
+		);
+
+		$meta_query = array(
+			array(
+				'key'   => 'album_id',
+				'value' => $attributes['album_id'],
+			),
+			array(
+				'key'     => 'song_number',
+				'compare' => 'EXISTS'
+			)
+		);
+
+
+		// Check if exclude has a value before we continue to eliminate bugs
+		if ( isset( $attributes['exclude'] )) {
+			// Create our array of values
+			// First, sanitize the data and remove white spaces
+			$no_whitespaces = preg_replace( '/\s*,\s*/', ',', filter_var( $attributes['exclude'], FILTER_SANITIZE_STRING ) );
+			$exclude_tracks = explode( ',', $no_whitespaces );
+
+			// Add the song numbers that we want to exclude...
+			$meta_query[] = array(
+				'key' => 'song_number',
+				'value' => $exclude_tracks,
+				'compare' => 'NOT IN'
+			);
+		}
+
+		$output = '';
+
+		$query = new WP_Query( array(
+			'post_type'      => 'lyrics',
+			'posts_per_page' => '15',
+			'meta_query'     => $meta_query,
+			'meta_key'       => 'song_number',
+			'orderby'        => 'meta_value_num',
+			'order'          => 'ASC'
+		) );
+
+		if ( $query->have_posts() ) {
+			$permalink_list = '';
+			while ( $query->have_posts() ) {
+				$query->the_post();
+				$permalink_list .= '<li><a href="' . get_the_permalink() . '">' . get_the_title() . '</a></li>';
+			}
+			$output = '<ol class="bf-album-tracks">' . $permalink_list . '</ol>';
+		} else {
+			// no posts found
+		}
+
+		/* Restore original query */
+		wp_reset_query();
+		return $output;
+
 	}
 }
 
