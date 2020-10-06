@@ -146,6 +146,11 @@ i.google-podcast-logo:before {
   display: inline-block;
   margin-bottom: -8px; }
 
+/** WooCommerce */
+.single-product .summary .price {
+  display: none; }
+
+/** Site Footer */
 .site-footer > .wrap {
   font-style: normal; }
 
