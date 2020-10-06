@@ -3,7 +3,7 @@
     Plugin Name: Blythe Family
     Plugin URI: http://www.blythefamily.com/
     Description: Structural components for the Blythe Family website
-    Version: 1.7
+    Version: 1.8
     Author: Richard Blythe
     Author URI: http://unity3software.com/richardblythe
     GitHub Plugin URI: https://github.com/richardblythe/blythefamily-plugin
@@ -70,6 +70,7 @@ class BF {
         }, 0);
         add_action('genesis_after_header', function (){ self::$in_header = false; }, 0);
 
+	    add_filter( "get_post_metadata", array( &$this, 'override_post_hero_featured'), 100, 3);
         add_filter( "default_post_metadata", array(&$this, 'get_default_metadata'), 100, 5);
     }
 
@@ -78,6 +79,18 @@ class BF {
         require_once (BF::$dir . 'includes/class-lyrics.php');
 	    require_once (BF::$dir . 'includes/woocommerce.php');
 //        require_once (BF::$dir . 'includes/powerpress.php');
+    }
+
+    function override_post_hero_featured($thumbnail_id, $object_id, $meta_key) {
+	    if ( self::$in_header && '_thumbnail_id' == $meta_key) {
+
+		    //override woocommerce product page hero image with the one set in Customize -> Header Media
+		    if ( 'product' == get_post_type($object_id) )  {
+			    $thumbnail_id = false;
+		    }
+	    }
+
+	    return $thumbnail_id;
     }
 
     function get_default_metadata( $value, $object_id, $meta_key, $single, $meta_type ) {
