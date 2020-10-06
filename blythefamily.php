@@ -1,12 +1,12 @@
 <?php
 /*
     Plugin Name: Blythe Family
-    Plugin URI: http://www.theblythefamily.net/
+    Plugin URI: http://www.blythefamily.com/
     Description: Structural components for the Blythe Family website
-    Version: 1.3
+    Version: 1.4
     Author: Richard Blythe
     Author URI: http://unity3software.com/richardblythe
-    GitHub Plugin URI: https://github.com/richardblythe/blythefamily
+    GitHub Plugin URI: https://github.com/richardblythe/blythefamily-plugin
  */
 class BF {
     public static $ver, $dir, $url, $assets_url, $vendor_url, $blank_img, $in_header;
