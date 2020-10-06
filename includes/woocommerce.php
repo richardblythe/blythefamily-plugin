@@ -7,6 +7,37 @@ update_option( 'woocommerce_prepend_shop_page_to_urls', 'yes' );
 add_theme_support( 'genesis-connect-woocommerce' );
 add_filter( 'loop_shop_per_page', function() { return 6; }, 20 );
 
+
+//Hide Price Range for WooCommerce Variable Products
+//https://learnwoo.com/hide-price-range-woocommerce-variable-products/
+add_filter( 'woocommerce_variable_sale_price_html',
+	'lw_variable_product_price', 10, 2 );
+add_filter( 'woocommerce_variable_price_html',
+	'lw_variable_product_price', 10, 2 );
+
+function lw_variable_product_price( $v_price, $v_product ) {
+
+// Product Price
+	$prod_prices = array( $v_product->get_variation_price( 'min', true ),
+		$v_product->get_variation_price( 'max', true ) );
+	$prod_price = $prod_prices[0]!==$prod_prices[1] ? sprintf(__('From: %1$s', 'woocommerce'),
+		wc_price( $prod_prices[0] ) ) : wc_price( $prod_prices[0] );
+
+// Regular Price
+	$regular_prices = array( $v_product->get_variation_regular_price( 'min', true ),
+		$v_product->get_variation_regular_price( 'max', true ) );
+	sort( $regular_prices );
+	$regular_price = $regular_prices[0]!==$regular_prices[1] ? sprintf(__('From: %1$s','woocommerce')
+		, wc_price( $regular_prices[0] ) ) : wc_price( $regular_prices[0] );
+
+	if ( $prod_price !== $regular_price ) {
+		$prod_price = '<del>'.$regular_price.$v_product->get_price_suffix() . '</del> <ins>' .
+		              $prod_price . $v_product->get_price_suffix() . '</ins>';
+	}
+	return $prod_price;
+}
+
+
 function blythe_woocart_add_class($classes) {
     $classes .= ' menu-item';
     return $classes;
