@@ -37,6 +37,18 @@ function lw_variable_product_price( $v_price, $v_product ) {
 	return $prod_price;
 }
 
+//Hide “From:$X”
+add_filter('woocommerce_get_price_html', 'lw_hide_variation_price', 10, 2);
+function lw_hide_variation_price( $v_price, $v_product ) {
+	$v_product_types = array( 'variable');
+	if ( in_array ( $v_product->product_type, $v_product_types ) && !(is_shop()) ) {
+		return '';
+	}
+// return regular price
+	return $v_price;
+}
+
+
 
 function blythe_woocart_add_class($classes) {
     $classes .= ' menu-item';
