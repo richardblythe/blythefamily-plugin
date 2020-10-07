@@ -136,6 +136,10 @@
 .single-blythe_episode .podcast-listing {
   padding-top: 35px; }
 
+/** Unity3 Gallery */
+.archive .unity3_gallery.entry .entry-title {
+  font-size: 3.5rem; }
+
 .wp-block-getwid-social-links ul li {
   list-style: none; }
 
