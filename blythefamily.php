@@ -3,7 +3,7 @@
     Plugin Name: Blythe Family
     Plugin URI: http://www.blythefamily.com/
     Description: Structural components for the Blythe Family website
-    Version: 1.13
+    Version: 1.14
     Author: Richard Blythe
     Author URI: http://unity3software.com/richardblythe
     GitHub Plugin URI: https://github.com/richardblythe/blythefamily-plugin
@@ -15,7 +15,7 @@ class BF {
 
     	$debug = (defined('WP_DEBUG') && true === WP_DEBUG);
 
-	    BF::$ver = '1.13';
+	    BF::$ver = '1.14';
         BF::$dir = plugin_dir_path( __FILE__ );
         BF::$url = plugin_dir_url( __FILE__ );
 	    BF::$assets_url = BF::$url . 'assets';
@@ -83,8 +83,11 @@ class BF {
     function override_post_hero_featured($thumbnail_id, $object_id, $meta_key) {
 	    if ( self::$in_header && '_thumbnail_id' == $meta_key) {
 
-		    //override woocommerce product page hero image with the one set in Customize -> Header Media
-		    if ( 'product' == get_post_type($object_id) )  {
+		    //any post, page, or cpt that wishes the hero to be the default set in: Customize -> Header Media
+		    $use_default_hero = array( 'unity3_gallery', 'product', 'blythe_episode' );
+		    $post_type = get_post_type( $object_id );
+
+		    if ( in_array( get_post_type( $object_id ), $use_default_hero ) ) {
 			    $thumbnail_id = false;
 		    }
 	    }

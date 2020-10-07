@@ -20,7 +20,8 @@
       position: absolute;
       background-color: transparent; } }
   .site-header .nav-primary {
-    background-color: #0b0b0be0; }
+    background-color: #0b0b0be0;
+    z-index: 10000; }
     @media (min-width: 896px) {
       .site-header .nav-primary {
         background-color: transparent; } }
