@@ -3,7 +3,7 @@
     Plugin Name: Blythe Family
     Plugin URI: http://www.blythefamily.com/
     Description: Structural components for the Blythe Family website
-    Version: 1.16
+    Version: 1.17
     Author: Richard Blythe
     Author URI: http://unity3software.com/richardblythe
     GitHub Plugin URI: https://github.com/richardblythe/blythefamily-plugin
@@ -41,24 +41,8 @@ class BF {
             return $paths;
         });
 
-        //allow mp3s to be
-         add_filter('upload_mimes', function( $types ) {
-             return array_merge($types, array(
-             	//Images
-	             'jpg|jpeg|jpe' => 'image/jpeg',
-	             'gif' => 'image/gif',
-	             'png' => 'image/png',
-
-                 // Audio formats.
-                 'mp3|m4a|m4b' => 'audio/mpeg',
-                 'ogg|oga' => 'audio/ogg',
-
-	             //Videos
-	              'mpeg|mpg|mpe' => 'video/mpeg',
-	              'mp4|m4v' => 'video/mp4',
-             ));
-         });
-
+	    add_filter( 'upload_mimes', array( &$this, 'allowed_mime_types' ), 100, 1 );
+	    add_filter( 'as3cf_allowed_mime_types', array( &$this, 'allowed_mime_types' ), 100, 1 );
 
         add_action('unity3/modules/load', array( $this, 'load_modules' ) );
 
@@ -87,6 +71,23 @@ class BF {
         require_once (BF::$dir . 'includes/class-lyrics.php');
 	    require_once (BF::$dir . 'includes/woocommerce.php');
 //        require_once (BF::$dir . 'includes/powerpress.php');
+    }
+
+    function allowed_mime_types() {
+	    return array(
+		    //Images
+		    'jpg|jpeg|jpe' => 'image/jpeg',
+		    'gif' => 'image/gif',
+		    'png' => 'image/png',
+
+		    // Audio formats.
+		    'mp3|m4a|m4b' => 'audio/mpeg',
+		    'ogg|oga' => 'audio/ogg',
+
+		    //Videos
+		    'mpeg|mpg|mpe' => 'video/mpeg',
+		    'mp4|m4v' => 'video/mp4',
+	    );
     }
 
     function override_post_hero_featured($thumbnail_id, $object_id, $meta_key) {

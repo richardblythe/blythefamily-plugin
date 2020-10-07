@@ -19,12 +19,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee506010-b818-4dde-951c-064802f3fe80" name="Default Changelist" comment="updates to mobile navigation style">
+    <list default="true" id="ee506010-b818-4dde-951c-064802f3fe80" name="Default Changelist" comment="added media support for Media Offload">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/dist/styles/blythe-studio-pro.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/dist/styles/blythe-studio-pro.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/dist/styles/blythe-studio-pro.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/dist/styles/blythe-studio-pro.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/styles/studio-pro/_gallery.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/src/styles/studio-pro/_gallery.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/styles/studio-pro/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/src/styles/studio-pro/_header.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blythefamily.php" beforeDir="false" afterPath="$PROJECT_DIR$/blythefamily.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -153,7 +149,7 @@
       <workItem from="1601918062996" duration="15000" />
       <workItem from="1601944166500" duration="8291000" />
       <workItem from="1602019088604" duration="5295000" />
-      <workItem from="1602097646252" duration="1619000" />
+      <workItem from="1602097646252" duration="2212000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1601755942710</created>
@@ -281,7 +277,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602097831345</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="added media support for Media Offload">
+      <created>1602108259002</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1602108259002</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,7 +320,8 @@
     <MESSAGE value="updates to the style" />
     <MESSAGE value="added more features to the Episode CPT" />
     <MESSAGE value="updates to mobile navigation style" />
-    <option name="LAST_COMMIT_MESSAGE" value="updates to mobile navigation style" />
+    <MESSAGE value="added media support for Media Offload" />
+    <option name="LAST_COMMIT_MESSAGE" value="added media support for Media Offload" />
   </component>
   <component name="WindowStateProjectService">
     <state x="667" y="163" key="#PHP" timestamp="1601949801922">
@@ -340,22 +344,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="813" y="418" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601759839127" />
-    <state width="1859" height="279" key="GridCell.Tab.0.bottom" timestamp="1602098202772">
+    <state width="1859" height="279" key="GridCell.Tab.0.bottom" timestamp="1602108296102">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1859" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602098202772" />
-    <state width="1859" height="279" key="GridCell.Tab.0.center" timestamp="1602098202771">
+    <state width="1859" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602108296102" />
+    <state width="1859" height="279" key="GridCell.Tab.0.center" timestamp="1602108296102">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1859" height="279" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602098202771" />
-    <state width="1859" height="279" key="GridCell.Tab.0.left" timestamp="1602098202771">
+    <state width="1859" height="279" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602108296102" />
+    <state width="1859" height="279" key="GridCell.Tab.0.left" timestamp="1602108296102">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1859" height="279" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602098202771" />
-    <state width="1859" height="279" key="GridCell.Tab.0.right" timestamp="1602098202771">
+    <state width="1859" height="279" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602108296102" />
+    <state width="1859" height="279" key="GridCell.Tab.0.right" timestamp="1602108296102">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1859" height="279" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602098202771" />
+    <state width="1859" height="279" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602108296102" />
     <state width="1860" height="344" key="GridCell.Tab.1.bottom" timestamp="1602028248265">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -396,10 +400,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1601759716571" />
-    <state x="552" y="240" key="Vcs.Push.Dialog.v2" timestamp="1602097835729">
+    <state x="552" y="240" key="Vcs.Push.Dialog.v2" timestamp="1602108306566">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="240" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602097835729" />
+    <state x="552" y="240" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602108306566" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1601755561512">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -442,7 +446,7 @@
         <line-breakpoint enabled="true" type="php">
           <condition expression="'_thumbnail_id' == $meta_key" language="PHP" />
           <url>file://$PROJECT_DIR$/blythefamily.php</url>
-          <line>108</line>
+          <line>109</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
