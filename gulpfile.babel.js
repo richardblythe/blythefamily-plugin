@@ -17,7 +17,7 @@ import named from 'vinyl-named';
 //files must have unique names. (front.js, admin.js, etc)
 const paths = {
 	styles : ['assets/src/styles/studio-pro/blythe-studio-pro.scss'],
-	scripts : ['assets/src/scripts/front/unity3-front.js']
+	scripts : ['assets/src/scripts/admin/blythefamily-admin.js']
 }
 
 const PRODUCTION = yargs.argv.prod;

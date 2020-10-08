@@ -19,9 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee506010-b818-4dde-951c-064802f3fe80" name="Default Changelist" comment="added media support for Media Offload">
+    <list default="true" id="ee506010-b818-4dde-951c-064802f3fe80" name="Default Changelist" comment="altered list of allowed mime types">
+      <change afterPath="$PROJECT_DIR$/assets/dist/scripts/blythefamily-admin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/src/scripts/admin/_episode.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/src/scripts/admin/blythefamily-admin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blythefamily.php" beforeDir="false" afterPath="$PROJECT_DIR$/blythefamily.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulpfile.babel.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.babel.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +37,13 @@
     <execution>
       <executable path="composer" />
     </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="PREVIEW_PUSH_PROTECTED_ONLY" value="true" />
@@ -101,12 +112,23 @@
       <recent name="S:\WORDPRESS\blythefamily\wp-content\plugins\blythefamily\assets\src\styles\studio-pro" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Gulp.js.styles">
     <configuration default="true" type="js.build_tools.gulp">
       <node-interpreter>project</node-interpreter>
       <node-options />
       <gulpfile />
       <tasks />
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="scripts" type="js.build_tools.gulp" temporary="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile>$PROJECT_DIR$/gulpfile.babel.js</gulpfile>
+      <tasks>
+        <task>scripts</task>
+      </tasks>
       <arguments />
       <envs />
       <method v="2" />
@@ -124,6 +146,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gulp.js.scripts" />
         <item itemvalue="Gulp.js.styles" />
       </list>
     </recent_temporary>
@@ -149,7 +172,10 @@
       <workItem from="1601918062996" duration="15000" />
       <workItem from="1601944166500" duration="8291000" />
       <workItem from="1602019088604" duration="5295000" />
-      <workItem from="1602097646252" duration="2212000" />
+      <workItem from="1602097646252" duration="2879000" />
+      <workItem from="1602175825372" duration="626000" />
+      <workItem from="1602181610726" duration="12000" />
+      <workItem from="1602182954323" duration="2451000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1601755942710</created>
@@ -284,7 +310,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602108259002</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="altered list of allowed mime types">
+      <created>1602108856918</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1602108856918</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,7 +354,8 @@
     <MESSAGE value="added more features to the Episode CPT" />
     <MESSAGE value="updates to mobile navigation style" />
     <MESSAGE value="added media support for Media Offload" />
-    <option name="LAST_COMMIT_MESSAGE" value="added media support for Media Offload" />
+    <MESSAGE value="altered list of allowed mime types" />
+    <option name="LAST_COMMIT_MESSAGE" value="altered list of allowed mime types" />
   </component>
   <component name="WindowStateProjectService">
     <state x="667" y="163" key="#PHP" timestamp="1601949801922">
@@ -344,22 +378,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="813" y="418" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601759839127" />
-    <state width="1859" height="279" key="GridCell.Tab.0.bottom" timestamp="1602108296102">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1602187733512">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1859" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602108296102" />
-    <state width="1859" height="279" key="GridCell.Tab.0.center" timestamp="1602108296102">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602187733512" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1602187733512">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1859" height="279" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602108296102" />
-    <state width="1859" height="279" key="GridCell.Tab.0.left" timestamp="1602108296102">
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602187733512" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1602187733512">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1859" height="279" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602108296102" />
-    <state width="1859" height="279" key="GridCell.Tab.0.right" timestamp="1602108296102">
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602187733512" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1602187733512">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1859" height="279" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602108296102" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602187733512" />
     <state width="1860" height="344" key="GridCell.Tab.1.bottom" timestamp="1602028248265">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -400,10 +434,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1601759716571" />
-    <state x="552" y="240" key="Vcs.Push.Dialog.v2" timestamp="1602108306566">
+    <state x="552" y="240" key="Vcs.Push.Dialog.v2" timestamp="1602108860933">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="240" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602108306566" />
+    <state x="552" y="240" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602108860933" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1601755561512">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -446,7 +480,7 @@
         <line-breakpoint enabled="true" type="php">
           <condition expression="'_thumbnail_id' == $meta_key" language="PHP" />
           <url>file://$PROJECT_DIR$/blythefamily.php</url>
-          <line>109</line>
+          <line>110</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">

@@ -3,7 +3,7 @@
     Plugin Name: Blythe Family
     Plugin URI: http://www.blythefamily.com/
     Description: Structural components for the Blythe Family website
-    Version: 1.17
+    Version: 1.18
     Author: Richard Blythe
     Author URI: http://unity3software.com/richardblythe
     GitHub Plugin URI: https://github.com/richardblythe/blythefamily-plugin
@@ -15,7 +15,7 @@ class BF {
 
     	$debug = (defined('WP_DEBUG') && true === WP_DEBUG);
 
-	    BF::$ver = '1.15';
+	    BF::$ver = '1.18';
         BF::$dir = plugin_dir_path( __FILE__ );
         BF::$url = plugin_dir_url( __FILE__ );
 	    BF::$assets_url = BF::$url . 'assets';
@@ -36,7 +36,8 @@ class BF {
         add_filter( "theme_mod_header_image", array( $this, 'custom_header' ) );
 
 		add_action( 'wp_enqueue_scripts', array( $this,'custom_stylesheet'), 100 );
-        add_filter('unity3_custom_template_path', function ( $paths ){
+	    add_action('admin_enqueue_scripts', array(&$this, 'enqueue_admin'), 100);
+		add_filter('unity3_custom_template_path', function ( $paths ){
             $paths[] = BF::$dir . 'templates';
             return $paths;
         });
@@ -122,6 +123,9 @@ class BF {
         return $value;
     }
 
+	public function enqueue_admin() {
+		wp_enqueue_script('blythefamily-admin-js',       BF::$assets_url . "/scripts/blythefamily-admin.js", array('jquery'), BF::$ver);
+	}
 
 	public function custom_stylesheet() {
 
