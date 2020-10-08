@@ -19,12 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee506010-b818-4dde-951c-064802f3fe80" name="Default Changelist" comment="fixed assets directory reference">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/dist/scripts/blythefamily-admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/dist/scripts/blythefamily-admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/scripts/admin/_episode.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/src/scripts/admin/_episode.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blythefamily.php" beforeDir="false" afterPath="$PROJECT_DIR$/blythefamily.php" afterDir="false" />
-    </list>
+    <list default="true" id="ee506010-b818-4dde-951c-064802f3fe80" name="Default Changelist" comment="fixed assets directory reference" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -173,7 +168,7 @@
       <workItem from="1602097646252" duration="2879000" />
       <workItem from="1602175825372" duration="626000" />
       <workItem from="1602181610726" duration="12000" />
-      <workItem from="1602182954323" duration="3260000" />
+      <workItem from="1602182954323" duration="3281000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1601755942710</created>
@@ -329,7 +324,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602188427574</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="fixed assets directory reference">
+      <created>1602188764084</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1602188764084</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -448,10 +450,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1601759716571" />
-    <state x="552" y="240" key="Vcs.Push.Dialog.v2" timestamp="1602188431014">
+    <state x="552" y="240" key="Vcs.Push.Dialog.v2" timestamp="1602188765478">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="240" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602188431014" />
+    <state x="552" y="240" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602188765478" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1601755561512">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
