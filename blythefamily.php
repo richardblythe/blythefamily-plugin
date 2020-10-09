@@ -3,7 +3,7 @@
     Plugin Name: Blythe Family
     Plugin URI: http://www.blythefamily.com/
     Description: Structural components for the Blythe Family website
-    Version: 1.20
+    Version: 1.21
     Author: Richard Blythe
     Author URI: http://unity3software.com/richardblythe
     GitHub Plugin URI: https://github.com/richardblythe/blythefamily-plugin
@@ -84,6 +84,9 @@ class BF {
 		    // Audio formats.
 		    'mp3|m4a|m4b' => 'audio/mpeg',
 		    'ogg|oga' => 'audio/ogg',
+
+		    //Documents
+		    'pdf' => 'application/pdf',
 
 		    //Videos
 		    'mpeg|mpg|mpe' => 'video/mpeg',
