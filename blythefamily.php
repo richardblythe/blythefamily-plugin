@@ -3,7 +3,7 @@
     Plugin Name: Blythe Family
     Plugin URI: http://www.blythefamily.com/
     Description: Structural components for the Blythe Family website
-    Version: 1.22
+    Version: 1.23
     Author: Richard Blythe
     Author URI: http://unity3software.com/richardblythe
     GitHub Plugin URI: https://github.com/richardblythe/blythefamily-plugin
@@ -15,7 +15,7 @@ class BF {
 
     	$debug = (defined('WP_DEBUG') && true === WP_DEBUG);
 
-	    BF::$ver = '1.22';
+	    BF::$ver = '1.23';
         BF::$dir = plugin_dir_path( __FILE__ );
         BF::$url = plugin_dir_url( __FILE__ );
 	    BF::$assets_url = BF::$url . 'assets';
@@ -140,6 +140,9 @@ class BF {
 
         //fontawesome
         wp_enqueue_script( 'font-awesome', 'https://kit.fontawesome.com/0e9ba0daf2.js', array(), '1.0.0', true );
+
+        //dequeue GetWid's fontawesome
+        wp_dequeue_style( 'fontawesome-free'  );
 
 	}
 

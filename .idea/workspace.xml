@@ -19,11 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee506010-b818-4dde-951c-064802f3fe80" name="Default Changelist" comment="add additional mime permissions">
+    <list default="true" id="ee506010-b818-4dde-951c-064802f3fe80" name="Default Changelist" comment="updated styles for mobile menu">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/dist/styles/blythe-studio-pro.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/dist/styles/blythe-studio-pro.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/dist/styles/blythe-studio-pro.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/dist/styles/blythe-studio-pro.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blythefamily.php" beforeDir="false" afterPath="$PROJECT_DIR$/blythefamily.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/single-blythe_episode.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/single-blythe_episode.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,6 +88,7 @@
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/../../themes/studio-pro" />
       <path value="$PROJECT_DIR$/../powerpress" />
+      <path value="$PROJECT_DIR$/../getwid" />
     </include_path>
   </component>
   <component name="ProjectId" id="1Tc7rPwlIGv8tA4dM5PUVHkqoa4" />
@@ -102,7 +103,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="$PROJECT_DIR$/node_modules/gulp" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../powerpress" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../getwid" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
@@ -178,7 +179,8 @@
       <workItem from="1602202502737" duration="1015000" />
       <workItem from="1602206528179" duration="14000" />
       <workItem from="1602261863308" duration="2795000" />
-      <workItem from="1602286501851" duration="141000" />
+      <workItem from="1602286501851" duration="823000" />
+      <workItem from="1602613515148" duration="1705000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1601755942710</created>
@@ -362,7 +364,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602262182943</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="updated styles for mobile menu">
+      <created>1602286719016</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1602286719016</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,13 +413,14 @@
     <MESSAGE value="fixed assets directory reference" />
     <MESSAGE value="add pdf offloading permissions for WP Offload Media" />
     <MESSAGE value="add additional mime permissions" />
-    <option name="LAST_COMMIT_MESSAGE" value="add additional mime permissions" />
+    <MESSAGE value="updated styles for mobile menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated styles for mobile menu" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="667" y="163" key="#PHP" timestamp="1602191015366">
+    <state x="667" y="163" key="#PHP" timestamp="1602613551364">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="667" y="163" key="#PHP/0.0.1920.1040@0.0.1920.1040" timestamp="1602191015366" />
+    <state x="667" y="163" key="#PHP/0.0.1920.1040@0.0.1920.1040" timestamp="1602613551364" />
     <state width="388" height="466" key="DebuggerActiveHint" timestamp="1602020039122">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -419,30 +429,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="184" y="73" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601756145888" />
-    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1602191012154">
+    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1602613549787">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602191012154" />
+    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602613549787" />
     <state x="813" y="418" key="Github.ShareDialog" timestamp="1601759839127">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="813" y="418" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601759839127" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1602200568716">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1602288697730">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602200568716" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1602200568716">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1602288697730" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1602288697730">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602200568716" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1602200568716">
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1602288697730" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1602288697730">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602200568716" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1602200568716">
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1602288697730" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1602288697730">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602200568716" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1602288697730" />
     <state width="1860" height="344" key="GridCell.Tab.1.bottom" timestamp="1602028248265">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -483,10 +493,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1601759716571" />
-    <state x="552" y="240" key="Vcs.Push.Dialog.v2" timestamp="1602262194382">
+    <state x="552" y="240" key="Vcs.Push.Dialog.v2" timestamp="1602286724068">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="240" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602262194382" />
+    <state x="552" y="240" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602286724068" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1601755561512">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -495,10 +505,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="769" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601760776057" />
-    <state x="668" y="220" width="1099" height="820" key="find.popup" timestamp="1602195858475">
+    <state x="668" y="220" width="1099" height="820" key="find.popup" timestamp="1602614312210">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="668" y="220" width="1099" height="820" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1602195858475" />
+    <state x="668" y="220" width="1099" height="820" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1602614312210" />
     <state x="694" y="308" key="git4idea.merge.GitMergeDialog" timestamp="1601759588072">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
