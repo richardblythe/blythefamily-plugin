@@ -33,7 +33,9 @@ add_action( 'genesis_entry_content', 'genesis_entry_header_markup_close', 5 );
 
 add_action('genesis_attr_entry-content', function ( $attributes ){
     // add original plus extra CSS classes
-    $attributes['class'] .= ' one-third';
+	if ( has_term( 'devotions', 'blythe_episode_group' ) ) {
+		$attributes['class'] .= ' one-third';
+	}
     return $attributes;
 });
 
@@ -67,7 +69,12 @@ add_action( 'genesis_before_entry_content', function() {
 
     if ( $embed ) {
 
-        echo '<div class="two-thirds first"><div class="embed-container">' . $embed . '</div></div>';
+        $class_names = "";
+	    if ( has_term( 'devotions', 'blythe_episode_group' ) ) {
+	        $class_names = 'two-thirds first';
+        }
+
+        echo '<div class="' . $class_names .'"><div class="embed-container">' . $embed . '</div></div>';
 
     }
 });
