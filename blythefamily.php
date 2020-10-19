@@ -3,7 +3,7 @@
     Plugin Name: Blythe Family
     Plugin URI: http://www.blythefamily.com/
     Description: Structural components for the Blythe Family website
-    Version: 1.24
+    Version: 1.3.0
     Author: Richard Blythe
     Author URI: http://unity3software.com/richardblythe
     GitHub Plugin URI: https://github.com/richardblythe/blythefamily-plugin
@@ -28,6 +28,12 @@ class BF {
     }
 
     function initialize() {
+
+    	// WP Rocket Integration
+	    require_once (BF::$dir . 'includes/wp-rocket.php');
+	    register_activation_hook( __FILE__, array($this, 'plugin_activate'));
+	    register_deactivation_hook( __FILE__, array($this, 'plugin_deactivate') );
+
 
         // Save fields in functionality plugin
         add_filter( 'acf/settings/save_json', array( $this, 'get_local_json_path' ) );
@@ -66,6 +72,14 @@ class BF {
 	    add_filter( "get_post_metadata", array( &$this, 'override_post_hero_featured'), 100, 3);
         add_filter( "default_post_metadata", array(&$this, 'get_default_metadata'), 100, 5);
     }
+
+	function plugin_activate() {
+		blythe_wprocket_activate();
+	}
+
+	function plugin_deactivate() {
+		blythe_wprocket_deactivate();
+	}
 
     function load_modules() {
         require_once (BF::$dir . 'includes/class-episode.php');
