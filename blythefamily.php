@@ -3,7 +3,7 @@
     Plugin Name: Blythe Family
     Plugin URI: http://www.blythefamily.com/
     Description: Structural components for the Blythe Family website
-    Version: 1.3.0
+    Version: 1.4.0
     Author: Richard Blythe
     Author URI: http://unity3software.com/richardblythe
     GitHub Plugin URI: https://github.com/richardblythe/blythefamily-plugin
@@ -15,7 +15,7 @@ class BF {
 
     	$debug = (defined('WP_DEBUG') && true === WP_DEBUG);
 
-	    BF::$ver = '1.23';
+	    BF::$ver = '1.4';
         BF::$dir = plugin_dir_path( __FILE__ );
         BF::$url = plugin_dir_url( __FILE__ );
 	    BF::$assets_url = BF::$url . 'assets';
@@ -33,7 +33,6 @@ class BF {
 	    require_once (BF::$dir . 'includes/wp-rocket.php');
 	    register_activation_hook( __FILE__, array($this, 'plugin_activate'));
 	    register_deactivation_hook( __FILE__, array($this, 'plugin_deactivate') );
-
 
         // Save fields in functionality plugin
         add_filter( 'acf/settings/save_json', array( $this, 'get_local_json_path' ) );
@@ -85,7 +84,9 @@ class BF {
         require_once (BF::$dir . 'includes/class-episode.php');
         require_once (BF::$dir . 'includes/class-lyrics.php');
 	    require_once (BF::$dir . 'includes/woocommerce.php');
-//        require_once (BF::$dir . 'includes/powerpress.php');
+
+	    //Blocks
+	    require_once (BF::$dir . 'includes/blocks/podcast-notes.php');
     }
 
     function allowed_mime_types() {

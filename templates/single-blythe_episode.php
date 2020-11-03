@@ -33,7 +33,7 @@ add_action( 'genesis_entry_content', 'genesis_entry_header_markup_close', 5 );
 
 add_action('genesis_attr_entry-content', function ( $attributes ){
     // add original plus extra CSS classes
-	if ( has_term( 'devotions', 'blythe_episode_group' ) ) {
+	if ( has_term( 'at-his-table', 'blythe_episode_group' ) ) {
 		$attributes['class'] .= ' one-third';
 	}
     return $attributes;
@@ -70,7 +70,7 @@ add_action( 'genesis_before_entry_content', function() {
     if ( $embed ) {
 
         $class_names = "";
-	    if ( has_term( 'devotions', 'blythe_episode_group' ) ) {
+	    if ( has_term( 'at-his-table', 'blythe_episode_group' ) ) {
 	        $class_names = 'two-thirds first';
         }
 
@@ -81,7 +81,7 @@ add_action( 'genesis_before_entry_content', function() {
 
 add_action( 'genesis_after_entry_content', function() {
 
-    if ( has_term( 'devotions', 'blythe_episode_group' ) ) :
+    if ( has_term( 'at-his-table', 'blythe_episode_group' ) ) :
         ?>
         <div class="podcast-listing clearfix">Also coming soon to: <i class="fas fa-podcast"></i>Apple Podcasts, <i class="google-podcast-logo"></i>Google Podcasts, <i class="fab fa-spotify"></i>Spotify</div>
         <?php

@@ -11,10 +11,10 @@ class BF_Episode extends Unity3_Post_Group {
 
 		$this->mergeSettings( array(
 			'drag_sort_posts' => false,
-			'group_rewrite' => array( 'base' => 'episodes' )
+			'group_rewrite' => array( 'base' => 'episodes' ),
 		));
 
-
+		add_action( 'registered_post_type', array(&$this, 'block_template'), 100, 2 );
 		add_filter( 'wp_insert_post_data' , array( &$this, 'insert_post_data') , '100', 2 );
 		add_action('acf/save_post', array( $this, 'acf_save_post'), 20 );
 
@@ -35,7 +35,38 @@ class BF_Episode extends Unity3_Post_Group {
 		add_post_type_support( self::POST_TYPE, 'genesis-singular-images' );
 		add_post_type_support( self::POST_TYPE, 'genesis-entry-meta-before-content' );
 		//get_post_type(), 'genesis-entry-meta-before-content'
+
+//		if ( $post_type_object = get_post_type_object( self::POST_TYPE ) ) {
+//
+//			$post_type_object->template = array(
+//				array( 'core/paragraph', array(
+//					'placeholder' => 'Add episode description, scripture reading...',
+//				) ),
+//				array( 'core/paragraph', array(
+//					'placeholder' => 'Any information that will only show in the podcast feed...',
+//				) ),
+//			);
+//			$post_type_object->template_lock = 'all';
+//
+//		}
+
+
 	}
+
+	function block_template( $post_type, $post_type_object ) {
+		if ( self::POST_TYPE == $post_type) {
+			$post_type_object->template = array(
+				array( 'core/paragraph', array(
+					'placeholder' => 'Add episode description...',
+				) ),
+				array( 'acf/blythe-podcast-notes', array(
+					'placeholder' => 'Add episode description...',
+				) ),
+			);
+		}
+
+	}
+
 
 	function insert_post_data( $data , $postarr ) {
 		if(self::POST_TYPE == $data['post_type']) {
