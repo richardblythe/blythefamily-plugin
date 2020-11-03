@@ -20,14 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee506010-b818-4dde-951c-064802f3fe80" name="Default Changelist" comment="WP Rocket Integration. Redirect www to non-www">
-      <change afterPath="$PROJECT_DIR$/includes/blocks/podcast-notes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/dist/styles/blythe-studio-pro.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/dist/styles/blythe-studio-pro.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/dist/styles/blythe-studio-pro.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/dist/styles/blythe-studio-pro.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/src/styles/studio-pro/_hero.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/src/styles/studio-pro/_hero.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blythefamily.php" beforeDir="false" afterPath="$PROJECT_DIR$/blythefamily.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/class-episode.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/class-episode.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/single-blythe_episode.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/single-blythe_episode.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +188,7 @@
       <workItem from="1603119107429" duration="2174000" />
       <workItem from="1603215097248" duration="2908000" />
       <workItem from="1603222585847" duration="3171000" />
-      <workItem from="1604436002995" duration="1909000" />
+      <workItem from="1604436002995" duration="2411000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1601755942710</created>
@@ -403,7 +400,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603120679283</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Updated CSS from referencing term: &quot;devotions&quot; to &quot;at-his-table&quot;">
+      <created>1604439179334</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1604439179334</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -449,7 +453,8 @@
     <MESSAGE value="Updated single episode template to only show podcast info for devotion term" />
     <MESSAGE value="updated layout of single-blythe_episode" />
     <MESSAGE value="WP Rocket Integration. Redirect www to non-www" />
-    <option name="LAST_COMMIT_MESSAGE" value="WP Rocket Integration. Redirect www to non-www" />
+    <MESSAGE value="Updated CSS from referencing term: &quot;devotions&quot; to &quot;at-his-table&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated CSS from referencing term: &quot;devotions&quot; to &quot;at-his-table&quot;" />
   </component>
   <component name="WindowStateProjectService">
     <state x="667" y="163" key="#PHP" timestamp="1602613551364">
@@ -472,22 +477,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="813" y="418" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601759839127" />
-    <state width="1877" height="347" key="GridCell.Tab.0.bottom" timestamp="1603225759232">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1604439587490">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603225759232" />
-    <state width="1877" height="347" key="GridCell.Tab.0.center" timestamp="1603225759232">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604439587490" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1604439587490">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603225759232" />
-    <state width="1877" height="347" key="GridCell.Tab.0.left" timestamp="1603225759232">
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604439587490" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1604439587490">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603225759232" />
-    <state width="1877" height="347" key="GridCell.Tab.0.right" timestamp="1603225759232">
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604439587490" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1604439587490">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603225759232" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604439587490" />
     <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1603225759232">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -532,10 +537,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1601759716571" />
-    <state x="552" y="240" key="Vcs.Push.Dialog.v2" timestamp="1603120681528">
+    <state x="552" y="240" key="Vcs.Push.Dialog.v2" timestamp="1604439186980">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="240" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1603120681528" />
+    <state x="552" y="240" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604439186980" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1601755561512">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
