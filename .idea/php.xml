@@ -24,6 +24,7 @@
       <path value="$PROJECT_DIR$/../../themes/studio-pro" />
       <path value="$PROJECT_DIR$/../powerpress" />
       <path value="$PROJECT_DIR$/../getwid" />
+      <path value="$PROJECT_DIR$/../../themes/genesis" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

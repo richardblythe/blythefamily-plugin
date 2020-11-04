@@ -10,6 +10,9 @@ class BF_Episode extends Unity3_Post_Group {
 		parent::__construct( self::POST_TYPE, __('Episode'), __('Episodes'), 'Adds episodes from the Blythe Family YouTube channel' );
 
 		$this->mergeSettings( array(
+			'post' => array(
+				'supports' => array( 'author' )
+			),
 			'drag_sort_posts' => false,
 			'group_rewrite' => array( 'base' => 'episodes' ),
 		));
@@ -26,6 +29,18 @@ class BF_Episode extends Unity3_Post_Group {
 		add_filter( 'cbc_compatibility_tag_taxonomy', function() { return 'blythe_episode_tag'; } );
 		add_filter( 'cbc_compatibility_url_meta', function() { return 'youtube_url'; } );
 		add_filter( 'cbc_compatibility_image_meta', function() { return '_thumbnail_id'; } );
+
+		add_filter('request', array(&$this, 'add_to_podcast_feed'), 1000 );
+
+		add_filter( 'get_site_icon_url', function($url, $size, $blog_id) {
+
+			if (is_feed( 'podcast' )) {
+				return null;
+			}
+
+			return $url;
+
+		}, 100, 3);
 	}
 
 	function Init()
@@ -51,6 +66,20 @@ class BF_Episode extends Unity3_Post_Group {
 //		}
 
 
+	}
+
+	/**
+	 * add custom post types to main rss feed
+	 **/
+	/**
+	 * add custom post types to podcast feed
+	 **/
+	function add_to_podcast_feed($qv) {
+
+		if ( isset($qv['feed']) && 'podcast' == $qv['feed'] ) {
+			$qv['post_type'] = array('post', self::POST_TYPE);
+		}
+		return $qv;
 	}
 
 	function block_template( $post_type, $post_type_object ) {

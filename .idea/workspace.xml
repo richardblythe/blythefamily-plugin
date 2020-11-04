@@ -20,11 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee506010-b818-4dde-951c-064802f3fe80" name="Default Changelist" comment="WP Rocket Integration. Redirect www to non-www">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/dist/styles/blythe-studio-pro.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/dist/styles/blythe-studio-pro.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/dist/styles/blythe-studio-pro.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/dist/styles/blythe-studio-pro.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/styles/studio-pro/_hero.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/src/styles/studio-pro/_hero.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blythefamily.php" beforeDir="false" afterPath="$PROJECT_DIR$/blythefamily.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/class-episode.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/class-episode.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +60,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
   <component name="PhpServers">
     <servers>
       <server host="dev.blythefamily.localhost.com" id="6976803f-d015-43d8-b7c2-8f671eb64a31" name="dev.blythefamily.localhost.com" />
@@ -90,6 +90,7 @@
       <path value="$PROJECT_DIR$/../../themes/studio-pro" />
       <path value="$PROJECT_DIR$/../powerpress" />
       <path value="$PROJECT_DIR$/../getwid" />
+      <path value="$PROJECT_DIR$/../../themes/genesis" />
     </include_path>
   </component>
   <component name="ProjectId" id="1Tc7rPwlIGv8tA4dM5PUVHkqoa4" />
@@ -104,7 +105,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="$PROJECT_DIR$/node_modules/gulp" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../getwid" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../themes/genesis" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2020.1.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
@@ -188,7 +189,9 @@
       <workItem from="1603119107429" duration="2174000" />
       <workItem from="1603215097248" duration="2908000" />
       <workItem from="1603222585847" duration="3171000" />
-      <workItem from="1604436002995" duration="2411000" />
+      <workItem from="1604436002995" duration="2692000" />
+      <workItem from="1604500547073" duration="6695000" />
+      <workItem from="1604521651776" duration="2061000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1601755942710</created>
@@ -407,7 +410,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604439179334</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Fixed CSS">
+      <created>1604439641504</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1604439641504</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -429,7 +439,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Initial commit 2" />
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Updates that structure this plugin as more of a grandchild to a Genesis theme" />
     <MESSAGE value="Structural components for the Blythe Family website" />
@@ -454,13 +463,14 @@
     <MESSAGE value="updated layout of single-blythe_episode" />
     <MESSAGE value="WP Rocket Integration. Redirect www to non-www" />
     <MESSAGE value="Updated CSS from referencing term: &quot;devotions&quot; to &quot;at-his-table&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated CSS from referencing term: &quot;devotions&quot; to &quot;at-his-table&quot;" />
+    <MESSAGE value="Fixed CSS" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed CSS" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="667" y="163" key="#PHP" timestamp="1602613551364">
+    <state x="667" y="163" key="#PHP" timestamp="1604512927096">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="667" y="163" key="#PHP/0.0.1920.1040@0.0.1920.1040" timestamp="1602613551364" />
+    <state x="667" y="163" key="#PHP/0.0.1920.1040@0.0.1920.1040" timestamp="1604512927096" />
     <state width="394" height="466" key="DebuggerActiveHint" timestamp="1603223866389">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -469,62 +479,62 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="184" y="73" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601756145888" />
-    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1602613549787">
+    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1604512922755">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1602613549787" />
+    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1604512922755" />
     <state x="813" y="418" key="Github.ShareDialog" timestamp="1601759839127">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="813" y="418" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601759839127" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1604439587490">
+    <state width="1877" height="347" key="GridCell.Tab.0.bottom" timestamp="1604522309309">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604439587490" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1604439587490">
+    <state width="1877" height="347" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604522309309" />
+    <state width="1877" height="347" key="GridCell.Tab.0.center" timestamp="1604522309309">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604439587490" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1604439587490">
+    <state width="1877" height="347" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604522309309" />
+    <state width="1877" height="347" key="GridCell.Tab.0.left" timestamp="1604522309309">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604439587490" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1604439587490">
+    <state width="1877" height="347" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604522309309" />
+    <state width="1877" height="347" key="GridCell.Tab.0.right" timestamp="1604522309309">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604439587490" />
-    <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1603225759232">
+    <state width="1877" height="347" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604522309309" />
+    <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1604522309309">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603225759232" />
-    <state width="1877" height="347" key="GridCell.Tab.1.center" timestamp="1603225759232">
+    <state width="1877" height="347" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604522309309" />
+    <state width="1877" height="347" key="GridCell.Tab.1.center" timestamp="1604522309309">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603225759232" />
-    <state width="1877" height="347" key="GridCell.Tab.1.left" timestamp="1603225759232">
+    <state width="1877" height="347" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604522309309" />
+    <state width="1877" height="347" key="GridCell.Tab.1.left" timestamp="1604522309309">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603225759232" />
-    <state width="1877" height="347" key="GridCell.Tab.1.right" timestamp="1603225759232">
+    <state width="1877" height="347" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604522309309" />
+    <state width="1877" height="347" key="GridCell.Tab.1.right" timestamp="1604522309309">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603225759232" />
-    <state width="1877" height="347" key="GridCell.Tab.2.bottom" timestamp="1603225759233">
+    <state width="1877" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604522309309" />
+    <state width="1877" height="347" key="GridCell.Tab.2.bottom" timestamp="1604522309309">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1603225759233" />
-    <state width="1877" height="347" key="GridCell.Tab.2.center" timestamp="1603225759233">
+    <state width="1877" height="347" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604522309309" />
+    <state width="1877" height="347" key="GridCell.Tab.2.center" timestamp="1604522309309">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1603225759233" />
-    <state width="1877" height="347" key="GridCell.Tab.2.left" timestamp="1603225759233">
+    <state width="1877" height="347" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604522309309" />
+    <state width="1877" height="347" key="GridCell.Tab.2.left" timestamp="1604522309309">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1603225759233" />
-    <state width="1877" height="347" key="GridCell.Tab.2.right" timestamp="1603225759233">
+    <state width="1877" height="347" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604522309309" />
+    <state width="1877" height="347" key="GridCell.Tab.2.right" timestamp="1604522309309">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1603225759233" />
+    <state width="1877" height="347" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604522309309" />
     <state x="794" y="443" key="NewPhpFileDialog" timestamp="1603216817226">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -537,10 +547,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1601759716571" />
-    <state x="552" y="240" key="Vcs.Push.Dialog.v2" timestamp="1604439186980">
+    <state x="552" y="240" key="Vcs.Push.Dialog.v2" timestamp="1604439642986">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="240" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604439186980" />
+    <state x="552" y="240" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604439642986" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1601755561512">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -549,10 +559,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="769" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1601760776057" />
-    <state x="668" y="220" width="1099" height="820" key="find.popup" timestamp="1604439051443">
+    <state x="668" y="220" width="1099" height="820" key="find.popup" timestamp="1604512960363">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="668" y="220" width="1099" height="820" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1604439051443" />
+    <state x="668" y="220" width="1099" height="820" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1604512960363" />
     <state x="694" y="308" key="git4idea.merge.GitMergeDialog" timestamp="1601759588072">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -582,7 +592,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/includes/class-episode.php</url>
-          <line>73</line>
+          <line>102</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -600,6 +610,21 @@
           <url>file://$PROJECT_DIR$/includes/blocks/podcast-notes.php</url>
           <line>34</line>
           <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/../powerpress/feed-podcast.php</url>
+          <line>128</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/../../../wp-includes/general-template.php</url>
+          <line>3290</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/../../../wp-includes/general-template.php</url>
+          <line>947</line>
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
