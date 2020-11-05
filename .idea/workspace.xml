@@ -21,7 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ee506010-b818-4dde-951c-064802f3fe80" name="Default Changelist" comment="WP Rocket Integration. Redirect www to non-www">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blythefamily.php" beforeDir="false" afterPath="$PROJECT_DIR$/blythefamily.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/class-episode.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/class-episode.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -190,7 +189,7 @@
       <workItem from="1604436002995" duration="2692000" />
       <workItem from="1604500547073" duration="6695000" />
       <workItem from="1604521651776" duration="2736000" />
-      <workItem from="1604543830009" duration="848000" />
+      <workItem from="1604543830009" duration="1236000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1601755942710</created>
@@ -423,7 +422,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604525444935</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Updated CPT Episode">
+      <created>1604544702972</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1604544702972</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -445,7 +451,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Updates that structure this plugin as more of a grandchild to a Genesis theme" />
     <MESSAGE value="Structural components for the Blythe Family website" />
     <MESSAGE value="added lyrics shortcode" />
     <MESSAGE value="updated github info" />
@@ -470,7 +475,8 @@
     <MESSAGE value="Updated CSS from referencing term: &quot;devotions&quot; to &quot;at-his-table&quot;" />
     <MESSAGE value="Fixed CSS" />
     <MESSAGE value="Updates to the episode post type" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updates to the episode post type" />
+    <MESSAGE value="Updated CPT Episode" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated CPT Episode" />
   </component>
   <component name="WindowStateProjectService">
     <state x="667" y="163" key="#PHP" timestamp="1604512927096">
@@ -553,10 +559,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1601759716571" />
-    <state x="552" y="240" key="Vcs.Push.Dialog.v2" timestamp="1604525447831">
+    <state x="552" y="240" key="Vcs.Push.Dialog.v2" timestamp="1604544704943">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="240" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604525447831" />
+    <state x="552" y="240" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604544704943" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1601755561512">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

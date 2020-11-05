@@ -11,7 +11,7 @@ class BF_Episode extends Unity3_Post_Group {
 
 		$this->mergeSettings( array(
 			'post' => array(
-				'supports' => array( 'title', 'author' )
+				'supports' => array( 'title', 'author', 'editor', 'thumbnail', 'excerpt' )
 			),
 			'drag_sort_posts' => false,
 			'group_rewrite' => array( 'base' => 'episodes' ),
