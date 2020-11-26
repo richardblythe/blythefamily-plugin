@@ -81,11 +81,9 @@ add_action( 'genesis_before_entry_content', function() {
 
 add_action( 'genesis_after_entry_content', function() {
 
-    if ( has_term( 'at-his-table', 'blythe_episode_group' ) ) :
-        ?>
-        <div class="podcast-listing clearfix">Also coming soon to: <i class="fas fa-podcast"></i>Apple Podcasts, <i class="google-podcast-logo"></i>Google Podcasts, <i class="fab fa-spotify"></i>Spotify</div>
-        <?php
-    endif;
+    if ( has_term( 'at-his-table', 'blythe_episode_group' ) ) {
+	    echo do_blythe_pod_subscribe_shortcode();
+    }
 });
 
 

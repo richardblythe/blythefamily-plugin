@@ -129,11 +129,16 @@
 .single-lyrics .additional-songs {
   margin-top: 60px; }
 
+.podcast-subscribe a {
+  margin-left: 10px; }
+  .podcast-subscribe a i {
+    margin-right: 5px; }
+
 .single-blythe_episode h1 {
   font-size: 2.2em;
   margin: 0; }
 
-.single-blythe_episode .podcast-listing {
+.single-blythe_episode .podcast-subscribe {
   padding-top: 35px; }
 
 /** Unity3 Gallery */

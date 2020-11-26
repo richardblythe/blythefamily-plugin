@@ -25,7 +25,7 @@ add_action( 'genesis_after_content', function() {
 
     echo '<div class="lyrics-info">';
 
-    if ( $youtube_url = get_post_meta( get_the_ID(), 'youtube_url', true) ) {
+    if ( $youtube_url = get_post_meta( get_the_ID(), 'youtube', true) ) {
         ?>
         <div class="youtube-container two-thirds first">
             <h3>Listen</h3>

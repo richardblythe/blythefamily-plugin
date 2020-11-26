@@ -11,7 +11,7 @@ class BF_Episode extends Unity3_Post_Group {
 
 		$this->mergeSettings( array(
 			'post' => array(
-				'supports' => array( 'title', 'author', 'editor', 'thumbnail', 'excerpt' )
+				'supports' => array( 'title', 'author', 'editor', 'thumbnail', 'excerpt', 'custom-fields' )
 			),
 			'drag_sort_posts' => false,
 			'group_rewrite' => array( 'base' => 'episodes' ),
@@ -65,6 +65,7 @@ class BF_Episode extends Unity3_Post_Group {
 //
 //		}
 
+		add_shortcode('blythe_pod_subscribe', 'do_blythe_pod_subscribe_shortcode');
 
 	}
 
@@ -129,3 +130,13 @@ class BF_Episode extends Unity3_Post_Group {
 ////       Register
 ////*************************
 unity3_modules()->Register(new BF_Episode());
+
+function do_blythe_pod_subscribe_shortcode() {
+	return
+	'<div class="podcast-subscribe clearfix"><span class="subscribe-intro">' .
+		__('You can also listen on:') . '</span>' .
+		'<a href="https://podcasts.apple.com/us/podcast/at-his-table/id1538816843?itsct=podcast_box&itscg=30200"><i class="fas fa-podcast"></i>Apple Podcasts</a>' .
+		'<a href="https://www.google.com/podcasts?feed=aHR0cHM6Ly9ibHl0aGVmYW1pbHkuY29tL2ZlZWQvcG9kY2FzdC8%3D"><i class="google-podcast-logo"></i>Google Podcasts</a>' .
+		'<a href="https://open.spotify.com/show/4qlHv7H1mEBY8N1TJdqnmo"><i class="fab fa-spotify"></i>Spotify</a>' .
+	'</div>';
+}
