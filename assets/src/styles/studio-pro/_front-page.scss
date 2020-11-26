@@ -53,10 +53,14 @@
       }
     }
 
-    p.podcast-intro-text {
-      margin-bottom: 0;
-    }
+    .podcast-subscribe {
+      text-align: center;
 
+      .subscribe-intro {
+        display: block;
+      }
+
+    }
   }
 
 }

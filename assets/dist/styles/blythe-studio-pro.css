@@ -87,8 +87,10 @@
     .home .weekly-devotions .left-column p.join-us {
       margin-bottom: 80px; } }
 
-.home .weekly-devotions .left-column p.podcast-intro-text {
-  margin-bottom: 0; }
+.home .weekly-devotions .left-column .podcast-subscribe {
+  text-align: center; }
+  .home .weekly-devotions .left-column .podcast-subscribe .subscribe-intro {
+    display: block; }
 
 .dark-container h1, .dark-container a {
   color: #fff; }
