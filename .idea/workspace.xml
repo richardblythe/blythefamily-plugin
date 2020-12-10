@@ -21,8 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ee506010-b818-4dde-951c-064802f3fe80" name="Default Changelist" comment="WP Rocket Integration. Redirect www to non-www">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/styles/studio-pro/_layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/src/styles/studio-pro/_layout.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blythefamily.php" beforeDir="false" afterPath="$PROJECT_DIR$/blythefamily.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/acf-json/group_5f1320f0f01e2.json" beforeDir="false" afterPath="$PROJECT_DIR$/acf-json/group_5f1320f0f01e2.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +194,8 @@
       <workItem from="1605035022583" duration="1086000" />
       <workItem from="1605551030864" duration="24000" />
       <workItem from="1606413395750" duration="4600000" />
-      <workItem from="1607364809255" duration="298000" />
+      <workItem from="1607364809255" duration="1368000" />
+      <workItem from="1607564939084" duration="214000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1601755942710</created>
@@ -470,7 +470,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606418583874</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Updated stylesheet to reflect to migration from Atomic Blocks to Genesis Blocks">
+      <created>1607365280604</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1607365280604</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -492,7 +499,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="hide price range in woocommerce" />
     <MESSAGE value="more tweaks to hide price range in woocommerce" />
     <MESSAGE value="updates to the style" />
     <MESSAGE value="added more features to the Episode CPT" />
@@ -517,7 +523,8 @@
     <MESSAGE value="Updated podcast subscribe links." />
     <MESSAGE value="Updated podcast subscribe links and fixed youtube reference in post_meta" />
     <MESSAGE value="Updated podcast subscribe css on front-page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated podcast subscribe css on front-page" />
+    <MESSAGE value="Updated stylesheet to reflect to migration from Atomic Blocks to Genesis Blocks" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated stylesheet to reflect to migration from Atomic Blocks to Genesis Blocks" />
   </component>
   <component name="WindowStateProjectService">
     <state x="667" y="163" key="#PHP" timestamp="1604512927096">
@@ -540,25 +547,29 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="813" y="418" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601759839127" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1606418710171">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1607365162453">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1606418710171" />
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040/2.-1080.1920.1040@0.0.1920.1040" timestamp="1607365162453" />
     <state width="1877" height="347" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604545790405" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1606418710171">
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1607365162453">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1606418710171" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040/2.-1080.1920.1040@0.0.1920.1040" timestamp="1607365162453" />
     <state width="1877" height="347" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604545790405" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1606418710171">
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1607365162453">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1606418710171" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040/2.-1080.1920.1040@0.0.1920.1040" timestamp="1607365162453" />
     <state width="1877" height="347" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604545790405" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1606418710171">
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1607365162453">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1606418710171" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040/2.-1080.1920.1040@0.0.1920.1040" timestamp="1607365162453" />
     <state width="1877" height="347" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604545790405" />
     <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1604545790406">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -604,10 +615,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1601759716571" />
-    <state x="81" y="248" key="Vcs.Push.Dialog.v2" timestamp="1606418589728">
+    <state x="81" y="248" key="Vcs.Push.Dialog.v2" timestamp="1607365285680">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="81" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1606418589728" />
+    <state x="81" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040/2.-1080.1920.1040@0.0.1920.1040" timestamp="1607365285680" />
     <state x="552" y="240" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604545147814" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1601755561512">
       <screen x="0" y="0" width="1920" height="1040" />

@@ -3,33 +3,9 @@
     "title": "Episode Resources",
     "fields": [
         {
-            "key": "field_5f32bd1c262bc",
-            "label": "Thumbnail",
-            "name": "_thumbnail_id",
-            "type": "image",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "id",
-            "preview_size": "medium",
-            "library": "uploadedTo",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
             "key": "field_5f13219646332",
             "label": "YouTube Url",
-            "name": "youtube_url",
+            "name": "youtube",
             "type": "url",
             "instructions": "",
             "required": 1,
@@ -41,42 +17,6 @@
             },
             "default_value": "",
             "placeholder": ""
-        },
-        {
-            "key": "field_5f32fd069f406",
-            "label": "MP3 Audio File",
-            "name": "mp3",
-            "type": "file",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "url",
-            "library": "all",
-            "min_size": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_5f32bccc262bb",
-            "label": "Publish Date",
-            "name": "publish_date",
-            "type": "date_time_picker",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "display_format": "F j, Y g:i a",
-            "return_format": "Y-m-d H:i:s",
-            "first_day": 0
         }
     ],
     "location": [
@@ -89,7 +29,7 @@
         ]
     ],
     "menu_order": 0,
-    "position": "side",
+    "position": "normal",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
