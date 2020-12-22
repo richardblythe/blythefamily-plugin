@@ -1,0 +1,40 @@
+{
+    "key": "group_5fe13f64ce0c2",
+    "title": "Shipping Info",
+    "fields": [
+        {
+            "key": "field_5fe13f94aad30",
+            "label": "Tracking",
+            "name": "blythe_woo_order_tracking",
+            "type": "url",
+            "instructions": "Specifies the tracking link for the order",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "The tracking url"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "shop_order"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1608597558
+}

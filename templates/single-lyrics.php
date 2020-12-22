@@ -55,52 +55,29 @@ add_action( 'genesis_after_content', function() {
         echo '</ul>';
         ?>
 
-
+        <?php
+        //----------------------------------------------
+        //Get the list of related songs...
+        $related_songs = get_post_meta( get_the_ID(), 'related_songs', true);
+        ?>
+        <?php if( $related_songs ): ?>
         <div class="additional-songs">
             <h4><i class="far fa-lightbulb"></i> You might also like:</h4>
-            <a href="#">Come Forth As Gold</a>
+            <ul>
+		        <?php foreach( $related_songs as $song_id ): ?>
+                    <li>
+                        <a href="<?php echo get_permalink( $song_id ); ?>">
+					        <?php echo get_the_title( $song_id ); ?>
+                        </a>
+                    </li>
+		        <?php endforeach; ?>
+            </ul>
+	        <?php endif; ?>
         </div>
     </div>
+</div>;
 <?php
-    echo '</div>';
-
-
-    return;
-
-    if ( $album_id = get_post_meta( get_the_ID(), 'album_id', true) ) {
-
-        echo '<div class="one-fourth">';
-        echo '<h3>From The Album:</h3>';
-        printf('<a href="%s">', get_permalink( $album_id ) );
-        genesis_image( array( 'post_id' => $album_id, 'size' => 'medium' ) );
-        echo '</a></div>';
-    }
-
-    if ( $sound_track_id = get_post_meta( get_the_ID(), 'sound_track_id', true) ) {
-
-        echo '<div class="one-fourth">';
-        echo '<h3>Sound Track Available!</h3>';
-        printf('<a href="%s">', get_permalink( $sound_track_id ) );
-        genesis_image( array( 'post_id' => $sound_track_id, 'size' => 'medium' ) );
-        echo '</a></div>';
-    }
-
-    if ( $sheet_music = get_post_meta( get_the_ID(), 'sheet_music', true) ) {
-
-        echo '<div class="one-fourth">';
-        printf('<a href="%s">', get_permalink( $sheet_music ) );
-        genesis_image( array( 'post_id' => $sheet_music, 'size' => 'medium' ) );
-        echo '</a></div>';
-    } else {
-        echo '<a href="#">Request Sheet Music</a>';
-    }
-
-    echo '</div>'; //end .one-third
 });
-
-// /** Remove Post Info */
-// remove_action('genesis_before_post_content','genesis_post_info');
-// remove_action('genesis_after_post_content','genesis_post_meta');
 
 genesis();
 

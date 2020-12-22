@@ -99,7 +99,7 @@
         {
             "key": "field_5f13560cc6276",
             "label": "YouTube URL",
-            "name": "youtube_url",
+            "name": "youtube",
             "type": "url",
             "instructions": "",
             "required": 0,
@@ -111,6 +111,28 @@
             },
             "default_value": "",
             "placeholder": "The full YouTube url..."
+        },
+        {
+            "key": "field_5fe13bdf9f954",
+            "label": "Related Songs",
+            "name": "related_songs",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "lyrics"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 1,
+            "return_format": "id",
+            "ui": 1
         }
     ],
     "location": [
@@ -130,7 +152,7 @@
     "hide_on_screen": [
         "featured_image"
     ],
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1597331119
+    "modified": 1608596622
 }

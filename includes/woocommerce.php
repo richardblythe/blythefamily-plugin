@@ -104,7 +104,7 @@ add_filter( 'woocommerce_billing_fields', 'blythe_wc_filter_phone', 10, 1 );
 add_filter( 'manage_edit-shop_order_columns', 'blythe_woo_custom_column' );
 function blythe_woo_custom_column( $columns ) {
     return array_slice( $columns, 0, 3, true )
-        + array( 'blythe_woo_downloaded' => 'Downloaded' )
+        + array( 'blythe_delivery_status' => 'Delivery Status' )
         + array_slice( $columns, 3, NULL, true );
 }
 
@@ -112,12 +112,27 @@ add_action( 'manage_shop_order_posts_custom_column', 'blythe_woo_custom_column_v
 function blythe_woo_custom_column_value( $column ) {
     global $wpdb, $post, $blythe_woo_downloads;
 
-    //start editing, I was saving my fields for the orders as custom post meta
-    //if you did the same, follow this code
 
-    if ( $column == 'blythe_woo_downloaded' ) {
+    if ( $column == 'blythe_delivery_status' ) {
         $order    = wc_get_order( $post->ID );
 
+        //--------------------------------
+	    //       Shipping Status
+	    //--------------------------------
+        $shipping_status = null;
+        $shipping_methods = $order->get_shipping_methods();
+        if ( is_array($shipping_methods) && count($shipping_methods) ) {
+	        $tracking = get_post_meta( $$post->id, 'blythe_tracking', true );
+	        if ( $tracking) {
+	        	$shipping_status = "<a href='{$tracking}' target='_blank' >Shipped</a>";
+	        } else {
+		        $shipping_status = '<strong>Ship</strong>';
+	        }
+        }
+
+
+        //---------------------------------
+	    //     Global Downloads Variable
         if (!isset($blythe_woo_downloads)) {
             $blythe_woo_downloads = $wpdb->get_results( $wpdb->prepare( "
 						SELECT order_id, SUM(download_count) AS dl FROM {$wpdb->prefix}woocommerce_downloadable_product_permissions
@@ -125,26 +140,32 @@ function blythe_woo_custom_column_value( $column ) {
 					", $post->ID ), OBJECT_K );
         }
 
-        $value = (array)$blythe_woo_downloads[$post->ID];
-        if ( !empty($value) ) {
-            echo 0 == $value['dl'] ? 'Awaiting Download' : 'Downloaded';
-        } else {
-            echo 'N/A';
-        }
+
+        ///----------------------------------
+	    //      Download Status
+	    $download_status = null;
+	    $value = (array)$blythe_woo_downloads[$post->ID];
+	    if ( !empty($value) ) {
+	    	$download_status = 0 == $value['dl'] ? '<strong>DL Pending</strong>' : 'Downloaded';
+	    }
+
+        //----------------------------------
+	    //Column Display
+	    echo $download_status . ( $shipping_status ? " / {$shipping_status}" : '' );
     }
 }
 
-add_action('admin_head', 'blythe_woo_downloaded_css');
+add_action('admin_head', 'blythe_delivery_status_css');
 
-function blythe_woo_downloaded_css() {
+function blythe_delivery_status_css() {
     echo '<style>
 	@media screen and (max-width: 782px) {
-		.post-type-shop_order .wp-list-table td.blythe_woo_downloaded {
+		.post-type-shop_order .wp-list-table td.blythe_delivery_status {
 			float: right;
 			display: inline-block !important;
 			padding: 0 1em 1em 1em !important;
 		}
-		.post-type-shop_order .wp-list-table td.blythe_woo_downloaded::before {
+		.post-type-shop_order .wp-list-table td.blythe_delivery_status::before {
 			display: none !important;
 		}
 	}</style>';
