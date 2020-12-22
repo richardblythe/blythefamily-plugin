@@ -29,7 +29,7 @@
             "key": "field_5fe13f94aad30",
             "label": "Tracking Number",
             "name": "blythe_woo_shipping_provider_tracking",
-            "type": "textarea",
+            "type": "text",
             "instructions": "Specifies the tracking link for the order",
             "required": 0,
             "conditional_logic": 0,
@@ -39,10 +39,10 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "",
             "maxlength": "",
-            "rows": "",
-            "new_lines": ""
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -62,5 +62,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1608601710
+    "modified": 1608602108
 }

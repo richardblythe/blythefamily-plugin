@@ -170,7 +170,8 @@ i.google-podcast-logo:before {
   .single-lyrics .site-header,
   .single-lyrics .hero-section,
   .single-lyrics .lyrics-info,
-  .single-lyrics .block-area-before-footer {
+  .single-lyrics .block-area-before-footer,
+  .single-lyrics .site-footer {
     display: none; } }
 
 /*# sourceMappingURL=blythe-studio-pro.css.map */
