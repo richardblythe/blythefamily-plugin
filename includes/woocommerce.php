@@ -122,9 +122,14 @@ function blythe_woo_custom_column_value( $column ) {
         $shipping_status = null;
         $shipping_methods = $order->get_shipping_methods();
         if ( is_array($shipping_methods) && count($shipping_methods) ) {
-	        $tracking = get_post_meta( $post->id, 'blythe_tracking', true );
+	        $provider = 'usps'; //todo Add other shipping providers?
+        	$tracking = get_post_meta( $post->ID, 'blythe_woo_shipping_provider_tracking', true );
 	        if ( $tracking) {
-	        	$shipping_status = "<a href='{$tracking}' target='_blank' >Shipped</a>";
+		        $tracking_url = '';
+		        if ( 'usps' == $provider) {
+		        	$tracking_url = "https://tools.usps.com/go/TrackConfirmAction_input?qtc_tLabels1={$tracking}";
+		        }
+	        	$shipping_status = "<a href='{$tracking_url}' target='_blank' >Shipped</a>";
 	        } else {
 		        $shipping_status = '<strong>Ship</strong>';
 	        }
@@ -151,7 +156,12 @@ function blythe_woo_custom_column_value( $column ) {
 
         //----------------------------------
 	    //Column Display
-	    echo $download_status . ( $shipping_status ? " / {$shipping_status}" : '' );
+	    if ( $download_status ) {
+		    echo $download_status . ( $shipping_status ? " / {$shipping_status}" : '' );
+	    } else {
+	    	echo $shipping_status;
+	    }
+
     }
 }
 
