@@ -138,7 +138,6 @@ function blythe_woo_custom_column_value( $column ) {
 						SELECT order_id, SUM(download_count) AS dl FROM {$wpdb->prefix}woocommerce_downloadable_product_permissions
 						GROUP BY order_id;
 					", OBJECT_K );
-            $blythe_woo_downloads = (array)$blythe_woo_downloads;
         }
 
 
