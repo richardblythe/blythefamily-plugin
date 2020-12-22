@@ -138,14 +138,14 @@ function blythe_woo_custom_column_value( $column ) {
 						SELECT order_id, SUM(download_count) AS dl FROM {$wpdb->prefix}woocommerce_downloadable_product_permissions
 						GROUP BY order_id;
 					", OBJECT_K );
+            $blythe_woo_downloads = (array)$blythe_woo_downloads;
         }
 
 
         ///----------------------------------
 	    //      Download Status
 	    $download_status = null;
-	    $value = isset($blythe_woo_downloads[$post->ID]) ? $blythe_woo_downloads[$post->ID]: null;
-	    if ( !empty($value) ) {
+	    if ( $value = $blythe_woo_downloads[$post->ID] ) {
 	    	$download_status = 0 == $value['dl'] ? '<strong>DL Pending</strong>' : 'Downloaded';
 	    }
 
