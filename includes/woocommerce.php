@@ -122,7 +122,7 @@ function blythe_woo_custom_column_value( $column ) {
         $shipping_status = null;
         $shipping_methods = $order->get_shipping_methods();
         if ( is_array($shipping_methods) && count($shipping_methods) ) {
-	        $tracking = get_post_meta( $$post->id, 'blythe_tracking', true );
+	        $tracking = get_post_meta( $post->id, 'blythe_tracking', true );
 	        if ( $tracking) {
 	        	$shipping_status = "<a href='{$tracking}' target='_blank' >Shipped</a>";
 	        } else {
@@ -134,10 +134,10 @@ function blythe_woo_custom_column_value( $column ) {
         //---------------------------------
 	    //     Global Downloads Variable
         if (!isset($blythe_woo_downloads)) {
-            $blythe_woo_downloads = $wpdb->get_results( $wpdb->prepare( "
+            $blythe_woo_downloads = $wpdb->get_results( "
 						SELECT order_id, SUM(download_count) AS dl FROM {$wpdb->prefix}woocommerce_downloadable_product_permissions
 						GROUP BY order_id;
-					", $post->ID ), OBJECT_K );
+					", OBJECT_K );
         }
 
 
