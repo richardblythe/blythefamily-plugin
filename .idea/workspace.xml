@@ -19,9 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee506010-b818-4dde-951c-064802f3fe80" name="Default Changelist" comment="And another revision that includes the version number :)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blythefamily.php" beforeDir="false" afterPath="$PROJECT_DIR$/blythefamily.php" afterDir="false" />
+    <list default="true" id="ee506010-b818-4dde-951c-064802f3fe80" name="Default Changelist" comment="Changed the global downloads variable in custom woocommerce orders page">
       <change beforePath="$PROJECT_DIR$/includes/woocommerce.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/woocommerce.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -197,7 +195,7 @@
       <workItem from="1606413395750" duration="4600000" />
       <workItem from="1607364809255" duration="1368000" />
       <workItem from="1607564939084" duration="1470000" />
-      <workItem from="1608568192821" duration="9322000" />
+      <workItem from="1608568192821" duration="9584000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1601755942710</created>
@@ -521,7 +519,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608599320201</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Changed the global downloads variable in custom woocommerce orders page">
+      <created>1608599855134</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1608599855134</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -543,7 +548,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="added script for episode integration with PowerPress" />
     <MESSAGE value="fixed assets directory reference" />
     <MESSAGE value="add pdf offloading permissions for WP Offload Media" />
     <MESSAGE value="add additional mime permissions" />
@@ -568,7 +572,8 @@
     <MESSAGE value="Another fix to the woocommerce custom column" />
     <MESSAGE value="And another revision" />
     <MESSAGE value="And another revision that includes the version number :)" />
-    <option name="LAST_COMMIT_MESSAGE" value="And another revision that includes the version number :)" />
+    <MESSAGE value="Changed the global downloads variable in custom woocommerce orders page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed the global downloads variable in custom woocommerce orders page" />
   </component>
   <component name="WindowStateProjectService">
     <state x="667" y="163" key="#PHP" timestamp="1604512927096">
@@ -668,10 +673,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1601759716571" />
-    <state x="81" y="248" key="Vcs.Push.Dialog.v2" timestamp="1608599321658">
+    <state x="81" y="248" key="Vcs.Push.Dialog.v2" timestamp="1608599856689">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="81" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1608599321658" />
+    <state x="81" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1608599856689" />
     <state x="81" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040/2.-1080.1920.1040@0.0.1920.1040" timestamp="1607365285680" />
     <state x="552" y="240" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604545147814" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1601755561512">

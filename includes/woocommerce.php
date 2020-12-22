@@ -146,7 +146,8 @@ function blythe_woo_custom_column_value( $column ) {
 	    //      Download Status
 	    $download_status = null;
 	    if ( $value = $blythe_woo_downloads[$post->ID] ) {
-	    	$download_status = 0 == $value['dl'] ? '<strong>DL Pending</strong>' : 'Downloaded';
+	    	$value = (array)$value;
+	    	$download_status = (0 == $value['dl'] ? '<strong>DL Pending</strong>' : 'Downloaded');
 	    }
 
         //----------------------------------
