@@ -43,7 +43,7 @@ add_action('genesis_attr_entry-content', function ( $attributes ){
 
 add_action( 'genesis_before_entry_content', function() {
 
-    $url = get_field('youtube_url');
+    $url = get_field('youtube');
 //    echo do_shortcode('[embed width="123" height="456"]' . $url . '[/embed]');
 
     $res = array(
