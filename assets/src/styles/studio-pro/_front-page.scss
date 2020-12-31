@@ -26,7 +26,7 @@
       padding: 20px !important;
     }
 
-    @include breakpoint(768px) {
+    @include breakpoint(700px) {
       margin-bottom: 40px;
 
       //see notes above.  A blur value of "1" is my flag for mobile only
