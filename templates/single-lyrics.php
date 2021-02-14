@@ -51,7 +51,15 @@ add_action( 'genesis_after_content', function() {
         }
 
         $sheet_music = get_post_meta( get_the_ID(), 'sheet_music', true);
-        echo ( '<li><i class="fas fa-book-open"></i>' . sprintf('<a href="%s">', get_permalink( $sheet_music ) ) . ( $sheet_music ? ' Sheet Music Available!' : 'Request Sheet Music' ) . '</a></li>' );
+        $permalink = '';
+        if ( $sheet_music ) {
+	        $permalink = get_permalink( $sheet_music );
+        } else {
+	        $page = get_page_by_path( 'sheet-music-request' );
+	        $permalink = add_query_arg ('song_title', get_the_title(), get_permalink ( $page )) ;
+        }
+
+        echo ( '<li><i class="fas fa-book-open"></i>' . sprintf('<a href="%s">', $permalink ) . ( $sheet_music ? ' Sheet Music Available!' : 'Request Sheet Music' ) . '</a></li>' );
         echo '</ul>';
         ?>
 

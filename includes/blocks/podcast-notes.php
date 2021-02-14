@@ -31,8 +31,8 @@ function my_register_blocks() {
  */
 function blythe_podcast_notes_render( $block, $content = '', $is_preview = false, $post_id = 0 ) {
 
-	//if we're not in the admin area or not generating a feed, get out of here.
-    if ( !(is_admin() || is_feed()) )
+	//if we're not in the admin area or not generating a podcast feed, get out of here.
+    if ( !(is_admin() || is_feed('podcast')) )
         return;
 
     if ( is_admin() ) {
