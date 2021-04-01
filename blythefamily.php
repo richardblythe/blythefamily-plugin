@@ -3,7 +3,7 @@
     Plugin Name: Blythe Family
     Plugin URI: http://www.blythefamily.com/
     Description: Structural components for the Blythe Family website
-    Version: 1.5.12
+    Version: 1.6.0
     Author: Richard Blythe
     Author URI: http://unity3software.com/richardblythe
     GitHub Plugin URI: https://github.com/richardblythe/blythefamily-plugin
@@ -15,7 +15,7 @@ class BF {
 
     	$debug = (defined('WP_DEBUG') && true === WP_DEBUG);
 
-	    BF::$ver = '1.5.11';
+	    BF::$ver = '1.6.0';
         BF::$dir = plugin_dir_path( __FILE__ );
         BF::$url = plugin_dir_url( __FILE__ );
 	    BF::$assets_url = BF::$url . 'assets';
@@ -70,6 +70,16 @@ class BF {
 
 	    add_filter( "get_post_metadata", array( &$this, 'override_post_hero_featured'), 100, 3);
         add_filter( "default_post_metadata", array(&$this, 'get_default_metadata'), 100, 5);
+
+
+        //Hide Tribe Events
+	    add_filter( 'posts_where', function( $where_sql ) {
+		    global $wpdb;
+		    if ( is_user_logged_in() || ! class_exists( 'Tribe__Events__Main' ) ) {
+		        return $where_sql;
+		    }
+		    return $wpdb->prepare( " $where_sql AND $wpdb->posts.post_type <> %s ", Tribe__Events__Main::POSTTYPE );
+		}, 100 );
     }
 
 	function plugin_activate() {
