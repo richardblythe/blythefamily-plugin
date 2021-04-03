@@ -220,6 +220,7 @@ function blythe_events_search_geo_fence( $default_geo_fence ) {
 	$sub = Ninja_Forms()->form()->get_sub( $blythe_nf_submission_id );
 
 	if ( $geofence = $sub->get_field_value( 'search_radius' ) ) {
+		$geofence = intval(intval($geofence) * .80); //reduce geofence to prevent overage;
 		$default_geo_fence = $geofence;
 	}
 
