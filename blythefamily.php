@@ -15,7 +15,7 @@ class BF {
 
     	$debug = (defined('WP_DEBUG') && true === WP_DEBUG);
 
-	    BF::$ver = '1.6.0';
+	    BF::$ver = '1.6.1';
         BF::$dir = plugin_dir_path( __FILE__ );
         BF::$url = plugin_dir_url( __FILE__ );
 	    BF::$assets_url = BF::$url . 'assets';
@@ -94,6 +94,7 @@ class BF {
         require_once (BF::$dir . 'includes/class-episode.php');
         require_once (BF::$dir . 'includes/class-lyrics.php');
 	    require_once (BF::$dir . 'includes/woocommerce.php');
+	    require_once (BF::$dir . 'includes/calendar-events.php');
 
 	    //Blocks
 	    require_once (BF::$dir . 'includes/blocks/podcast-notes.php');

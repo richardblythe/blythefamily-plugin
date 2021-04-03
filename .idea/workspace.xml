@@ -19,7 +19,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee506010-b818-4dde-951c-064802f3fe80" name="Default Changelist" comment="Fixed css on print">
+    <list default="true" id="ee506010-b818-4dde-951c-064802f3fe80" name="Default Changelist" comment="Add initial integration code for The Events Calendar.  Want to hide it from the front end for right now">
+      <change afterPath="$PROJECT_DIR$/acf-json/group_606772380a47f.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/includes/calendar-events.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blythefamily.php" beforeDir="false" afterPath="$PROJECT_DIR$/blythefamily.php" afterDir="false" />
     </list>
@@ -61,6 +64,16 @@
   <component name="PhpServers">
     <servers>
       <server host="dev.blythefamily.localhost.com" id="6976803f-d015-43d8-b7c2-8f671eb64a31" name="dev.blythefamily.localhost.com" />
+      <server host="dev.unity3.localhost.com" id="a63c4368-996b-4ec2-bc12-80743c9c9cee" name="dev.unity3.localhost.com" use_path_mappings="true">
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$/../../../wp-admin" remote-root="S:/WORDPRESS/unity3dev/wp-admin" />
+        </path_mappings>
+      </server>
+      <server host="localhost" id="a950ef8e-6cb1-4e30-bc69-e38b5f342e10" name="localhost" use_path_mappings="true">
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$/../the-events-calendar/common/vendor/freemius/templates/forms" remote-root="C:/xampp/phpMyAdmin" />
+        </path_mappings>
+      </server>
     </servers>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
@@ -88,6 +101,9 @@
       <path value="$PROJECT_DIR$/../powerpress" />
       <path value="$PROJECT_DIR$/../getwid" />
       <path value="$PROJECT_DIR$/../../themes/genesis" />
+      <path value="$PROJECT_DIR$/../the-events-calendar" />
+      <path value="$PROJECT_DIR$/../events-calendar-pro" />
+      <path value="$PROJECT_DIR$/../ninja-forms" />
     </include_path>
   </component>
   <component name="ProjectId" id="1Tc7rPwlIGv8tA4dM5PUVHkqoa4" />
@@ -102,15 +118,15 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="$PROJECT_DIR$/node_modules/gulp" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/includes/blocks" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ninja-forms" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2020.1.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="S:\WORDPRESS\blythefamily\wp-content\plugins\blythefamily\includes\blocks" />
       <recent name="S:\WORDPRESS\blythefamily\wp-content\plugins\blythefamily\includes" />
+      <recent name="S:\WORDPRESS\blythefamily\wp-content\plugins\blythefamily\includes\blocks" />
       <recent name="S:\WORDPRESS\blythefamily\wp-content\plugins\blythefamily\vendor" />
       <recent name="S:\WORDPRESS\blythefamily\wp-content\plugins\blythefamily\assets\src\styles\studio-pro" />
     </key>
@@ -212,14 +228,9 @@
       <workItem from="1612215488931" duration="9000" />
       <workItem from="1613261980203" duration="1637000" />
       <workItem from="1613752870106" duration="753000" />
-      <workItem from="1617309362647" duration="198000" />
-    </task>
-    <task id="LOCAL-00007" summary="added lyrics shortcode">
-      <created>1601944600116</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1601944600116</updated>
+      <workItem from="1617309362647" duration="683000" />
+      <workItem from="1617390557477" duration="5041000" />
+      <workItem from="1617464724997" duration="10236000" />
     </task>
     <task id="LOCAL-00008" summary="updated github info">
       <created>1601947624865</created>
@@ -557,7 +568,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613263511904</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="Add initial integration code for The Events Calendar.  Want to hide it from the front end for right now">
+      <created>1617309615578</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1617309615578</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -579,7 +597,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Fixed CSS" />
     <MESSAGE value="Updates to the episode post type" />
     <MESSAGE value="Updated CPT Episode" />
     <MESSAGE value="Updated CPT Episode again :)" />
@@ -604,38 +621,87 @@
     <MESSAGE value="Updated styles for front page" />
     <MESSAGE value="More updated styles for front page" />
     <MESSAGE value="Updated sheet music request link in single-lyrics.php template" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated sheet music request link in single-lyrics.php template" />
+    <MESSAGE value="Add initial integration code for The Events Calendar.  Want to hide it from the front end for right now" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add initial integration code for The Events Calendar.  Want to hide it from the front end for right now" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1611717972490">
+    <state x="667" y="163" key="#PHP" timestamp="1617468937002">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040/2.-1080.1920.1040@0.0.1920.1040" timestamp="1608689409040" />
-    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1611717972490" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1609457022266">
+    <state x="667" y="163" key="#PHP/0.0.1920.1040@0.0.1920.1040" timestamp="1617468937002" />
+    <state width="530" height="466" key="DebuggerActiveHint" timestamp="1617476492287">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="530" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1617476492287" />
+    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1617468935316">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1617468935316" />
+    <state width="1877" height="347" key="GridCell.Tab.0.bottom" timestamp="1617476899180">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1609457022266" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1609457022266">
+    <state width="1877" height="347" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617476899180" />
+    <state width="1877" height="347" key="GridCell.Tab.0.center" timestamp="1617476899179">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1609457022266" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1609457022266">
+    <state width="1877" height="347" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617476899179" />
+    <state width="1877" height="347" key="GridCell.Tab.0.left" timestamp="1617476899179">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1609457022266" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1609457022266">
+    <state width="1877" height="347" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617476899179" />
+    <state width="1877" height="347" key="GridCell.Tab.0.right" timestamp="1617476899180">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1609457022266" />
-    <state x="81" y="248" key="Vcs.Push.Dialog.v2" timestamp="1613263548666">
+    <state width="1877" height="347" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617476899180" />
+    <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1617476899116">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="347" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617476899116" />
+    <state width="1877" height="347" key="GridCell.Tab.1.center" timestamp="1617476899116">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="347" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617476899116" />
+    <state width="1877" height="347" key="GridCell.Tab.1.left" timestamp="1617476899116">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="347" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617476899116" />
+    <state width="1877" height="347" key="GridCell.Tab.1.right" timestamp="1617476899116">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617476899116" />
+    <state width="1877" height="347" key="GridCell.Tab.2.bottom" timestamp="1617476899116">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="347" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617476899116" />
+    <state width="1877" height="347" key="GridCell.Tab.2.center" timestamp="1617476899116">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="347" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617476899116" />
+    <state width="1877" height="347" key="GridCell.Tab.2.left" timestamp="1617476899116">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="347" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617476899116" />
+    <state width="1877" height="347" key="GridCell.Tab.2.right" timestamp="1617476899116">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="347" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617476899116" />
+    <state x="81" y="248" key="Vcs.Push.Dialog.v2" timestamp="1617309617509">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="81" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1613263548666" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1617309448829">
+    <state x="81" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1617309617509" />
+    <state x="667" y="253" width="585" height="534" key="find.popup" timestamp="1617394414129">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1617309448829" />
+    <state x="667" y="253" width="585" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1617394414129" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1617477942435">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1617477942435" />
   </component>
   <component name="WordPressConfiguration" doNotAskConfigAgain="true" enabled="true">
     <wordpressPath>E:\WORDPRESS\blythefamily</wordpressPath>
@@ -673,6 +739,16 @@
           <url>file://$PROJECT_DIR$/templates/single-lyrics.php</url>
           <line>70</line>
           <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/../ninja-forms/includes/MergeTags/Fields.php</url>
+          <line>51</line>
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/includes/calendar-events.php</url>
+          <line>167</line>
+          <option name="timeStamp" value="67" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

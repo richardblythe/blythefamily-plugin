@@ -25,6 +25,9 @@
       <path value="$PROJECT_DIR$/../powerpress" />
       <path value="$PROJECT_DIR$/../getwid" />
       <path value="$PROJECT_DIR$/../../themes/genesis" />
+      <path value="$PROJECT_DIR$/../the-events-calendar" />
+      <path value="$PROJECT_DIR$/../events-calendar-pro" />
+      <path value="$PROJECT_DIR$/../ninja-forms" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
