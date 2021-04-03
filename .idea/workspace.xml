@@ -19,11 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee506010-b818-4dde-951c-064802f3fe80" name="Default Changelist" comment="Add initial integration code for The Events Calendar.  Want to hide it from the front end for right now">
-      <change afterPath="$PROJECT_DIR$/acf-json/group_606772380a47f.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/calendar-events.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="ee506010-b818-4dde-951c-064802f3fe80" name="Default Changelist" comment="Additional integration with The Events Calendar and Ninja Forms">
       <change beforePath="$PROJECT_DIR$/blythefamily.php" beforeDir="false" afterPath="$PROJECT_DIR$/blythefamily.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -230,14 +226,7 @@
       <workItem from="1613752870106" duration="753000" />
       <workItem from="1617309362647" duration="683000" />
       <workItem from="1617390557477" duration="5041000" />
-      <workItem from="1617464724997" duration="10236000" />
-    </task>
-    <task id="LOCAL-00008" summary="updated github info">
-      <created>1601947624865</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1601947624865</updated>
+      <workItem from="1617464724997" duration="10421000" />
     </task>
     <task id="LOCAL-00009" summary="updated woocommerce reference">
       <created>1601949009664</created>
@@ -575,7 +564,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617309615578</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Additional integration with The Events Calendar and Ninja Forms">
+      <created>1617478671382</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1617478671382</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -597,7 +593,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Updates to the episode post type" />
     <MESSAGE value="Updated CPT Episode" />
     <MESSAGE value="Updated CPT Episode again :)" />
     <MESSAGE value="Forgot to update plugin version number" />
@@ -622,7 +617,8 @@
     <MESSAGE value="More updated styles for front page" />
     <MESSAGE value="Updated sheet music request link in single-lyrics.php template" />
     <MESSAGE value="Add initial integration code for The Events Calendar.  Want to hide it from the front end for right now" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add initial integration code for The Events Calendar.  Want to hide it from the front end for right now" />
+    <MESSAGE value="Additional integration with The Events Calendar and Ninja Forms" />
+    <option name="LAST_COMMIT_MESSAGE" value="Additional integration with The Events Calendar and Ninja Forms" />
   </component>
   <component name="WindowStateProjectService">
     <state x="667" y="163" key="#PHP" timestamp="1617468937002">
@@ -689,11 +685,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="347" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617476899116" />
-    <state x="81" y="248" key="Vcs.Push.Dialog.v2" timestamp="1617309617509">
+    <state x="81" y="248" key="Vcs.Push.Dialog.v2" timestamp="1617478673390">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="81" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1613263548666" />
-    <state x="81" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1617309617509" />
+    <state x="81" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1617478673390" />
     <state x="667" y="253" width="585" height="534" key="find.popup" timestamp="1617394414129">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
