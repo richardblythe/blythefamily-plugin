@@ -17,7 +17,16 @@ function blythe_events_calendar_block_template() {
             array( 'tribe/event-links' ),
         );
         $post_type_object->publicly_queryable = false;
-//        $post_type_object->has_archive = false;
+
+        //tribe_venue
+	    if ( $post_type_object = get_post_type_object( 'tribe_venue' ) ) {
+	    	$post_type_object->publicly_queryable = false;
+	    }
+
+	    //tribe_organizer
+	    if ( $post_type_object = get_post_type_object( 'tribe_organizer' ) ) {
+		    $post_type_object->publicly_queryable = false;
+	    }
     }
 }
 add_action( 'init', 'blythe_events_calendar_block_template', 999 );
@@ -74,14 +83,14 @@ function blythe_events_calendar_redirect_from_events( $query ) {
 }
 add_filter( 'tribe_events_pre_get_posts', 'blythe_events_calendar_redirect_from_events' );
 
-//add_filter( 'posts_where', 'restrict_events', 100 );
-//function restrict_events( $where_sql ) {
-//    global $wpdb;
-//    if ( is_user_logged_in() || ! class_exists( 'Tribe__Events__Main' ) ) {
-//        return $where_sql;
-//    }
-//    return $wpdb->prepare( " $where_sql AND $wpdb->posts.post_type <> %s ", Tribe__Events__Main::POSTTYPE );
-//}
+add_filter( 'posts_where', 'restrict_events', 100 );
+function restrict_events( $where_sql ) {
+    global $wpdb;
+    if ( is_admin() || ! class_exists( 'Tribe__Events__Main' ) ) {
+        return $where_sql;
+    }
+    return $wpdb->prepare( " $where_sql AND $wpdb->posts.post_type <> %s ", Tribe__Events__Main::POSTTYPE );
+}
 
 function blythe_events_search_by_submission( $submission_id, $raw = false ) {
 	$sub = Ninja_Forms()->form()->get_sub( $submission_id );
