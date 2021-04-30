@@ -3,7 +3,7 @@
     Plugin Name: Blythe Family
     Plugin URI: http://www.blythefamily.com/
     Description: Structural components for the Blythe Family website
-    Version: 1.6.4
+    Version: 1.6.5
     Author: Richard Blythe
     Author URI: http://unity3software.com/richardblythe
     GitHub Plugin URI: https://github.com/richardblythe/blythefamily-plugin
@@ -93,6 +93,7 @@ class BF {
     function load_modules() {
         require_once (BF::$dir . 'includes/class-episode.php');
         require_once (BF::$dir . 'includes/class-lyrics.php');
+	    require_once (BF::$dir . 'includes/shortcodes.php');
 	    require_once (BF::$dir . 'includes/woocommerce.php');
 	    require_once (BF::$dir . 'includes/calendar-events.php');
 
@@ -224,3 +225,12 @@ class BF {
 }
 
 new BF();
+//if ( ! function_exists('write_log')) {
+//	function write_log ( $log )  {
+//		if ( is_array( $log ) || is_object( $log ) ) {
+//			error_log( print_r( $log, true ) );
+//		} else {
+//			error_log( $log );
+//		}
+//	}
+//}

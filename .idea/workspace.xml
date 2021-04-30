@@ -19,10 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee506010-b818-4dde-951c-064802f3fe80" name="Default Changelist" comment="Reduce user specified geofence by 20% to prevent overage search">
+    <list default="true" id="ee506010-b818-4dde-951c-064802f3fe80" name="Default Changelist" comment="Reduce user specified geofence by 30% to prevent overage search">
+      <change afterPath="$PROJECT_DIR$/includes/shortcodes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blythefamily.php" beforeDir="false" afterPath="$PROJECT_DIR$/blythefamily.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/calendar-events.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/calendar-events.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/woocommerce.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/woocommerce.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -228,14 +229,9 @@
       <workItem from="1613752870106" duration="753000" />
       <workItem from="1617309362647" duration="683000" />
       <workItem from="1617390557477" duration="5041000" />
-      <workItem from="1617464724997" duration="12713000" />
-    </task>
-    <task id="LOCAL-00013" summary="hide price range in woocommerce">
-      <created>1601952913562</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1601952913562</updated>
+      <workItem from="1617464724997" duration="14533000" />
+      <workItem from="1617718797685" duration="2062000" />
+      <workItem from="1619810562151" duration="888000" />
     </task>
     <task id="LOCAL-00014" summary="more tweaks to hide price range in woocommerce">
       <created>1601953216127</created>
@@ -573,7 +569,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617483911489</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="Reduce user specified geofence by 30% to prevent overage search">
+      <created>1617484265481</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1617484265481</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -595,7 +598,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Forgot to update plugin version number" />
     <MESSAGE value="Updated podcast subscribe links" />
     <MESSAGE value="Updated podcast subscribe links." />
     <MESSAGE value="Updated podcast subscribe links and fixed youtube reference in post_meta" />
@@ -620,7 +622,8 @@
     <MESSAGE value="Additional integration with The Events Calendar and Ninja Forms" />
     <MESSAGE value="Changes to make The Events Calendar visible in admin only for right now" />
     <MESSAGE value="Reduce user specified geofence by 20% to prevent overage search" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reduce user specified geofence by 20% to prevent overage search" />
+    <MESSAGE value="Reduce user specified geofence by 30% to prevent overage search" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reduce user specified geofence by 30% to prevent overage search" />
   </component>
   <component name="WindowStateProjectService">
     <state x="667" y="163" key="#PHP" timestamp="1617468937002">
@@ -635,67 +638,71 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1617468935316" />
-    <state width="1877" height="347" key="GridCell.Tab.0.bottom" timestamp="1617476899180">
+    <state width="1877" height="347" key="GridCell.Tab.0.bottom" timestamp="1617486526047">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1609457022266" />
-    <state width="1877" height="347" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617476899180" />
-    <state width="1877" height="347" key="GridCell.Tab.0.center" timestamp="1617476899179">
+    <state width="1877" height="347" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617486526047" />
+    <state width="1877" height="347" key="GridCell.Tab.0.center" timestamp="1617486526047">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1609457022266" />
-    <state width="1877" height="347" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617476899179" />
-    <state width="1877" height="347" key="GridCell.Tab.0.left" timestamp="1617476899179">
+    <state width="1877" height="347" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617486526047" />
+    <state width="1877" height="347" key="GridCell.Tab.0.left" timestamp="1617486526047">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1609457022266" />
-    <state width="1877" height="347" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617476899179" />
-    <state width="1877" height="347" key="GridCell.Tab.0.right" timestamp="1617476899180">
+    <state width="1877" height="347" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617486526047" />
+    <state width="1877" height="347" key="GridCell.Tab.0.right" timestamp="1617486526047">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1609457022266" />
-    <state width="1877" height="347" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617476899180" />
-    <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1617476899116">
+    <state width="1877" height="347" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617486526047" />
+    <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1617486526047">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617476899116" />
-    <state width="1877" height="347" key="GridCell.Tab.1.center" timestamp="1617476899116">
+    <state width="1877" height="347" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617486526047" />
+    <state width="1877" height="347" key="GridCell.Tab.1.center" timestamp="1617486526047">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617476899116" />
-    <state width="1877" height="347" key="GridCell.Tab.1.left" timestamp="1617476899116">
+    <state width="1877" height="347" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617486526047" />
+    <state width="1877" height="347" key="GridCell.Tab.1.left" timestamp="1617486526047">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617476899116" />
-    <state width="1877" height="347" key="GridCell.Tab.1.right" timestamp="1617476899116">
+    <state width="1877" height="347" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617486526047" />
+    <state width="1877" height="347" key="GridCell.Tab.1.right" timestamp="1617486526047">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617476899116" />
-    <state width="1877" height="347" key="GridCell.Tab.2.bottom" timestamp="1617476899116">
+    <state width="1877" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617486526047" />
+    <state width="1877" height="347" key="GridCell.Tab.2.bottom" timestamp="1617486526047">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617476899116" />
-    <state width="1877" height="347" key="GridCell.Tab.2.center" timestamp="1617476899116">
+    <state width="1877" height="347" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617486526047" />
+    <state width="1877" height="347" key="GridCell.Tab.2.center" timestamp="1617486526047">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617476899116" />
-    <state width="1877" height="347" key="GridCell.Tab.2.left" timestamp="1617476899116">
+    <state width="1877" height="347" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617486526047" />
+    <state width="1877" height="347" key="GridCell.Tab.2.left" timestamp="1617486526047">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617476899116" />
-    <state width="1877" height="347" key="GridCell.Tab.2.right" timestamp="1617476899116">
+    <state width="1877" height="347" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617486526047" />
+    <state width="1877" height="347" key="GridCell.Tab.2.right" timestamp="1617486526047">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617476899116" />
-    <state x="81" y="248" key="Vcs.Push.Dialog.v2" timestamp="1617483912867">
+    <state width="1877" height="347" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617486526047" />
+    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1619811301824">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1619811301824" />
+    <state x="81" y="248" key="Vcs.Push.Dialog.v2" timestamp="1617484266834">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="81" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1613263548666" />
-    <state x="81" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1617483912867" />
-    <state x="667" y="253" width="585" height="534" key="find.popup" timestamp="1617394414129">
+    <state x="81" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1617484266834" />
+    <state x="570" y="167" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1619810872328">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="667" y="253" width="585" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1617394414129" />
+    <state x="570" y="167" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1619810872328" />
+    <state x="667" y="253" width="585" height="534" key="find.popup" timestamp="1619810720408">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="667" y="253" width="585" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1619810720408" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1617477942435">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -2,7 +2,6 @@
 //------------------------------------
 //* Woo-Commerce Code
 //------------------------------------
-
 update_option( 'woocommerce_prepend_shop_page_to_urls', 'yes' );
 add_theme_support( 'genesis-connect-woocommerce' );
 add_filter( 'loop_shop_per_page', function() { return 6; }, 20 );
@@ -78,13 +77,6 @@ function custom_woocommerce_auto_complete_order( $order_id ) {
     $order->update_status( 'completed' );
 }
 add_action( 'woocommerce_thankyou', 'custom_woocommerce_auto_complete_order' );
-
-
-function blythe_download_only_func() {
-    return '<p style="color: red;">This item is available via download only</p>';
-}
-add_shortcode('blythe_download_only', 'blythe_download_only_func');
-
 
 function blythe_wc_product_tabs($tabs = array()) {
     unset($tabs['reviews']);
