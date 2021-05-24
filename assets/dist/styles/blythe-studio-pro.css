@@ -122,6 +122,9 @@
 .single-lyrics .resource-container {
   text-align: center; }
 
+.single-lyrics .entry-content .ccli-song {
+  margin-left: 40px; }
+
 .single-lyrics .lyrics-info {
   width: 100%; }
 

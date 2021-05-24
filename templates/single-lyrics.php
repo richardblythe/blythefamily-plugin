@@ -21,6 +21,21 @@ add_action( 'genesis_entry_content', 'genesis_do_post_title',3 );
 add_action( 'genesis_entry_content', 'genesis_post_info', 4 );
 add_action( 'genesis_entry_content', 'genesis_entry_header_markup_close', 5 );
 
+add_action( 'genesis_entry_content', function (){
+	$copyright  = get_post_meta( get_the_ID(), 'copyright', true);
+	$ccli = get_post_meta( get_the_ID(), 'ccli_song', true);
+
+	if ( $copyright || $ccli ) {
+
+		echo '<div class="copyright-info">';
+
+		echo $copyright ? ( '<span class="copyright">Copyright &copy; ' . $copyright . '</span>') : null;
+		echo $ccli ? ( '<span class="ccli-song">CCLI Song# ' . $ccli . '</span>') : null;
+
+		echo '</div>';
+	}
+}, 100 );
+
 add_action( 'genesis_after_content', function() {
 
     echo '<div class="lyrics-info">';

@@ -19,11 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee506010-b818-4dde-951c-064802f3fe80" name="Default Changelist" comment="Reduce user specified geofence by 30% to prevent overage search">
-      <change afterPath="$PROJECT_DIR$/includes/shortcodes.php" afterDir="false" />
+    <list default="true" id="ee506010-b818-4dde-951c-064802f3fe80" name="Default Changelist" comment="Added custom shortcodes for Woocommerce product descriptions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/acf-json/group_5f135464842f9.json" beforeDir="false" afterPath="$PROJECT_DIR$/acf-json/group_5f135464842f9.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/dist/styles/blythe-studio-pro.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/dist/styles/blythe-studio-pro.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/dist/styles/blythe-studio-pro.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets/dist/styles/blythe-studio-pro.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/src/styles/studio-pro/_lyrics.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/src/styles/studio-pro/_lyrics.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blythefamily.php" beforeDir="false" afterPath="$PROJECT_DIR$/blythefamily.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/woocommerce.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/woocommerce.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/single-lyrics.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/single-lyrics.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,6 +143,17 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="build" type="js.build_tools.gulp" temporary="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile>$PROJECT_DIR$/gulpfile.babel.js</gulpfile>
+      <tasks>
+        <task>build</task>
+      </tasks>
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="scripts" type="js.build_tools.gulp" temporary="true">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -164,6 +178,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gulp.js.build" />
         <item itemvalue="Gulp.js.styles" />
         <item itemvalue="Gulp.js.scripts" />
       </list>
@@ -231,14 +246,8 @@
       <workItem from="1617390557477" duration="5041000" />
       <workItem from="1617464724997" duration="14533000" />
       <workItem from="1617718797685" duration="2062000" />
-      <workItem from="1619810562151" duration="888000" />
-    </task>
-    <task id="LOCAL-00014" summary="more tweaks to hide price range in woocommerce">
-      <created>1601953216127</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1601953216127</updated>
+      <workItem from="1619810562151" duration="2923000" />
+      <workItem from="1621870435386" duration="2141000" />
     </task>
     <task id="LOCAL-00015" summary="updates to the style">
       <created>1601954088832</created>
@@ -576,7 +585,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617484265481</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="Added custom shortcodes for Woocommerce product descriptions">
+      <created>1619811510507</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1619811510507</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -598,7 +614,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Updated podcast subscribe links" />
     <MESSAGE value="Updated podcast subscribe links." />
     <MESSAGE value="Updated podcast subscribe links and fixed youtube reference in post_meta" />
     <MESSAGE value="Updated podcast subscribe css on front-page" />
@@ -623,7 +638,8 @@
     <MESSAGE value="Changes to make The Events Calendar visible in admin only for right now" />
     <MESSAGE value="Reduce user specified geofence by 20% to prevent overage search" />
     <MESSAGE value="Reduce user specified geofence by 30% to prevent overage search" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reduce user specified geofence by 30% to prevent overage search" />
+    <MESSAGE value="Added custom shortcodes for Woocommerce product descriptions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added custom shortcodes for Woocommerce product descriptions" />
   </component>
   <component name="WindowStateProjectService">
     <state x="667" y="163" key="#PHP" timestamp="1617468937002">
@@ -638,22 +654,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1617468935316" />
-    <state width="1877" height="347" key="GridCell.Tab.0.bottom" timestamp="1617486526047">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1621872591347">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1617486526047" />
-    <state width="1877" height="347" key="GridCell.Tab.0.center" timestamp="1617486526047">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1621872591347" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1621872591347">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1617486526047" />
-    <state width="1877" height="347" key="GridCell.Tab.0.left" timestamp="1617486526047">
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1621872591347" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1621872591347">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1617486526047" />
-    <state width="1877" height="347" key="GridCell.Tab.0.right" timestamp="1617486526047">
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1621872591347" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1621872591347">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="347" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1617486526047" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1621872591347" />
     <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1617486526047">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -690,11 +706,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1619811301824" />
-    <state x="81" y="248" key="Vcs.Push.Dialog.v2" timestamp="1617484266834">
+    <state x="81" y="248" key="Vcs.Push.Dialog.v2" timestamp="1619811512622">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="81" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040/0.1080.1920.1040@0.0.1920.1040" timestamp="1613263548666" />
-    <state x="81" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1617484266834" />
+    <state x="81" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1619811512622" />
     <state x="570" y="167" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1619810872328">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -742,7 +758,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/templates/single-lyrics.php</url>
-          <line>70</line>
+          <line>85</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
