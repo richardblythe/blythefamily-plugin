@@ -2,55 +2,54 @@
 use Tribe\Events\Pro\Views\V2\Geo_Loc\Services\Google_Maps as GoogleMaps;
 use Tribe\Events\Pro\Views\V2\Geo_Loc\Services\Geo_Loc_Data as GeoData;
 
-
 /**
  * Block template for posts
  * @link https://www.billerickson.net/gutenberg-block-templates/
  *
  */
 function blythe_events_calendar_block_template() {
-    if ( class_exists( 'Tribe__Events__Main' ) ) {
-        $post_type_object = get_post_type_object( Tribe__Events__Main::POSTTYPE );
-        $post_type_object->template = array(
-            array( 'tribe/event-datetime' ),
-            array( 'tribe/event-venue' ),
-            array( 'tribe/event-links' ),
-        );
-        $post_type_object->publicly_queryable = false;
+	if ( class_exists( 'Tribe__Events__Main' ) ) {
+		$post_type_object = get_post_type_object( Tribe__Events__Main::POSTTYPE );
+		$post_type_object->template = array(
+			array( 'tribe/event-datetime' ),
+			array( 'tribe/event-venue' ),
+			array( 'tribe/event-links' ),
+		);
+		$post_type_object->publicly_queryable = false;
 
-        //tribe_venue
-	    if ( $post_type_object = get_post_type_object( 'tribe_venue' ) ) {
-	    	$post_type_object->publicly_queryable = false;
-	    }
+		//tribe_venue
+		if ( $post_type_object = get_post_type_object( 'tribe_venue' ) ) {
+			$post_type_object->publicly_queryable = false;
+		}
 
-	    //tribe_organizer
-	    if ( $post_type_object = get_post_type_object( 'tribe_organizer' ) ) {
-		    $post_type_object->publicly_queryable = false;
-	    }
-    }
+		//tribe_organizer
+		if ( $post_type_object = get_post_type_object( 'tribe_organizer' ) ) {
+			$post_type_object->publicly_queryable = false;
+		}
+	}
 }
 add_action( 'init', 'blythe_events_calendar_block_template', 999 );
 
 
 
 function filter_post_data( $data , $postarr ) {
-    // Change post title
-    if ( empty($data['post_title']) && class_exists( 'Tribe__Events__Main' ) && $postarr['post_type'] === Tribe__Events__Main::POSTTYPE ) {
-        //Overwrite event title with venue name and the year of the event
-        $venue_id = get_post_meta($postarr['ID'],'_EventVenueID',true);
-        if ( $venue = get_post( $venue_id ) ) {
-            $start_date = null;
-            if ( !$start_date = get_post_meta($postarr['ID'],'_EventStartDate',true) ) {
-                $start_date = 'now';
-            }
-            $data['post_title'] = $venue->post_title . ' - ' . date("Y", strtotime($start_date));
-            $data['post_name'] = sanitize_title($data['post_title']);
-        }
-    }
+	// Change post title
+	if ( empty($data['post_title']) && class_exists( 'Tribe__Events__Main' ) && $postarr['post_type'] === Tribe__Events__Main::POSTTYPE ) {
+		//Overwrite event title with venue name and the year of the event
+		$venue_id = get_post_meta($postarr['ID'],'_EventVenueID',true);
+		if ( $venue = get_post( $venue_id ) ) {
+			$start_date = null;
+			if ( !$start_date = get_post_meta($postarr['ID'],'_EventStartDate',true) ) {
+				$start_date = 'now';
+			}
+			$data['post_title'] = $venue->post_title . ' - ' . date("Y", strtotime($start_date));
+			$data['post_name'] = sanitize_title($data['post_title']);
+		}
+	}
 
 
 
-    return $data;
+	return $data;
 }
 add_filter( 'wp_insert_post_data' , 'filter_post_data' , '99', 2 );
 
@@ -58,39 +57,43 @@ add_filter( 'wp_insert_post_data' , 'filter_post_data' , '99', 2 );
 //restrict access on the front end
 function blythe_events_calendar_redirect_from_events( $query ) {
 
-    if ( ! $query->is_main_query() || ! $query->get( 'eventDisplay' ) )
-        return;
+	if ( ! $query->is_main_query() || ! $query->get( 'eventDisplay' ) )
+		return;
 
-    // Look for a page with a slug of "logged-in-users-only".
+	// Look for a page with a slug of "logged-in-users-only".
 //        $target_page = get_posts( [
 //            'post_type' => 'page',
 //            'name' => 'logged-in-users-only'
 //        ] );
 
-    $target_page = '';
+	$target_page = '';
 
-    // Use the target page URL if found, else use the home page URL.
-    if ( empty( $target_page ) ) {
-        $url = get_home_url();
-    } else {
-        $target_page = current( $target_page );
-        $url = get_permalink( $target_page->ID );
-    }
+	// Use the target page URL if found, else use the home page URL.
+	if ( empty( $target_page ) ) {
+		$url = get_home_url();
+	} else {
+		$target_page = current( $target_page );
+		$url = get_permalink( $target_page->ID );
+	}
 
-    // Redirect!
-    wp_safe_redirect( $url );
-    exit;
+	// Redirect!
+	wp_safe_redirect( $url );
+	exit;
 }
 add_filter( 'tribe_events_pre_get_posts', 'blythe_events_calendar_redirect_from_events' );
 
-add_filter( 'posts_where', 'restrict_events', 100 );
-function restrict_events( $where_sql ) {
-    global $wpdb;
-    if ( is_admin() || ! class_exists( 'Tribe__Events__Main' ) ) {
-        return $where_sql;
-    }
-    return $wpdb->prepare( " $where_sql AND $wpdb->posts.post_type <> %s ", Tribe__Events__Main::POSTTYPE );
+
+function blythe_restrict_events( $where_sql ) {
+
+	global $wpdb;
+	global $blythe_nf_submission_id;
+
+	if ( is_admin() || $blythe_nf_submission_id || !class_exists( 'Tribe__Events__Main' ) ) {
+		return $where_sql;
+	}
+	return $wpdb->prepare( " $where_sql AND $wpdb->posts.post_type <> %s ", Tribe__Events__Main::POSTTYPE );
 }
+add_filter( 'posts_where', 'blythe_restrict_events', 100 );
 
 function blythe_events_search_by_submission( $submission_id, $raw = false ) {
 	$sub = Ninja_Forms()->form()->get_sub( $submission_id );
@@ -114,7 +117,7 @@ function blythe_events_search_by_submission( $submission_id, $raw = false ) {
 		if ($raw)
 			return $geo_loc_data;
 		else
-			return 'Error in retrieving results:\r\n' . $geo_loc_data->get_error_message();
+			return 'Error in retrieving results.  Address: ' . $address  . '. Msg: ' . $geo_loc_data->get_error_message();
 
 	} else {
 
@@ -126,7 +129,7 @@ function blythe_events_search_by_submission( $submission_id, $raw = false ) {
 
 			'tribe_geoloc'   => true,
 			'tribe_geoloc_lat' => $geo_loc_data->get_lat(),
-			'tribe_geoloc_lng' => $geo_loc_data->get_lng()
+			'tribe_geoloc_lng' => $geo_loc_data->get_lng(),
 		));
 
 		remove_filter( 'tribe_geoloc_geofence', 'blythe_events_search_geo_fence', 99 );
@@ -136,12 +139,17 @@ function blythe_events_search_by_submission( $submission_id, $raw = false ) {
 			return $events;
 		}
 
+		////DEBUG TRACING
+		// update_option( 'func_blythe_events_search_by_submission',
+		//     ('id: ' . $submission_id .
+		//     ', address: ' . $address .
+		//     ', geo: [' . ($geo_loc_data->get_lat() . ', ' . $geo_loc_data->get_lng() ) . ']' .
+		//     ', events: ' . count($events) ) );
+
 		$html_output = '';
 		if ( count($events) ) {
 
-			$result_label = count($events) . ' location' . (1==count($events) ? '' : 's');
-
-			$html_output = "Thank you for inquiring about our upcoming schedule! We found <strong>{$result_label}</strong> in your search area.<br/><br/> ";
+			$html_output = "Thank you for your schedule inquiry! Listed below are the upcoming event(s) in your search area:<br/><br/> ";
 
 			foreach ( $events as $event ) {
 
@@ -165,29 +173,43 @@ function blythe_events_search_by_submission( $submission_id, $raw = false ) {
 					get_post_meta($venue_id, '_VenueZip', true) . '<br/><br/><br/>';
 			}
 			$html_output .=
-				'<strong>Notice: Any event shown above could change unexpectedly, so please contact us to confirm an event before making plans to attend.</strong><br/><br/>' .
-				'God bless you!<br/>' .
-				'The Blythe Family';
+				'<strong>Notice: Any event(s) shown above are subject to change without notice. Please contact us to confirm an event before making plans to attend.</strong>';
 		} else {
-			$html_output = "Thank you for inquiring about our upcoming schedule! Unfortunately, no dates were found in your specified search area.<br/><br/> " .
-			          'God bless you!<br/>' .
-			          'The Blythe Family';
+			$html_output = "Thank you for your schedule inquiry! Unfortunately, no dates were found in your specified search area.<br/><br/> " .
+			               'God bless you!<br/>' .
+			               'The Blythe Family';
 		}
 
 		return $html_output;
 	}
 }
 
-//function blythe_nf_submission_search_admin_msg_prepare_field( $field ) {
-//	$post = get_post();//submission post
-//	$sub = Ninja_Forms()->form()->get_sub( $post->ID);
-//	$email =  $sub->get_field_value( 'email' );
-//	$field['message'] = "Below are the events that were found in the user\'s specified search area. " .
-//	                  "You can copy/paste this information into a return email back to the user:<br\/>" .
-//	                  "<a href=\"mailto:{$email}\">Email: {$email}</a>";
-//	return $field;
-//}
-//add_filter('acf/prepare_field/key=field_6067724760d5b', 'blythe_nf_submission_search_admin_msg_prepare_field');
+
+////DEBUG TRACING
+// function blythe_tribe_get_events( $events, $args, $full ) {
+
+//     update_option( 'func_blythe_tribe_get_events', $args );
+//     return $events;
+
+// }
+// add_filter( 'tribe_get_events', 'blythe_tribe_get_events', 99, 3);
+
+// function blythe_log_events_query( $cache_type,  $tribe_events_name,  $args ) {
+//     update_option( 'func_blythe_log_events_query', array( $cache_type, $args ) );
+// }
+// add_action('log', 'blythe_log_events_query', 99, 3 );
+
+
+
+// function blythe_dump_request( $input ) {
+
+//     if ( strpos( $input, "g7Mz3ejc_posts.post_type = 'tribe_events'" ) ) {
+//          update_option( 'func_blythe_dump_request', array( time(), $input ) );
+//     }
+
+//     return $input;
+// }
+// add_filter( 'posts_request', 'blythe_dump_request' );
 
 function blythe_nf_submission_search_results_prepare_field( $field ) {
 	$post = get_post();
@@ -203,27 +225,38 @@ function blythe_nf_email_search_results($value, $post_id, $meta_key) {
 	//Using a custom/dynamic postmeta field in the Admin email to attach search results
 	if ( 'blythe_nf_email_search_results' === $meta_key ) {
 		global $blythe_nf_submission_id;
+
+		////DEBUG TRACING
+		//update_option( 'func_blythe_nf_email_search_results', ('id: ' . $blythe_nf_submission_id . ', time: ' . time()) );
+
 		$value = blythe_events_search_by_submission( $blythe_nf_submission_id );
 	}
 	return $value;
 }
 add_filter( "get_post_metadata", 'blythe_nf_email_search_results', 99, 3);
 
-function blythe_new_submission($id) {
+function blythe_new_submission( $id ) {
 	global $blythe_nf_submission_id;
 	$blythe_nf_submission_id = $id;
+
+	////DEBUG TRACING
+	//update_option( 'func_blythe_new_submission', ('id: ' . $blythe_nf_submission_id . ', time: ' . time() ) );
 }
-add_action( 'nf_create_sub', 'blythe_new_submission', 99, 1 );
+add_action( 'nf_save_sub', 'blythe_new_submission', 10, 1 );
 
 function blythe_events_search_geo_fence( $default_geo_fence ) {
 	global $blythe_nf_submission_id;
+
 	$sub = Ninja_Forms()->form()->get_sub( $blythe_nf_submission_id );
 
 	$geofence = intval( $sub->get_field_value( 'search_radius' ) );
-	if ($geofence && $geofence >= 100 ) {
-		$geofence = intval(intval($geofence) * .70); //reduce geofence to prevent overage;
-		$default_geo_fence = $geofence;
+	if ( $geofence ) {
+		//reduce geofence equal or greater than 100 to prevent overage;
+		$default_geo_fence = $geofence >= 100 ? ($geofence * .70) : $geofence;
 	}
+
+	////DEBUG TRACING
+	//update_option( 'func_blythe_events_search_geo_fence', ( 'id: ' . $blythe_nf_submission_id . ', fence: ' . $default_geo_fence ) );
 
 	return $default_geo_fence;
 }

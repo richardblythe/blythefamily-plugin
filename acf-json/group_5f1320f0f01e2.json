@@ -5,7 +5,7 @@
         {
             "key": "field_5f13219646332",
             "label": "YouTube Url",
-            "name": "youtube",
+            "name": "youtube_url",
             "type": "url",
             "instructions": "",
             "required": 1,
@@ -29,7 +29,7 @@
         ]
     ],
     "menu_order": 0,
-    "position": "normal",
+    "position": "side",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
@@ -45,7 +45,7 @@
         "tags",
         "send-trackbacks"
     ],
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1597177202
+    "modified": 1626726418
 }

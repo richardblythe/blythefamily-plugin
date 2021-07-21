@@ -1,0 +1,11 @@
+@media print {
+  .single-lyrics {
+    .site-header,
+    .hero-section,
+    .lyrics-info,
+    .block-area-before-footer,
+    .site-footer {
+      display: none;
+    }
+  }
+}

@@ -16,7 +16,7 @@ import named from 'vinyl-named';
 
 //files must have unique names. (front.js, admin.js, etc)
 const paths = {
-	styles : ['assets/src/styles/studio-pro/blythe-studio-pro.scss'],
+	styles : ['assets/src/styles/studio-pro/blythe-studio-pro.scss', 'assets/src/styles/editor/blythe-editor.scss'],
 	scripts : ['assets/src/scripts/admin/blythefamily-admin.js']
 }
 

@@ -1,0 +1,50 @@
+/** Lyrics */
+
+.single-blythe_episode .entry-content {
+  clear: none;
+}
+
+.post-type-archive-lyrics #s {
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+.single-lyrics {
+
+  .entry-content {
+
+    h1.entry-title {
+      margin-bottom: 0;
+    }
+
+    .lyrics-resource-jump {
+      display: block;
+      color: #999;
+      margin-bottom: 1em;
+      margin-top: -.5em;
+    }
+
+    .ccli-song {
+      margin-left: 40px;
+    }
+
+  }
+
+  .entry-content,
+  .resource-container {
+    text-align: center;
+  }
+
+  .lyrics-info {
+    width: 100%;
+  }
+
+  .youtube-container {
+    margin-bottom: 40px;
+  }
+
+  .additional-songs {
+    margin-top: 60px;
+  }
+
+}

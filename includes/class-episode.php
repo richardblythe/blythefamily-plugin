@@ -3,6 +3,9 @@
 class BF_Episode extends Unity3_Post_Group {
 
 	const POST_TYPE     = 'blythe_episode';
+	const GROUP_TAX     = 'blythe_episode_group';
+	const GROUP_TERM_AHT = 'at-his-table';
+
 	private $header_img;
 
 	function __construct() {
@@ -31,6 +34,8 @@ class BF_Episode extends Unity3_Post_Group {
 		add_filter( 'cbc_compatibility_image_meta', function() { return '_thumbnail_id'; } );
 
 		add_filter('request', array(&$this, 'add_to_podcast_feed'), 1000 );
+
+		add_filter( 'post_row_actions', array(&$this, 'modify_list_row_actions'), 10, 2 );
 
 		add_filter( 'get_site_icon_url', function($url, $size, $blog_id) {
 
@@ -86,15 +91,35 @@ class BF_Episode extends Unity3_Post_Group {
 	function block_template( $post_type, $post_type_object ) {
 		if ( self::POST_TYPE == $post_type) {
 			$post_type_object->template = array(
-				array( 'core/paragraph', array(
-					'placeholder' => 'Add episode description...',
-				) ),
+				array( 'blythe/episode-info' ),
 				array( 'acf/blythe-podcast-notes', array(
 					'placeholder' => 'Add episode description...',
 				) ),
 			);
 		}
 
+	}
+
+
+	function modify_list_row_actions( $actions, $post ) {
+		// Check for your post type.
+		if ( $post->post_type == BF_Episode::POST_TYPE ) {
+
+			$meta = get_post_meta( $post->ID, 'audio_transcription', true );
+			$status = get_post_meta( $post->ID, 'audio_transcription_status', true );
+			$status = 'private' === $status ? 'Private' : 'Public';
+
+			$actions = array(
+				'transcription' => sprintf( '<a href="%1$s">%2$s</a>',
+					$meta ? esc_url( admin_url('admin.php?page=aht-transcription&id=' . $post->ID) ) : '#',
+					( $meta ? ( 'Edit Transcription - ' . $status ) : 'No Transcription' )
+			));
+//			unset( $actions['trash'] );
+//			unset( $actions['inline hide-if-no-js'] );
+//			unset( $actions['view'] );
+		}
+
+		return $actions;
 	}
 
 
@@ -140,3 +165,41 @@ function do_blythe_pod_subscribe_shortcode() {
 		'<a href="https://open.spotify.com/show/4qlHv7H1mEBY8N1TJdqnmo"><i class="fab fa-spotify"></i>Spotify</a>' .
 	'</div>';
 }
+
+function blythe_podcast_audio($metadata, $object_id, $meta_key, $single ){
+
+	if ( isset( $meta_key ) && 'blythe_podcast_audio' == $meta_key ){
+
+		$enclosure = get_post_meta($object_id, 'enclosure', true);
+		$MetaParts = explode("\n", $enclosure, 4);
+
+		if( count($MetaParts) > 0 ) {
+			$metadata = array( trim($MetaParts[0]) );
+		}
+	}
+
+	// Return
+	return $metadata;
+
+}
+
+add_filter( 'get_post_metadata', 'blythe_podcast_audio', 100, 4 );
+
+//filter the posts in the podcast audio download page
+function blythe_filter_podcast_audio_posts( $post_args, $attributes ) {
+
+	if ( isset( $attributes['customFields'] ) && strpos( $attributes['customFields'], 'blythe_podcast_audio' ) ) {
+		$post_args['date_query'] = array(
+			array(
+				'before' => '2 weeks ago'
+			)
+		);
+	}
+
+	return $post_args;
+
+}
+
+add_filter( 'ptam_custom_post_types_query', 'blythe_filter_podcast_audio_posts',  100, 2);
+
+require_once ( BF::$dir . '/includes/transcribe-options-page.php');

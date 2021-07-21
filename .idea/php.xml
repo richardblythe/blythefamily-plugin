@@ -28,6 +28,8 @@
       <path value="$PROJECT_DIR$/../the-events-calendar" />
       <path value="$PROJECT_DIR$/../events-calendar-pro" />
       <path value="$PROJECT_DIR$/../ninja-forms" />
+      <path value="P:/Downloads/2021/Software" />
+      <path value="$PROJECT_DIR$/../../.." />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

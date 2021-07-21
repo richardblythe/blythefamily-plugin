@@ -136,7 +136,7 @@
         },
         {
             "key": "field_60abc7fef53a9",
-            "label": "CCLI Song",
+            "label": "CCLI Song#",
             "name": "ccli_song",
             "type": "number",
             "instructions": "",
@@ -168,11 +168,33 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
+            "default_value": "Blythe Music Group\/BMI",
             "placeholder": "",
             "prepend": "",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_60be55ec11741",
+            "label": "Songwriter(s)",
+            "name": "songwriters",
+            "type": "user",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "role": [
+                "author",
+                "editor",
+                "administrator"
+            ],
+            "allow_null": 1,
+            "multiple": 1,
+            "return_format": "array"
         }
     ],
     "location": [
@@ -194,5 +216,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1621871568
+    "modified": 1623087953
 }

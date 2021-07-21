@@ -3,19 +3,19 @@
     Plugin Name: Blythe Family
     Plugin URI: http://www.blythefamily.com/
     Description: Structural components for the Blythe Family website
-    Version: 1.7.0
+    Version: 1.8.0
     Author: Richard Blythe
     Author URI: http://unity3software.com/richardblythe
     GitHub Plugin URI: https://github.com/richardblythe/blythefamily-plugin
  */
 class BF {
-    public static $ver, $dir, $url, $assets_url, $vendor_url, $blank_img, $in_header;
+    public static $ver, $dir, $url, $assets_url,  $vendor_url, $blank_img, $in_header;
     private $min;
     function __construct() {
 
     	$debug = (defined('WP_DEBUG') && true === WP_DEBUG);
 
-	    BF::$ver = '1.7.0';
+	    BF::$ver = '1.8.1';
         BF::$dir = plugin_dir_path( __FILE__ );
         BF::$url = plugin_dir_url( __FILE__ );
 	    BF::$assets_url = BF::$url . 'assets';
@@ -70,16 +70,6 @@ class BF {
 
 	    add_filter( "get_post_metadata", array( &$this, 'override_post_hero_featured'), 100, 3);
         add_filter( "default_post_metadata", array(&$this, 'get_default_metadata'), 100, 5);
-
-
-        //Hide Tribe Events
-	    add_filter( 'posts_where', function( $where_sql ) {
-		    global $wpdb;
-		    if ( is_user_logged_in() || ! class_exists( 'Tribe__Events__Main' ) ) {
-		        return $where_sql;
-		    }
-		    return $wpdb->prepare( " $where_sql AND $wpdb->posts.post_type <> %s ", Tribe__Events__Main::POSTTYPE );
-		}, 100 );
     }
 
 	function plugin_activate() {
@@ -97,8 +87,16 @@ class BF {
 	    require_once (BF::$dir . 'includes/woocommerce.php');
 	    require_once (BF::$dir . 'includes/calendar-events.php');
 
+
+
+	    wp_register_script('blythe-editor-script', BF::$url . 'build/index.js', null, filemtime( BF::$dir . 'build/index.js' ));
+	    wp_register_style( 'blythe-editor-style', BF::$url . 'build/index.css', null, filemtime( BF::$dir . 'build/index.css' ) );
+	    wp_register_style( 'blythe-style', BF::$url . 'build/style-index.css', null, filemtime( BF::$dir . 'build/style-index.css' ));
+
 	    //Blocks
-	    require_once (BF::$dir . 'includes/blocks/podcast-notes.php');
+	    require_once ( BF::$dir . 'includes/blocks/podcast-notes.php' );
+	    register_block_type_from_metadata(  BF::$dir . 'src/blocks/lyrics-section/block.json');
+	    register_block_type_from_metadata(  BF::$dir . 'src/blocks/episode-info/block.json');
     }
 
     function allowed_mime_types() {
@@ -127,8 +125,6 @@ class BF {
 
 		    //any post, page, or cpt that wishes the hero to be the default set in: Customize -> Header Media
 		    $use_default_hero = array( 'unity3_gallery', 'product', 'blythe_episode' );
-		    $post_type = get_post_type( $object_id );
-
 		    if ( in_array( get_post_type( $object_id ), $use_default_hero ) ) {
 			    $thumbnail_id = false;
 		    }
@@ -155,15 +151,24 @@ class BF {
     }
 
 	public function enqueue_admin() {
-		wp_enqueue_script('blythefamily-admin-js',BF::$assets_url . "/dist/scripts/blythefamily-admin.js", array('jquery'), BF::$ver);
+//		wp_enqueue_script(
+//			'blythefamily-admin-js',
+//			BF::$url . "assets/dist/scripts/blythefamily-admin.js",
+//			array( 'wp-blocks', 'wp-element' ),
+//			filemtime( BF::$dir . 'assets/dist/scripts/blythefamily-admin.js' )
+//		);
+	}
+
+	public function my_custom_format_enqueue_assets_editor() {
+		//wp_enqueue_script( 'blythefamily-admin-js' );
 	}
 
 	public function custom_stylesheet() {
 
-        wp_enqueue_style(
-            'blythefamily-style',
-            BF::$assets_url . '/dist/styles/blythe-studio-pro.css', [genesis_get_theme_handle()], BF::$ver
-        );
+//        wp_enqueue_style(
+//            'blythefamily-style',
+//            BF::$assets_url . '/dist/styles/blythe-studio-pro.css', [genesis_get_theme_handle()], BF::$ver
+//        );
 
         //fontawesome
         wp_enqueue_script( 'font-awesome', 'https://kit.fontawesome.com/0e9ba0daf2.js', array(), '1.0.0', true );

@@ -1,0 +1,20 @@
+.single-post .content-sidebar-wrap {
+  max-width: 680px;
+}
+
+
+.block-area-before-footer {
+  .cb-block-cta {
+    @include linear-gradient(#e0e0e0, #ffffff);
+  }
+}
+
+.block-area-before-footer > .alignfull {
+  margin-bottom: 0;
+}
+
+.site-footer {
+  .wrap {
+    padding: 0;
+  }
+}

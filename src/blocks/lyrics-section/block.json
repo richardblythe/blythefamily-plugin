@@ -1,0 +1,15 @@
+{
+	"apiVersion": 2,
+	"name": "blythe/lyrics-section",
+	"title": "Lyrics Section",
+	"category": "design",
+	"icon": "edit-large",
+	"description": "Displays a section of song lyrics: (Verse, Chorus, etc.)",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "blythe",
+	"editorScript": "blythe-editor-script",
+	"editorStyle": "blythe-editor-style",
+	"style": "blythe-style"
+}

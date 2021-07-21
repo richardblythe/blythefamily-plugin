@@ -1,0 +1,21 @@
+.site-header {
+  position: static;
+  background-color: #0b0b0b;
+
+  @include breakpoint(xs) {
+    position: absolute;
+    background-color: transparent;
+  }
+
+  .nav-primary {
+    background-color: #0b0b0be0;
+    z-index: 990;
+    @media (min-width: 896px) {
+      background-color: transparent;
+    }
+  }
+
+}
+
+
+

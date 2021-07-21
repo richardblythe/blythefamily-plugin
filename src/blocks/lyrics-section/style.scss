@@ -1,0 +1,39 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.lyrics-section {
+
+  .title {
+    font-weight: bold;
+  }
+
+  .phrases {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+  }
+
+  .phrases li {
+    list-style-type: none;
+  }
+
+  @media (min-width: 768px) {
+    .phrases li {
+      display: inline;
+    }
+
+    .phrases li:nth-of-type(2n+0):before {
+      content: " - ";
+    }
+
+    .phrases li:nth-of-type(2n):after {
+      content: "\A";
+      white-space: pre;
+    }
+  }
+}

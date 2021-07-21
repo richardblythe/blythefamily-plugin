@@ -21,6 +21,13 @@ add_action( 'genesis_entry_content', 'genesis_do_post_title',3 );
 add_action( 'genesis_entry_content', 'genesis_post_info', 4 );
 add_action( 'genesis_entry_content', 'genesis_entry_header_markup_close', 5 );
 
+
+
+
+add_action( 'genesis_entry_content', function(){
+    echo '<a href="#lyric-resources" class="lyrics-resource-jump">(Jump to lyric resources)</a>';
+}, 6 ); //right after genesis_entry_header_markup_close
+
 add_action( 'genesis_entry_content', function (){
 	$copyright  = get_post_meta( get_the_ID(), 'copyright', true);
 	$ccli = get_post_meta( get_the_ID(), 'ccli_song', true);
@@ -52,9 +59,7 @@ add_action( 'genesis_after_content', function() {
     ?>
 
     <div class="resource-container<?php echo ( $youtube_url ? ' one-third' : ''); ?>">
-        <h3>Resources</h3>
-
-
+        <h3 id="lyric-resources">Resources</h3>
         <ul>
         <?php
         if ( $album_id = get_post_meta( get_the_ID(), 'album_id', true) ) {
