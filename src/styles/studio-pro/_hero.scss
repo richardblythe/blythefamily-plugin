@@ -1,21 +1,25 @@
-.hero-section {
-  background-position: center 10%;
-  padding: 40% 0 0;
+/* need the extra class specification to override the default styling */
+.site-inner {
+  .hero-section {
+    background-position: center 10%;
+    padding: 40% 0 0;
 
-  @include breakpoint(sm) {
-    padding: 26rem 0 0;
+    @include breakpoint(sm) {
+      padding: 26rem 0 0;
+    }
+
+    @include breakpoint(xl) {
+      padding: 36rem 0 0;
+    }
   }
 
-  @include breakpoint(xl) {
-    padding: 36rem 0 0;
+  .hero-section .wrap {
+    max-width: 100%;
+    width: 100%;
+    background-color: #2c3c4a99;
   }
 }
 
-.hero-section .wrap {
-  max-width: 100%;
-  width: 100%;
-  background-color: #2c3c4a99;
-}
 
 
 .archive.term-at-his-table .hero-section,
