@@ -20,76 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee506010-b818-4dde-951c-064802f3fe80" name="Default Changelist" comment="Structural changes to styles, scripts, blocks. Added two new blocks. Changes to the lyrics page">
-      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/dist/styles/blythe-editor.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/dist/styles/blythe-editor.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/src/scripts/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/src/styles/editor/_lyrics-section-block.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/src/styles/editor/_lyrics-section-label-block.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/src/styles/editor/blythe-editor.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/images/google_pod_bw_32.27894758.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/images/weekly-devotions-bg-2.b4c93eeb.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/images/weekly-devotions-bg.dc6a0f13.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/index.asset.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/style-index.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/transcribe-options-page.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json1234" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/episode-info/block.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/episode-info/edit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/episode-info/editor.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/episode-info/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/episode-info/save.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/episode-info/style.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/episode-info/transforms.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/lyrics-section/block.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/lyrics-section/edit.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/lyrics-section/editor.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/lyrics-section/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/lyrics-section/save.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/lyrics-section/style.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/blocks/lyrics-section/transforms.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/google_pod_bw_32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/weekly-devotions-bg-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/weekly-devotions-bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/style.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/studio-pro/_blythe_episode.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/studio-pro/_front-page.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/studio-pro/_gallery.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/studio-pro/_getwid.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/studio-pro/_google.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/studio-pro/_header.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/studio-pro/_hero.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/studio-pro/_layout.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/studio-pro/_lyrics.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/studio-pro/_print.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/studio-pro/_required_images.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/studio-pro/_site-footer.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/studio-pro/_utilities.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/studio-pro/_woocommerce.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/studio-pro/blythe-studio-pro.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/style.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack.config.js123" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/acf-json/group_5f1320f0f01e2.json" beforeDir="false" afterPath="$PROJECT_DIR$/acf-json/group_5f1320f0f01e2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/acf-json/group_5f135464842f9.json" beforeDir="false" afterPath="$PROJECT_DIR$/acf-json/group_5f135464842f9.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/dist/scripts/blythefamily-admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/dist/scripts/blythefamily-admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/scripts/admin/_episode.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/scripts/admin/blythefamily-admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/src/scripts/admin/blythefamily-admin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blythefamily.php" beforeDir="false" afterPath="$PROJECT_DIR$/blythefamily.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gulpfile.babel.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.babel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/calendar-events.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/calendar-events.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/class-episode.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/class-episode.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/single-lyrics.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/single-lyrics.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json1234" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js123" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -365,14 +298,7 @@
       <workItem from="1626365656466" duration="14992000" />
       <workItem from="1626716340766" duration="4575000" />
       <workItem from="1626802870977" duration="1604000" />
-      <workItem from="1626891206325" duration="5015000" />
-    </task>
-    <task id="LOCAL-00016" summary="added more features to the Episode CPT">
-      <created>1602020278115</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1602020278115</updated>
+      <workItem from="1626891206325" duration="5280000" />
     </task>
     <task id="LOCAL-00017" summary="added more features to the Episode CPT">
       <created>1602020797517</created>
@@ -710,7 +636,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621872651948</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="Structural changes to styles, scripts, blocks. Added two new blocks. Changes to the lyrics page">
+      <created>1626897317317</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1626897317317</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -844,14 +777,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1626365805546" />
-    <state x="461" y="165" key="SettingsEditor" timestamp="1626894238091">
+    <state x="461" y="165" key="SettingsEditor" timestamp="1626897424515">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1626894238091" />
-    <state x="81" y="248" key="Vcs.Push.Dialog.v2" timestamp="1621872656551">
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1626897424515" />
+    <state x="81" y="248" key="Vcs.Push.Dialog.v2" timestamp="1626897323916">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="81" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1621872656551" />
+    <state x="81" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1626897323916" />
     <state x="822" y="419" key="WebDeployment.AddServerDialog.v.1" timestamp="1621872860092">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
