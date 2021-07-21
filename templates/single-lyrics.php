@@ -24,8 +24,9 @@ add_action( 'genesis_entry_content', 'genesis_entry_header_markup_close', 5 );
 
 
 
-add_action( 'genesis_entry_content', function(){
+add_action( 'genesis_entry_content', function() {
     echo '<a href="#lyric-resources" class="lyrics-resource-jump">(Jump to lyric resources)</a>';
+    echo '<p class="lyrics-print-only" style="display: none;">' . get_permalink() . '</p>';
 }, 6 ); //right after genesis_entry_header_markup_close
 
 add_action( 'genesis_entry_content', function (){
@@ -40,6 +41,7 @@ add_action( 'genesis_entry_content', function (){
 		echo $ccli ? ( '<span class="ccli-song">CCLI Song# ' . $ccli . '</span>') : null;
 
 		echo '</div>';
+		echo '<p class="lyrics-print-only" style="display: none;">For more music visit: blythefamily.com</p>';
 	}
 }, 100 );
 
@@ -103,7 +105,7 @@ add_action( 'genesis_after_content', function() {
 	        <?php endif; ?>
         </div>
     </div>
-</div>;
+</div>
 <?php
 });
 

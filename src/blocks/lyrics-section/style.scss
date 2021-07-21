@@ -26,7 +26,7 @@
     text-transform: capitalize;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 768px), print {
     .phrases li {
       display: inline;
     }
@@ -38,6 +38,12 @@
     .phrases li:nth-of-type(2n):after {
       content: "\A";
       white-space: pre;
+    }
+  }
+
+  @media print {
+    .title {
+      margin-bottom: 0.618em;
     }
   }
 }

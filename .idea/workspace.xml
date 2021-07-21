@@ -19,12 +19,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee506010-b818-4dde-951c-064802f3fe80" name="Default Changelist" comment="Updated version number">
+    <list default="true" id="ee506010-b818-4dde-951c-064802f3fe80" name="Default Changelist" comment="Revisions to the style">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blythefamily.php" beforeDir="false" afterPath="$PROJECT_DIR$/blythefamily.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/style-index.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/style-index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/blocks/lyrics-section/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/blocks/lyrics-section/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/studio-pro/_hero.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/studio-pro/_hero.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/studio-pro/_print.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/studio-pro/_print.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/single-lyrics.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/single-lyrics.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -300,14 +301,7 @@
       <workItem from="1626365656466" duration="14992000" />
       <workItem from="1626716340766" duration="4575000" />
       <workItem from="1626802870977" duration="1604000" />
-      <workItem from="1626891206325" duration="6881000" />
-    </task>
-    <task id="LOCAL-00018" summary="updates to mobile navigation style">
-      <created>1602097831345</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1602097831345</updated>
+      <workItem from="1626891206325" duration="9140000" />
     </task>
     <task id="LOCAL-00019" summary="added media support for Media Offload">
       <created>1602108259002</created>
@@ -645,7 +639,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626897603257</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="Revisions to the style">
+      <created>1626899478607</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1626899478608</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -667,7 +668,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Updated stylesheet to reflect to migration from Atomic Blocks to Genesis Blocks" />
     <MESSAGE value="Updated advance custom fields for Episode resources" />
     <MESSAGE value="Revised custom WooCommerce orders page to include shipping status.  Fixed related songs on single lyrics page" />
     <MESSAGE value="Fixed woocommerce custom column" />
@@ -692,7 +692,8 @@
     <MESSAGE value="Added copyright info for song lyrics" />
     <MESSAGE value="Structural changes to styles, scripts, blocks. Added two new blocks. Changes to the lyrics page" />
     <MESSAGE value="Updated version number" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated version number" />
+    <MESSAGE value="Revisions to the style" />
+    <option name="LAST_COMMIT_MESSAGE" value="Revisions to the style" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Deployment" timestamp="1621872921823">
@@ -727,22 +728,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1625857812948" />
-    <state width="1860" height="278" key="GridCell.Tab.0.bottom" timestamp="1626899418887">
+    <state width="1860" height="278" key="GridCell.Tab.0.bottom" timestamp="1626901601462">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="278" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1626899418887" />
-    <state width="1860" height="278" key="GridCell.Tab.0.center" timestamp="1626899418887">
+    <state width="1860" height="278" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1626901601462" />
+    <state width="1860" height="278" key="GridCell.Tab.0.center" timestamp="1626901601461">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="278" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1626899418887" />
-    <state width="1860" height="278" key="GridCell.Tab.0.left" timestamp="1626899418887">
+    <state width="1860" height="278" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1626901601461" />
+    <state width="1860" height="278" key="GridCell.Tab.0.left" timestamp="1626901601461">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="278" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1626899418887" />
-    <state width="1860" height="278" key="GridCell.Tab.0.right" timestamp="1626899418887">
+    <state width="1860" height="278" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1626901601461" />
+    <state width="1860" height="278" key="GridCell.Tab.0.right" timestamp="1626901601461">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="278" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1626899418887" />
+    <state width="1860" height="278" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1626901601461" />
     <state width="1877" height="347" key="GridCell.Tab.1.bottom" timestamp="1626396447784">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -783,10 +784,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1626897424515" />
-    <state x="81" y="248" key="Vcs.Push.Dialog.v2" timestamp="1626897607889">
+    <state x="81" y="248" key="Vcs.Push.Dialog.v2" timestamp="1626899480466">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="81" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1626897607889" />
+    <state x="81" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1626899480466" />
     <state x="822" y="419" key="WebDeployment.AddServerDialog.v.1" timestamp="1621872860092">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -842,7 +843,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/templates/single-lyrics.php</url>
-          <line>90</line>
+          <line>92</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">

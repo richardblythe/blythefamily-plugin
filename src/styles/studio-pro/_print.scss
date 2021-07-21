@@ -3,9 +3,15 @@
     .site-header,
     .hero-section,
     .lyrics-info,
+    .lyrics-resource-jump,
     .block-area-before-footer,
     .site-footer {
-      display: none;
+      display: none !important;
     }
+  }
+
+  .lyrics-print-only {
+    display: block !important;
+    font-style: italic;
   }
 }
