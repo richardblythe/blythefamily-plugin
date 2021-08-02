@@ -86,6 +86,14 @@ add_action( 'genesis_after_entry_content', function() {
     }
 });
 
+remove_filter( 'the_content', 'unity3_audio_transcription_post_append', 999 );
+add_action( 'genesis_after_entry_content', 'unity3_audio_transcription_post_output', 20 );
+
+//prevent excerpt from being printed in the hero section
+add_filter('get_the_excerpt', function ( $excerpt ) {
+	return null;//
+}, 999, 1);
+
 
 
 genesis();

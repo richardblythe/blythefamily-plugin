@@ -22,7 +22,43 @@ class BF_Episode extends Unity3_Post_Group {
 
 		add_action( 'registered_post_type', array(&$this, 'block_template'), 100, 2 );
 		add_filter( 'wp_insert_post_data' , array( &$this, 'insert_post_data') , '100', 2 );
-		add_action('acf/save_post', array( $this, 'acf_save_post'), 20 );
+		add_action('acf/save_post', array( &$this, 'acf_save_post'), 20 );
+
+		add_filter('unity3/audio/transcription/no_job_msg', function ($msg, $post){
+			if ( $post->post_type == self::POST_TYPE ) {
+				$msg =
+				'<h3>No transcription job exists</h3>' .
+				'<ol>' .
+					'<li><a href="#change-media-button-podcast">Jump to Podcast Episode</a></li>' .
+					'<li>Click Choose File</li>' .
+					'<li>Upload new audio file to Blubrry</li>' .
+					'<li>Click Verify</li>' .
+					'<li>At the top right of the page, click the button labeled something like: Save, Update, Public</li>' .
+					'<li>After episode has been saved, then reload the page to check on transcription progress</li>' .
+					'<li><button class="button" onClick="window.location.href=window.location.href">Reload Page</button></li>' .
+				'</ol>';
+			}
+			return $msg;
+		}, 100, 2);
+
+		add_filter('the_content_feed', array(&$this, 'rss_feed_content'), 99, 1);
+		add_filter( 'get_the_excerpt', array(&$this, 'custom_excerpt'), 99, 2);
+		add_filter('get_the_content_limit', function ( $output, $content, $link, $max_characters ) {
+			if ( is_archive(self::POST_TYPE) || is_tax(self::GROUP_TAX ) ) {
+				return wp_trim_words( get_the_excerpt(), 300, $link );
+			}
+			return $content; //$content;
+		}, 999, 4);
+
+		add_filter( 'excerpt_length', function ( $length ){
+			if ( self::POST_TYPE == get_post_type() ) {
+				$length = 300;
+			}
+			return $length;
+		}, 999, 1 );
+
+
+
 
 		// Declare theme compatible with YouTube Video Import plugin
 		// https://wpythub.com/
@@ -100,19 +136,77 @@ class BF_Episode extends Unity3_Post_Group {
 
 	}
 
+	function custom_excerpt( $excerpt, $post ){
+
+		if ( self::POST_TYPE == $post->post_type && has_blocks( $post->post_content ) ) {
+			$blocks = parse_blocks( $post->post_content );
+			$found_blythe_episode = false;
+
+			foreach ($blocks as $block) {
+				if ($block['blockName'] == 'blythe/episode-info') {
+
+					if (preg_match('/<p.*>(.*)<\/p>/misU', $block['innerHTML'], $matches )) {
+						$excerpt = $matches[1];
+						$found_blythe_episode = true;
+					}
+					break; //break because we only target one blythe/episode-info block
+				}
+			}
+			//check older posts
+			if ( !$found_blythe_episode && $pos = strpos(strtolower($excerpt), 'scripture reading:') ) {
+				$excerpt = substr($excerpt, 0, $pos);
+			}
+
+			wp_strip_all_tags($excerpt);
+		}
+
+		return $excerpt;
+	}
+
+	function rss_feed_content( $content ) {
+
+		if ( self::POST_TYPE == get_post_type()  && preg_match('/<p.*>(.*)<\/p><h.*>(.*)<\/h.*>.*<ul.*>(.*)<\/ul>.*<p.*>(.*)<\/p>/misU', $content, $matches) ) {
+
+			$rawList = explode('</li>', $matches[3] );
+			$listItems = '';
+			foreach ( $rawList as $li ) {
+				if ( !empty( $li ) ) {
+					$listItems .= ( "\n" . $li . '</li>' );
+				}
+			}
+
+			$content =
+				//Episode description
+				( '<p>' . $matches[1] . '</p>' ) .
+				"\n" .
+				//Scripture Reading
+				( '<h3>' . $matches[2] . '</h3>' ) .
+				"\n" .
+				( '<ul>' . $listItems . '</ul>' ) .
+				"\n" .
+				//Podcast specific text
+				('<p>' . $matches[4] . '</p>');
+		}
+
+		return $content;
+	}
+
+
 
 	function modify_list_row_actions( $actions, $post ) {
 		// Check for your post type.
 		if ( $post->post_type == BF_Episode::POST_TYPE ) {
 
-			$meta = get_post_meta( $post->ID, 'audio_transcription', true );
-			$status = get_post_meta( $post->ID, 'audio_transcription_status', true );
-			$status = 'private' === $status ? 'Private' : 'Public';
+
+			$status = get_post_meta( $post->ID, Unity3_Audio_Transcription::PM_STATUS, true );
+			$has_transcription = $status === 'COMPLETED';
+			$visibility = get_post_meta( $post->ID, Unity3_Audio_Transcription::PM_VISIBILITY, true );
+			$str_visibility = 'public' === $visibility ? 'Public' : 'Private';
 
 			$actions = array(
 				'transcription' => sprintf( '<a href="%1$s">%2$s</a>',
-					$meta ? esc_url( admin_url('admin.php?page=aht-transcription&id=' . $post->ID) ) : '#',
-					( $meta ? ( 'Edit Transcription - ' . $status ) : 'No Transcription' )
+					$has_transcription ? esc_url( admin_url('admin.php?page=aht-transcription&aht_post_id=' . $post->ID) ) : '#',
+					( $has_transcription ? ( 'Edit Transcription - ' . $str_visibility ) : 'No Transcription' )
 			));
 //			unset( $actions['trash'] );
 //			unset( $actions['inline hide-if-no-js'] );
@@ -132,6 +226,18 @@ class BF_Episode extends Unity3_Post_Group {
 
 			$data['post_title'] = trim( $data['post_title'] ); //remove trailing white spaces
 			$data['post_name'] = sanitize_title($data['post_title']);
+
+			//create a custom excerpt from block data
+//			if ( has_blocks( $data['post_content'] ) ) {
+//				$blocks = parse_blocks( $data['post_content'] );
+//				$excerpt = '';
+//				foreach ($blocks as $block) {
+//					if ($block['blockName'] == 'blythe/episode-info') {
+//						$excerpt .= $block['innerHTML'];
+//					}
+//				}
+//				$data['post_excerpt'] = $excerpt;
+//			}
 		}
 		return $data;
 	}
@@ -144,6 +250,7 @@ class BF_Episode extends Unity3_Post_Group {
 			$my_post = array();
 			$my_post['ID'] = $post_id;
 			$my_post['post_date'] = $acf_date;
+
             $post = wp_update_post( $my_post );
         }
 
@@ -201,5 +308,3 @@ function blythe_filter_podcast_audio_posts( $post_args, $attributes ) {
 }
 
 add_filter( 'ptam_custom_post_types_query', 'blythe_filter_podcast_audio_posts',  100, 2);
-
-require_once ( BF::$dir . '/includes/transcribe-options-page.php');

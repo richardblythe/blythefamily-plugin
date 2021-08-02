@@ -30,6 +30,7 @@
       <path value="$PROJECT_DIR$/../ninja-forms" />
       <path value="P:/Downloads/2021/Software" />
       <path value="$PROJECT_DIR$/../../.." />
+      <path value="$PROJECT_DIR$/../unity3-master" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />

@@ -3,7 +3,7 @@
 	"version": "2.0.0",
 	"description": "Displays a section of song lyrics: (Verse, Chorus, etc.)",
 	"author": "Richard Blythe",
-	"main": "assets/dist/scripts/blythefamily-admin.js",
+	"main": "assets_OLD/dist/scripts/blythefamily-admin.js",
 	"scripts": {
 		"build": "wp-scripts build",
 		"format": "wp-scripts format",

@@ -3,26 +3,21 @@
     Plugin Name: Blythe Family
     Plugin URI: http://www.blythefamily.com/
     Description: Structural components for the Blythe Family website
-    Version: 1.9.2
+    Version: 1.10.0
     Author: Richard Blythe
     Author URI: http://unity3software.com/richardblythe
     GitHub Plugin URI: https://github.com/richardblythe/blythefamily-plugin
  */
 class BF {
-    public static $ver, $dir, $url, $assets_url,  $vendor_url, $blank_img, $in_header;
-    private $min;
+    public static $ver, $dir, $url, $assets_url, $vendor_url, $blank_img, $in_header;
     function __construct() {
 
     	$debug = (defined('WP_DEBUG') && true === WP_DEBUG);
 
-	    BF::$ver = '1.9.2';
         BF::$dir = plugin_dir_path( __FILE__ );
         BF::$url = plugin_dir_url( __FILE__ );
 	    BF::$assets_url = BF::$url . 'assets';
         BF::$vendor_url = BF::$url  . 'vendor';
-	    BF::$blank_img = BF::$assets_url . '/images/blank.gif';
-
-        $this->min = $debug ? '.min.' : '.';
 
         $this->initialize();
     }
@@ -46,6 +41,10 @@ class BF {
             $paths[] = BF::$dir . 'templates';
             return $paths;
         });
+
+//	    add_filter('taxonomy_template', function ( $template, $type, $template_names ){
+//		    return BF::$dir . 'templates/archive-blythe_episode.php';
+//	    }, 100, 3);
 
 	    add_filter( 'upload_mimes', array( &$this, 'allowed_mime_types' ), 100, 1 );
 	    add_filter( 'as3cf_allowed_mime_types', array( &$this, 'allowed_mime_types' ), 100, 1 );
@@ -82,12 +81,14 @@ class BF {
 
     function load_modules() {
         require_once (BF::$dir . 'includes/class-episode.php');
+	    require_once (BF::$dir . 'includes/class-episode-transcription-editor.php');
+
         require_once (BF::$dir . 'includes/class-lyrics.php');
+	    require_once (BF::$dir . 'includes/class-schedule.php');
 	    require_once (BF::$dir . 'includes/shortcodes.php');
 	    require_once (BF::$dir . 'includes/woocommerce.php');
-	    require_once (BF::$dir . 'includes/calendar-events.php');
 
-
+	    require_once (BF::$dir . 'includes/powerpress.php');
 
 	    wp_register_script('blythe-editor-script', BF::$url . 'build/index.js', null, filemtime( BF::$dir . 'build/index.js' ));
 	    wp_register_style( 'blythe-editor-style', BF::$url . 'build/index.css', null, filemtime( BF::$dir . 'build/index.css' ) );
