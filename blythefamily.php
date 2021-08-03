@@ -3,7 +3,7 @@
     Plugin Name: Blythe Family
     Plugin URI: http://www.blythefamily.com/
     Description: Structural components for the Blythe Family website
-    Version: 1.10.0
+    Version: 1.10.2
     Author: Richard Blythe
     Author URI: http://unity3software.com/richardblythe
     GitHub Plugin URI: https://github.com/richardblythe/blythefamily-plugin

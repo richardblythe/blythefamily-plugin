@@ -19,57 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee506010-b818-4dde-951c-064802f3fe80" name="Default Changelist" comment="More revisions to the single lyrics page">
-      <change afterPath="$PROJECT_DIR$/includes/class-episode-transcription-editor.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/class-schedule.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/includes/sheet-music-requests.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/email/part/event_listing.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/email/schedule_search_no_results.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/email/schedule_search_results.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="ee506010-b818-4dde-951c-064802f3fe80" name="Default Changelist" comment="Updates to audio transcription.  Patched podcast feed. updates to the schedule page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/acf-json/group_5f1320f0f01e2.json" beforeDir="false" afterPath="$PROJECT_DIR$/acf-json/group_5f1320f0f01e2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/dist/images/google_pod_bw_32.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets_OLD/dist/images/google_pod_bw_32.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/dist/images/weekly-devotions-bg-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets_OLD/dist/images/weekly-devotions-bg-2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/dist/images/weekly-devotions-bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets_OLD/dist/images/weekly-devotions-bg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/dist/scripts/blythefamily-admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets_OLD/dist/scripts/blythefamily-admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/dist/styles/blythe-editor.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets_OLD/dist/styles/blythe-editor.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/dist/styles/blythe-editor.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets_OLD/dist/styles/blythe-editor.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/dist/styles/blythe-studio-pro.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets_OLD/dist/styles/blythe-studio-pro.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/dist/styles/blythe-studio-pro.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/assets_OLD/dist/styles/blythe-studio-pro.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/images/google_pod_bw_32.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets_OLD/src/images/google_pod_bw_32.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/images/weekly-devotions-bg-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets_OLD/src/images/weekly-devotions-bg-2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/images/weekly-devotions-bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/assets_OLD/src/images/weekly-devotions-bg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/scripts/admin/blythefamily-admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets_OLD/src/scripts/admin/blythefamily-admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets_OLD/src/scripts/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/styles/editor/_lyrics-section-block.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets_OLD/src/styles/editor/_lyrics-section-block.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/styles/editor/_lyrics-section-label-block.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets_OLD/src/styles/editor/_lyrics-section-label-block.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/styles/editor/blythe-editor.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets_OLD/src/styles/editor/blythe-editor.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/styles/studio-pro/_blythe_episode.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets_OLD/src/styles/studio-pro/_blythe_episode.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/styles/studio-pro/_front-page.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets_OLD/src/styles/studio-pro/_front-page.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/styles/studio-pro/_gallery.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets_OLD/src/styles/studio-pro/_gallery.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/styles/studio-pro/_getwid.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets_OLD/src/styles/studio-pro/_getwid.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/styles/studio-pro/_google.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets_OLD/src/styles/studio-pro/_google.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/styles/studio-pro/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets_OLD/src/styles/studio-pro/_header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/styles/studio-pro/_hero.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets_OLD/src/styles/studio-pro/_hero.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/styles/studio-pro/_layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets_OLD/src/styles/studio-pro/_layout.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/styles/studio-pro/_lyrics.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets_OLD/src/styles/studio-pro/_lyrics.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/styles/studio-pro/_print.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets_OLD/src/styles/studio-pro/_print.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/styles/studio-pro/_site-footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets_OLD/src/styles/studio-pro/_site-footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/styles/studio-pro/_utilities.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets_OLD/src/styles/studio-pro/_utilities.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/styles/studio-pro/_woocommerce.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets_OLD/src/styles/studio-pro/_woocommerce.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/src/styles/studio-pro/blythe-studio-pro.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets_OLD/src/styles/studio-pro/blythe-studio-pro.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blythefamily.php" beforeDir="false" afterPath="$PROJECT_DIR$/blythefamily.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/style-index.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/style-index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gulpfile.babel.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.babel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/calendar-events.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/class-episode.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/class-episode.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/powerpress.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/powerpress.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/transcribe-options-page.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/studio-pro/_blythe_episode.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/studio-pro/_blythe_episode.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/archive-lyrics.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/archive-lyrics.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/single-blythe_episode.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/single-blythe_episode.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/class-schedule.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/class-schedule.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/email/part/event_listing.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/email/part/event_listing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/email/schedule_search_results.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/email/schedule_search_results.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -355,14 +310,7 @@
       <workItem from="1627755944021" duration="410000" />
       <workItem from="1627756363219" duration="10037000" />
       <workItem from="1627774296508" duration="7534000" />
-      <workItem from="1627920230679" duration="21036000" />
-    </task>
-    <task id="LOCAL-00020" summary="altered list of allowed mime types">
-      <created>1602108856918</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1602108856918</updated>
+      <workItem from="1627920230679" duration="24656000" />
     </task>
     <task id="LOCAL-00021" summary="added script for episode integration with PowerPress">
       <created>1602187978890</created>
@@ -700,7 +648,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626901736967</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="Updates to audio transcription.  Patched podcast feed. updates to the schedule page">
+      <created>1627948245971</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1627948245972</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -722,7 +677,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Revised custom WooCommerce orders page to include shipping status.  Fixed related songs on single lyrics page" />
     <MESSAGE value="Fixed woocommerce custom column" />
     <MESSAGE value="Another fix to the woocommerce custom column" />
     <MESSAGE value="And another revision" />
@@ -747,7 +701,8 @@
     <MESSAGE value="Updated version number" />
     <MESSAGE value="Revisions to the style" />
     <MESSAGE value="More revisions to the single lyrics page" />
-    <option name="LAST_COMMIT_MESSAGE" value="More revisions to the single lyrics page" />
+    <MESSAGE value="Updates to audio transcription.  Patched podcast feed. updates to the schedule page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updates to audio transcription.  Patched podcast feed. updates to the schedule page" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Deployment" timestamp="1621872921823">
@@ -846,10 +801,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1626897424515" />
-    <state x="81" y="248" key="Vcs.Push.Dialog.v2" timestamp="1626901755756">
+    <state x="81" y="248" key="Vcs.Push.Dialog.v2" timestamp="1627948248707">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="81" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1626901755756" />
+    <state x="81" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1627948248707" />
     <state x="822" y="419" key="WebDeployment.AddServerDialog.v.1" timestamp="1621872860092">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

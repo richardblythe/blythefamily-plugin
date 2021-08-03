@@ -252,7 +252,8 @@ class Blythe_Schedule {
 
 		$results = [
 			'sub'           =>  $sub,
-			'search_address' => $search_address,
+			'address' => $search_address,
+			'radius'         => intval( $sub->get_field_value( 'search_radius' ) ),
 			'events' => false,
 		];
 

@@ -23,7 +23,7 @@
 		<td id="m_-7437770077905669010bodyText-8" style="font-family:'Open Sans',Arial,Helvetica,sans-serif;font-size:14px;line-height:150%;color:#6f6f6f">
 			<h3 style="text-align:center;margin:0px">
 				<?php echo $event_html['title']; ?>
-			</h3><span class="im">
+			</h3>
             <p style="margin-top:0px;margin-bottom:10px;line-height:150%;text-align:center;margin:0px">
 	            <?php echo $event_html['date_range'] ?>
             </p>
@@ -31,7 +31,6 @@
 	            <?php echo $event_html['location']; ?>
             </p>
             <p style="margin-top:0px;margin-bottom:0px;line-height:150%"></p>
-          </span>
 		</td>
 	</tr>
 	</tbody>
