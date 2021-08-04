@@ -1,6 +1,6 @@
 <?php
-use Tribe\Events\Pro\Views\V2\Geo_Loc\Services\Google_Maps as GoogleMaps;
-use Tribe\Events\Pro\Views\V2\Geo_Loc\Services\Geo_Loc_Data as GeoData;
+use Tribe\Events\Pro\Views\V2\Geo_Loc\Services\Google_Maps;
+use Tribe\Events\Pro\Views\V2\Geo_Loc\Services\Geo_Loc_Data;
 
 /**
  * Block template for posts
@@ -11,11 +11,14 @@ use Tribe\Events\Pro\Views\V2\Geo_Loc\Services\Geo_Loc_Data as GeoData;
 class Blythe_Schedule {
 
 	const CRON_HOOK = 'blythe_calendar_events_hook';
-	const OP_LAST_DATE = 'blythe_email_last_queried_date';
+	const OP_SUMMARY_LAST_POST = 'blythe_search_summary_last_post_id';
+	const OP_GEO_CACHE = 'blythe_search_geo_cache';
 
 	public function __construct() {
 		add_action( 'init', array(&$this, 'hide_template'), 999 );
 		add_action( 'nf_save_sub', array(&$this, 'new_submission'), 10, 1 );
+
+		add_action( 'blythe_plugin_deactivate', array(&$this, 'plugin_deactivate') );
 
 		add_filter( 'wp_insert_post_data' , array(&$this, 'hide_data' ) , 999, 2 );
 		add_filter( 'tribe_events_pre_get_posts', array(&$this, 'redirect_from_events') );
@@ -24,84 +27,46 @@ class Blythe_Schedule {
 		add_filter( "get_post_metadata", array(&$this, 'nf_email_search_results'), 99, 3);
 
 
-		//TODO  Finish Cron Code
 		//Cron
-		//add_action( self::CRON_HOOK, array(&$this, 'cron') );
+		add_action( self::CRON_HOOK, array(&$this, 'cron') );
+		if ( !wp_next_scheduled( self::CRON_HOOK ) ) {
+			wp_schedule_event( strtotime('tomorrow +10 hours'), 'daily', self::CRON_HOOK );
 
-//		if ( !wp_next_scheduled( self::CRON_HOOK ) ) {
-//			wp_schedule_event( strtotime('tomorrow +10 hours'), 'daily', self::CRON_HOOK );
-//		}
+			//initialize option so the cron will query the submissions after the last one on record (avoid a possible old backlog of submissions)
+			$last_post_id = get_option( self::OP_SUMMARY_LAST_POST, 0);
+			if ( intval($last_post_id) === 0 ) {
+				$results = $this->_get_submission_ids();
+				$last_post_id = count( $results ) ? max($results) : 0;
+				update_option( self::OP_SUMMARY_LAST_POST, $last_post_id );
+			}
+		}
+	}
+
+
+	function plugin_deactivate() {
+		if ( $timestamp = wp_next_scheduled( self::CRON_HOOK ) ) {
+			wp_unschedule_event( $timestamp, self::CRON_HOOK );
+		}
 	}
 
 	function cron() {
 
+		$search_results_list = $this->get_recent_search_submissions( true );
+		if ( count($search_results_list) ) {
 
-		$last_queried_date = get_option( self::OP_LAST_DATE, time());
+			$email = get_option('admin_email');
+			$title = 'Schedule Searches: ' . count($search_results_list);
 
-		$posts = get_posts([
-			'post_type' => 'nf_sub',
-			'numberposts' => -1,
-			'date_query' => array(
-				array(
-					'after'     => $last_queried_date,
-				),
-			),
-		]);
+			ob_start();
+			include( BF::$dir . '/templates/email/schedule_search_admin_summary.php' );
+			$body = ob_get_clean();
 
-		update_option( self::OP_LAST_DATE, time() );
-
-		if ( !count($posts) ) {
-			$this->stop_cron();
-			return;
+			$content_type = function() { return 'text/html'; };
+			add_filter( 'wp_mail_content_type', $content_type );
+			wp_mail( $email, $title, $body );
+			remove_filter( 'wp_mail_content_type', $content_type );
 		}
 
-
-		$body_content = '';
-		foreach ($posts as $post ) {
-			$events = $this->search_by_submission( $post->ID, true );
-			foreach ( $events as $event ) {
-
-				$start_date = get_post_meta($event->ID, '_EventStartDate', true);
-				$end_date = get_post_meta($event->ID, '_EventEndDate', true);
-
-				$venue_id = get_post_meta($event->ID, '_EventVenueID', true);
-				$venue = get_post($venue_id);
-
-
-
-				$body_content .=
-					//Location Title
-					'<strong>' . $venue->post_title . '</strong><br/>' .
-					//Date of the event
-					date("F j, Y", strtotime($start_date)) . ' - ' . date("F j, Y", strtotime($end_date)) . '<br/>' .
-					//Location Address
-					get_post_meta($venue_id, '_VenueAddress', true) . ', ' .
-					get_post_meta($venue_id, '_VenueCity', true) . ', ' .
-					get_post_meta($venue_id, '_VenueState', true) . ', ' .
-					get_post_meta($venue_id, '_VenueZip', true) . '<br/><br/><br/>';
-			}
-		}
-
-
-		//format an email to me
-		$email = get_option('admin_email');
-		$title = 'Schedule Searches: ' . count($posts);
-		$body =
-			'<!DOCTYPE html PUBLIC "...">
-			<html xmlns="https://www.w3.org/1999/xhtml">
-			<head>
-			  <title>' . $title . '</title>
-			<style></style>
-			</head>
-				<body>'.
-					$body_content
-				.'</body>
-			</html>';
-
-		$content_type = function() { return 'text/html'; };
-		add_filter( 'wp_mail_content_type', $content_type );
-		wp_mail( $email, $title, $body );
-		remove_filter( 'wp_mail_content_type', $content_type );
 
 	}
 
@@ -236,43 +201,116 @@ class Blythe_Schedule {
 		return $value;
 	}
 
+	private function get_recent_search_submissions( $only_with_events ) {
 
+		//get the post id that serves as an offset for our pending query
+		$results = $this->_get_submission_ids();
+		if ( count( $results ) ) {
+			update_option( self::OP_SUMMARY_LAST_POST, max( $results ) );
+		}
+
+		//now build the recent search submission list
+		$search_results_list = [];
+		foreach ( $results as $post_id ) {
+			$search_results_list[] = $this->search_by_submission( $post_id );
+		}
+
+		return $only_with_events ? array_filter( $search_results_list, function ($i){ return count( $i['events'] );  } ) : $search_results_list;
+	}
+
+	private function _get_submission_ids() {
+		global $wpdb;
+
+		$nf3_form_meta_table = $wpdb->prefix . 'nf3_form_meta';
+		$option_name = self::OP_SUMMARY_LAST_POST;
+
+		return $wpdb->get_col(
+			$wpdb->prepare(
+				"SELECT  p.ID
+			    FROM  {$wpdb->posts} p 
+			    INNER JOIN {$wpdb->postmeta} pm ON (
+			        pm.post_id = p.ID AND 
+                    pm.meta_key = '_form_id' AND 
+                    pm.meta_value = ( 
+                        SELECT MAX(`parent_id`) FROM {$nf3_form_meta_table} 
+                        WHERE `key` = 'key' AND `value` = 'blythe_schedule_search_form'
+                        LIMIT 1
+                    )
+                )
+				WHERE p.ID > ( 
+                        SELECT MAX(`option_value`) FROM {$wpdb->options} 
+                        WHERE `option_name` = '{$option_name}'
+                        LIMIT 1
+                ) AND p.post_type = 'nf_sub' AND p.post_status = 'publish'"
+			)
+		);
+	}
 
 	private function search_by_submission( $submission_id ) {
 
+		$submission_id = intval( $submission_id ); //safety
 		$sub = Ninja_Forms()->form()->get_sub( $submission_id );
 		if ( !$sub ) {
 			return new \WP_Error('Submission ID is not valid!');
 		}
 
 		$search_address =
-			$sub->get_field_value( 'city' ) . ', ' .
-            $sub->get_field_value( 'us_state' ) . ', ' .
-            $sub->get_field_value( 'zip' );
+			trim($sub->get_field_value( 'city' ) ) . ', ' .
+            trim( $sub->get_field_value( 'us_state' ) ). ', ' .
+            trim( $sub->get_field_value( 'zip' ) );
+
 
 		$results = [
-			'sub'           =>  $sub,
+			'sub'     =>  $sub,
+			'name'    => $sub->get_field_value( 'contact_name' ),
+			'email'   => $sub->get_field_value( 'email' ),
 			'address' => $search_address,
-			'radius'         => intval( $sub->get_field_value( 'search_radius' ) ),
-			'events' => false,
+			'radius'  => intval( $sub->get_field_value( 'search_radius' ) ),
+			'edit_link' => get_admin_url(null, "post.php?post={$submission_id}&action=edit" ),
+			'events'  => false,
 		];
 
+		$geo_loc_data = null;
 
-		$maps = new GoogleMaps();
-		$geo_loc_data = $maps->resolve_to_coords( $search_address );
-		/** @var \WP_Error $geo_loc_data */
-		if ( $geo_loc_data instanceof \WP_Error ) {
-			do_action( 'tribe_log', 'error', 'Geocoding_Handler', [
-				'action' => 'geofcode_resolution_failure',
-				'code'    => $geo_loc_data->get_error_code(),
-				'message' => $geo_loc_data->get_error_message(),
-				'data'    => $geo_loc_data->get_error_data(),
-			] );
+		//****************************************************
+		// attempt to get geo info from cache first
+		$cache_geo_data = get_option( self::OP_GEO_CACHE );
+		if ( !is_array( $cache_geo_data) ) {
+			$cache_geo_data = array();
+		}
 
-			return $geo_loc_data; //error
-
+		$key = strtolower( trim( $search_address) );
+		if ( isset($cache_geo_data[ $key ]) ) {
+			$geo_loc_data = $cache_geo_data[ $key ];
 		} else {
+			//no cache item found so let's go talk with Google_Maps
+			$maps = new Google_Maps();
+			$google_data = $maps->resolve_to_coords( $search_address );
 
+			if ( $google_data instanceof Geo_Loc_Data ) {
+
+				$geo_loc_data = [
+					'lat' => $google_data->get_lat(),
+					'lng' => $google_data->get_lng(),
+				];
+
+				$cache_geo_data[ $key ] = $geo_loc_data;
+				update_option( self::OP_GEO_CACHE, $cache_geo_data, false );
+			} elseif ( is_wp_error( $google_data ) ) {
+				//Error
+				do_action( 'tribe_log', 'error', 'Geocoding_Handler', [
+					'action' => 'geocode_resolution_failure',
+					'code'    => $google_data->get_error_code(),
+					'message' => $google_data->get_error_message(),
+					'data'    => $google_data->get_error_data(),
+				] );
+
+				return $google_data; //error
+			}
+		}
+		//*******************************************************
+
+		if ( $geo_loc_data ) {
 			add_filter( 'tribe_geoloc_geofence', array(&$this, 'geo_fence'), 99 );
 
 			$results['events'] = tribe_get_events(array(
@@ -280,8 +318,8 @@ class Blythe_Schedule {
 				'start_date'     => 'now',
 
 				'tribe_geoloc'   => true,
-				'tribe_geoloc_lat' => $geo_loc_data->get_lat(),
-				'tribe_geoloc_lng' => $geo_loc_data->get_lng(),
+				'tribe_geoloc_lat' => $geo_loc_data['lat'],
+				'tribe_geoloc_lng' => $geo_loc_data['lng'],
 			));
 
 			remove_filter( 'tribe_geoloc_geofence', array(&$this, 'geo_fence'), 99 );

@@ -41,7 +41,7 @@ class BF_Episode extends Unity3_Post_Group {
 			return $msg;
 		}, 100, 2);
 
-		add_filter('the_content_feed', array(&$this, 'rss_feed_content'), 99, 1);
+		add_filter('the_content', array(&$this, 'rss_feed_content'), 99, 1);
 		add_filter( 'get_the_excerpt', array(&$this, 'custom_excerpt'), 99, 2);
 		add_filter('get_the_content_limit', function ( $output, $content, $link, $max_characters ) {
 			if ( is_archive(self::POST_TYPE) || is_tax(self::GROUP_TAX ) ) {
@@ -145,6 +145,7 @@ class BF_Episode extends Unity3_Post_Group {
 			foreach ($blocks as $block) {
 				if ($block['blockName'] == 'blythe/episode-info') {
 
+					$matches = null;
 					if (preg_match('/<p.*>(.*)<\/p>/misU', $block['innerHTML'], $matches )) {
 						$excerpt = $matches[1];
 						$found_blythe_episode = true;
@@ -160,22 +161,32 @@ class BF_Episode extends Unity3_Post_Group {
 			wp_strip_all_tags($excerpt);
 		}
 
-		return $excerpt;
+		$debug = isset($_GET['debug_var']);
+
+		return $excerpt . ( $debug ? 'WE ARE DEBUGGING' : '');
 	}
 
 	function rss_feed_content( $content ) {
 
-		if ( self::POST_TYPE == get_post_type()  && preg_match('/<p.*>(.*)<\/p><h.*>(.*)<\/h.*>.*<ul.*>(.*)<\/ul>.*<p.*>(.*)<\/p>/misU', $content, $matches) ) {
+		if ( !is_feed() || self::POST_TYPE !== get_post_type() ) {
+			return $content;
+		}
+
+		$matches = null;
+		$debug = isset($_GET['debug_var']);
+		//Matches content from the blythe/episode-info block output
+		if ( preg_match('/<p.*>(.*)<\/p><h.*>(.*)<\/h.*>.*<ul.*>(.*)<\/ul>.*<p.*>(.*)<\/p>/misU', $content, $matches) ) {
 
 			$rawList = explode('</li>', $matches[3] );
 			$listItems = '';
 			foreach ( $rawList as $li ) {
 				if ( !empty( $li ) ) {
-					$listItems .= ( "\n" . $li . '</li>' );
+					$listItems .= ( $li . '</li>' );
 				}
 			}
 
 			$content =
+				( $debug ? 'MY DEBUG' : '') .
 				//Episode description
 				( '<p>' . $matches[1] . '</p>' ) .
 				"\n" .
@@ -186,9 +197,21 @@ class BF_Episode extends Unity3_Post_Group {
 				"\n" .
 				//Podcast specific text
 				('<p>' . $matches[4] . '</p>');
+
+		} else {
+			//Remove excessive newline characters in older content
+			$arrSplit = explode("\n", $content );
+			$newContent = '';
+
+			foreach ( $arrSplit as $item ) {
+				if ( !empty( $item ) ) {
+				   $newContent .= ( "\n" . $item );
+				}
+			}
+			$content = $newContent;
 		}
 
-		return $content;
+		return $content	. ( $debug ? 'WE ARE DEBUGGING CONTENT!' : '');
 	}
 
 
