@@ -21,11 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ee506010-b818-4dde-951c-064802f3fe80" name="Default Changelist" comment="Improvements to the episode template.  Updates to the email template">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blythefamily.php" beforeDir="false" afterPath="$PROJECT_DIR$/blythefamily.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/class-schedule.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/class-schedule.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/schedule.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/email/part/search_summary_card.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/email/part/search_summary_card.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/email/schedule_search_admin_summary.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/email/schedule_search_admin_summary.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/style-index.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/style-index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/studio-pro/_blythe_episode.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/studio-pro/_blythe_episode.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/single-blythe_episode.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/single-blythe_episode.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -154,7 +151,7 @@
       <recent name="S:\WORDPRESS\blythefamily\wp-content\plugins\blythefamily\assets\src\scripts\admin\blocks\lyrics-section" />
     </key>
   </component>
-  <component name="RunManager" selected="Gulp.js.build">
+  <component name="RunManager" selected="npm.build">
     <configuration default="true" type="js.build_tools.gulp">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -317,14 +314,7 @@
       <workItem from="1628017638063" duration="18619000" />
       <workItem from="1628094256803" duration="19635000" />
       <workItem from="1628174214753" duration="547000" />
-      <workItem from="1628180690215" duration="6255000" />
-    </task>
-    <task id="LOCAL-00023" summary="fixed assets directory reference">
-      <created>1602188764084</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1602188764084</updated>
+      <workItem from="1628180690215" duration="7718000" />
     </task>
     <task id="LOCAL-00024" summary="fixed assets directory reference">
       <created>1602188785477</created>
@@ -662,7 +652,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628111133708</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="Improvements to the episode template.  Updates to the email template">
+      <created>1628205927015</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1628205927016</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -812,10 +809,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1626897424515" />
-    <state x="81" y="248" key="Vcs.Push.Dialog.v2" timestamp="1628111137151">
+    <state x="81" y="248" key="Vcs.Push.Dialog.v2" timestamp="1628205929151">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="81" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1628111137151" />
+    <state x="81" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1628205929151" />
     <state x="822" y="419" key="WebDeployment.AddServerDialog.v.1" timestamp="1621872860092">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

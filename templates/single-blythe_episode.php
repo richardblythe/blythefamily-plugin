@@ -90,8 +90,14 @@ remove_filter( 'the_content', 'unity3_audio_transcription_post_append', 999 );
 add_action( 'genesis_after_entry_content', 'unity3_audio_transcription_post_output', 20 );
 
 add_filter('unity3/audio/transcription/content/front', function ( $content, $post ) {
-	$author = get_the_author_meta('display_name', $post->post_author );
-	return esc_html( "<h3>{$author}</h3><br>" ) . $content;
+
+	if ( 'public' == get_post_meta( $post->ID, 'transcription_visibility', true)  ) {
+		$author = get_the_author_meta('display_name', $post->post_author );
+		return "<h3>{$author}:</h3><br>" . $content;
+	}
+
+	return $content;
+
 }, 99, 2);
 
 
