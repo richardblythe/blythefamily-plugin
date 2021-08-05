@@ -14,6 +14,8 @@ class Blythe_Schedule {
 	const OP_SUMMARY_LAST_POST = 'blythe_search_summary_last_post_id';
 	const OP_GEO_CACHE = 'blythe_search_geo_cache';
 
+	const PM_EVENT_IDS_CACHE = 'blythe_event_ids_cache';
+
 	public function __construct() {
 		add_action( 'init', array(&$this, 'hide_template'), 999 );
 		add_action( 'nf_save_sub', array(&$this, 'new_submission'), 10, 1 );
@@ -35,7 +37,7 @@ class Blythe_Schedule {
 			//initialize option so the cron will query the submissions after the last one on record (avoid a possible old backlog of submissions)
 			$last_post_id = get_option( self::OP_SUMMARY_LAST_POST, 0);
 			if ( intval($last_post_id) === 0 ) {
-				$results = $this->_get_submission_ids();
+				$results = $this->get_submission_ids();
 				$last_post_id = count( $results ) ? max($results) : 0;
 				update_option( self::OP_SUMMARY_LAST_POST, $last_post_id );
 			}
@@ -51,7 +53,7 @@ class Blythe_Schedule {
 
 	function cron() {
 
-		$search_results_list = $this->get_recent_search_submissions( true );
+		$search_results_list = $this->get_recent_search_submissions( false );
 		if ( count($search_results_list) ) {
 
 			$email = get_option('admin_email');
@@ -63,7 +65,7 @@ class Blythe_Schedule {
 
 			$content_type = function() { return 'text/html'; };
 			add_filter( 'wp_mail_content_type', $content_type );
-			wp_mail( $email, $title, $body );
+			wp_mail( 'mail@blythefamily.com', $title, $body );
 			remove_filter( 'wp_mail_content_type', $content_type );
 		}
 
@@ -204,7 +206,8 @@ class Blythe_Schedule {
 	private function get_recent_search_submissions( $only_with_events ) {
 
 		//get the post id that serves as an offset for our pending query
-		$results = $this->_get_submission_ids();
+		$results = $this->get_submission_ids( get_option( self::OP_SUMMARY_LAST_POST, true ) );
+
 		if ( count( $results ) ) {
 			update_option( self::OP_SUMMARY_LAST_POST, max( $results ) );
 		}
@@ -212,17 +215,20 @@ class Blythe_Schedule {
 		//now build the recent search submission list
 		$search_results_list = [];
 		foreach ( $results as $post_id ) {
-			$search_results_list[] = $this->search_by_submission( $post_id );
+			$item = $this->search_by_submission( $post_id );
+			if ( is_array($item) && ( !$only_with_events || count( $item['events'] ) ) ) {
+				$search_results_list[] = $item;
+			}
 		}
 
-		return $only_with_events ? array_filter( $search_results_list, function ($i){ return count( $i['events'] );  } ) : $search_results_list;
+		return $search_results_list;
 	}
 
-	private function _get_submission_ids() {
+	private function get_submission_ids( $greater_than = 0 ) {
 		global $wpdb;
 
 		$nf3_form_meta_table = $wpdb->prefix . 'nf3_form_meta';
-		$option_name = self::OP_SUMMARY_LAST_POST;
+		$greater_than = intval( $greater_than );
 
 		return $wpdb->get_col(
 			$wpdb->prepare(
@@ -237,18 +243,16 @@ class Blythe_Schedule {
                         LIMIT 1
                     )
                 )
-				WHERE p.ID > ( 
-                        SELECT MAX(`option_value`) FROM {$wpdb->options} 
-                        WHERE `option_name` = '{$option_name}'
-                        LIMIT 1
-                ) AND p.post_type = 'nf_sub' AND p.post_status = 'publish'"
-			)
+				WHERE p.ID > %d AND p.post_type = 'nf_sub' AND p.post_status = 'publish'"
+			, $greater_than)
 		);
 	}
 
 	private function search_by_submission( $submission_id ) {
 
-		$submission_id = intval( $submission_id ); //safety
+		global $blythe_nf_submission_id;
+		$submission_id = $blythe_nf_submission_id = intval( $submission_id );
+
 		$sub = Ninja_Forms()->form()->get_sub( $submission_id );
 		if ( !$sub ) {
 			return new \WP_Error('Submission ID is not valid!');
@@ -270,10 +274,26 @@ class Blythe_Schedule {
 			'events'  => false,
 		];
 
-		$geo_loc_data = null;
+
+		//*********************************************
+		// SUBMISSION EVENTS CACHE
+		$event_ids_cache = get_post_meta( $submission_id, self::PM_EVENT_IDS_CACHE, true );
+		if ( is_array( $event_ids_cache ) ) {
+			//return the list of events that the user would have seen
+			$results['events'] = count( $event_ids_cache ) == 0 ? array() :
+				tribe_get_events(array(
+					'posts_per_page' => -1,
+					'post__in' => $event_ids_cache,
+					'tribe_geoloc'   => false //don't need geo
+				));
+			return $results;
+		}
+		//*********************************************
+
 
 		//****************************************************
-		// attempt to get geo info from cache first
+		// GEO CACHE
+		$geo_loc_data = null;
 		$cache_geo_data = get_option( self::OP_GEO_CACHE );
 		if ( !is_array( $cache_geo_data) ) {
 			$cache_geo_data = array();
@@ -323,6 +343,9 @@ class Blythe_Schedule {
 			));
 
 			remove_filter( 'tribe_geoloc_geofence', array(&$this, 'geo_fence'), 99 );
+
+			//store the located events in a cache for future reference
+			update_post_meta( $submission_id, self::PM_EVENT_IDS_CACHE, wp_list_pluck( $results['events'], 'ID' ) );
 		}
 
 		return $results;

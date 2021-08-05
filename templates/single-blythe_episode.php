@@ -89,6 +89,12 @@ add_action( 'genesis_after_entry_content', function() {
 remove_filter( 'the_content', 'unity3_audio_transcription_post_append', 999 );
 add_action( 'genesis_after_entry_content', 'unity3_audio_transcription_post_output', 20 );
 
+add_filter('unity3/audio/transcription/content/front', function ( $content, $post ) {
+	$author = get_the_author_meta('display_name', $post->post_author );
+	return esc_html( "<h3>{$author}</h3><br>" ) . $content;
+}, 99, 2);
+
+
 //prevent excerpt from being printed in the hero section
 add_filter('get_the_excerpt', function ( $excerpt ) {
 	return null;//

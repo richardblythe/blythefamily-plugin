@@ -19,14 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee506010-b818-4dde-951c-064802f3fe80" name="Default Changelist" comment="More tweaks to the schedule email template">
-      <change afterPath="$PROJECT_DIR$/templates/email/part/search_summary_card.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/email/schedule_search_admin_summary.php" afterDir="false" />
+    <list default="true" id="ee506010-b818-4dde-951c-064802f3fe80" name="Default Changelist" comment="Improvements to the episode template.  Updates to the email template">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blythefamily.php" beforeDir="false" afterPath="$PROJECT_DIR$/blythefamily.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/class-episode.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/class-episode.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/class-schedule.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/class-schedule.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/email/schedule_search_no_results.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/email/schedule_search_no_results.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/schedule.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/email/part/search_summary_card.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/email/part/search_summary_card.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/email/schedule_search_admin_summary.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/email/schedule_search_admin_summary.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/single-blythe_episode.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/single-blythe_episode.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -315,14 +315,9 @@
       <workItem from="1627920230679" duration="26555000" />
       <workItem from="1628003526701" duration="4300000" />
       <workItem from="1628017638063" duration="18619000" />
-      <workItem from="1628094256803" duration="9713000" />
-    </task>
-    <task id="LOCAL-00022" summary="fixed assets directory reference">
-      <created>1602188427574</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1602188427574</updated>
+      <workItem from="1628094256803" duration="19635000" />
+      <workItem from="1628174214753" duration="547000" />
+      <workItem from="1628180690215" duration="6255000" />
     </task>
     <task id="LOCAL-00023" summary="fixed assets directory reference">
       <created>1602188764084</created>
@@ -660,7 +655,14 @@
       <option name="project" value="LOCAL" />
       <updated>1627956032237</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="More tweaks to the schedule email template">
+      <created>1628111133708</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1628111133708</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -682,7 +684,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="And another revision" />
     <MESSAGE value="And another revision that includes the version number :)" />
     <MESSAGE value="Changed the global downloads variable in custom woocommerce orders page" />
     <MESSAGE value="Fixed cast object to array issue" />
@@ -707,7 +708,8 @@
     <MESSAGE value="Updates to audio transcription.  Patched podcast feed. updates to the schedule page" />
     <MESSAGE value="Tweaks to the schedule email template" />
     <MESSAGE value="More tweaks to the schedule email template" />
-    <option name="LAST_COMMIT_MESSAGE" value="More tweaks to the schedule email template" />
+    <MESSAGE value="Improvements to the episode template.  Updates to the email template" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improvements to the episode template.  Updates to the email template" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Deployment" timestamp="1621872921823">
@@ -738,66 +740,66 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="707" y="375" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040@0.0.1920.1040" timestamp="1623181902459" />
-    <state width="715" height="466" key="DebuggerActiveHint" timestamp="1628099755716">
+    <state width="715" height="466" key="DebuggerActiveHint" timestamp="1628118163813">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="715" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1628099755716" />
-    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1625858419963">
+    <state width="715" height="466" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1628118163813" />
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog" timestamp="1628205797664">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1625858419963" />
-    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1627755596118">
+    <state x="92" y="92" width="1736" height="856" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1628205797664" />
+    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1628205773377">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1627755596118" />
-    <state width="1877" height="346" key="GridCell.Tab.0.bottom" timestamp="1628111107234">
+    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1628205773377" />
+    <state width="1877" height="346" key="GridCell.Tab.0.bottom" timestamp="1628123935309">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="346" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1628111107234" />
-    <state width="1877" height="346" key="GridCell.Tab.0.center" timestamp="1628111107234">
+    <state width="1877" height="346" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1628123935309" />
+    <state width="1877" height="346" key="GridCell.Tab.0.center" timestamp="1628123935309">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="346" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1628111107234" />
-    <state width="1877" height="346" key="GridCell.Tab.0.left" timestamp="1628111107234">
+    <state width="1877" height="346" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1628123935309" />
+    <state width="1877" height="346" key="GridCell.Tab.0.left" timestamp="1628123935309">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="346" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1628111107234" />
-    <state width="1877" height="346" key="GridCell.Tab.0.right" timestamp="1628111107234">
+    <state width="1877" height="346" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1628123935309" />
+    <state width="1877" height="346" key="GridCell.Tab.0.right" timestamp="1628123935309">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="346" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1628111107234" />
-    <state width="1877" height="346" key="GridCell.Tab.1.bottom" timestamp="1628111107234">
+    <state width="1877" height="346" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1628123935309" />
+    <state width="1877" height="346" key="GridCell.Tab.1.bottom" timestamp="1628123935309">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="346" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1628111107234" />
-    <state width="1877" height="346" key="GridCell.Tab.1.center" timestamp="1628111107234">
+    <state width="1877" height="346" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1628123935309" />
+    <state width="1877" height="346" key="GridCell.Tab.1.center" timestamp="1628123935309">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="346" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1628111107234" />
-    <state width="1877" height="346" key="GridCell.Tab.1.left" timestamp="1628111107234">
+    <state width="1877" height="346" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1628123935309" />
+    <state width="1877" height="346" key="GridCell.Tab.1.left" timestamp="1628123935309">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="346" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1628111107234" />
-    <state width="1877" height="346" key="GridCell.Tab.1.right" timestamp="1628111107234">
+    <state width="1877" height="346" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1628123935309" />
+    <state width="1877" height="346" key="GridCell.Tab.1.right" timestamp="1628123935309">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="346" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1628111107234" />
-    <state width="1877" height="346" key="GridCell.Tab.2.bottom" timestamp="1628111107234">
+    <state width="1877" height="346" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1628123935309" />
+    <state width="1877" height="346" key="GridCell.Tab.2.bottom" timestamp="1628123935309">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="346" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1628111107234" />
-    <state width="1877" height="346" key="GridCell.Tab.2.center" timestamp="1628111107234">
+    <state width="1877" height="346" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1628123935309" />
+    <state width="1877" height="346" key="GridCell.Tab.2.center" timestamp="1628123935309">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="346" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1628111107234" />
-    <state width="1877" height="346" key="GridCell.Tab.2.left" timestamp="1628111107234">
+    <state width="1877" height="346" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1628123935309" />
+    <state width="1877" height="346" key="GridCell.Tab.2.left" timestamp="1628123935309">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="346" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1628111107234" />
-    <state width="1877" height="346" key="GridCell.Tab.2.right" timestamp="1628111107234">
+    <state width="1877" height="346" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1628123935309" />
+    <state width="1877" height="346" key="GridCell.Tab.2.right" timestamp="1628123935309">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="346" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1628111107234" />
+    <state width="1877" height="346" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1628123935309" />
     <state x="652" y="243" key="NewPhpClassDialog" timestamp="1627602652550">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -810,10 +812,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1626897424515" />
-    <state x="81" y="248" key="Vcs.Push.Dialog.v2" timestamp="1627956033621">
+    <state x="81" y="248" key="Vcs.Push.Dialog.v2" timestamp="1628111137151">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="81" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1627956033621" />
+    <state x="81" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1628111137151" />
     <state x="822" y="419" key="WebDeployment.AddServerDialog.v.1" timestamp="1621872860092">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -826,18 +828,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="570" y="167" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1619810872328" />
-    <state x="667" y="253" width="811" height="534" key="find.popup" timestamp="1627946514782">
+    <state x="667" y="253" width="811" height="534" key="find.popup" timestamp="1628120481194">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="667" y="253" width="811" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1627946514782" />
+    <state x="667" y="253" width="811" height="534" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1628120481194" />
     <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1628028373956">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1628028373956" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1628108975981">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1628113724348">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1628108975981" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1628113724348" />
   </component>
   <component name="WordPressConfiguration" doNotAskConfigAgain="true" enabled="true">
     <wordpressPath>E:\WORDPRESS\blythefamily</wordpressPath>
@@ -878,17 +880,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/includes/class-schedule.php</url>
-          <line>188</line>
+          <line>190</line>
           <option name="timeStamp" value="97" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/includes/class-schedule.php</url>
-          <line>190</line>
+          <line>192</line>
           <option name="timeStamp" value="99" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/includes/class-schedule.php</url>
-          <line>189</line>
+          <line>191</line>
           <option name="timeStamp" value="100" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -898,18 +900,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/includes/class-schedule.php</url>
-          <line>212</line>
+          <line>215</line>
           <option name="timeStamp" value="166" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/includes/class-schedule.php</url>
-          <line>54</line>
+          <line>56</line>
           <option name="timeStamp" value="169" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/includes/class-schedule.php</url>
-          <line>35</line>
-          <option name="timeStamp" value="174" />
+          <line>344</line>
+          <option name="timeStamp" value="182" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
