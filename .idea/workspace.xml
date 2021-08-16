@@ -4,10 +4,6 @@
     <expand>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
       <path>
@@ -16,11 +12,25 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee506010-b818-4dde-951c-064802f3fe80" name="Default Changelist" comment="Improvements to the episode transcription template">
+    <list default="true" id="ee506010-b818-4dde-951c-064802f3fe80" name="Default Changelist" comment="Improvements to the episode transcription template. Update plugin version number :)">
+      <change afterPath="$PROJECT_DIR$/src/styles/editor/_audio-transcription.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/editor/editor.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blythefamily.php" beforeDir="false" afterPath="$PROJECT_DIR$/blythefamily.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.asset.php" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.asset.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/class-episode-transcription-editor.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/class-episode-transcription-editor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/class-schedule.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/class-schedule.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,19 +143,19 @@
     <property name="two.files.diff.last.used.file" value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.txt" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="S:\WORDPRESS\blythefamily\wp-content\plugins\blythefamily\src\styles\editor" />
+      <recent name="S:\WORDPRESS\blythefamily\wp-content\plugins\blythefamily\src\styles\studio-pro" />
+      <recent name="S:\WORDPRESS\blythefamily\wp-content\plugins\blythefamily\src\styles" />
+      <recent name="S:\WORDPRESS\blythefamily\wp-content\plugins\blythefamily\src" />
+      <recent name="S:\WORDPRESS\blythefamily\wp-content\plugins\blythefamily" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="S:\WORDPRESS\blythefamily\wp-content\plugins\blythefamily\includes" />
       <recent name="S:\WORDPRESS\blythefamily\wp-content\themes\corporate-pro" />
       <recent name="S:\WORDPRESS\blythefamily\wp-content\plugins\blythefamily\templates" />
       <recent name="S:\WORDPRESS\blythefamily\wp-content\plugins\blythefamily\src\blocks" />
       <recent name="S:\WORDPRESS\blythefamily\wp-content\plugins\blythefamily\src\blocks\lyrics-section" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="S:\WORDPRESS\blythefamily\wp-content\plugins\blythefamily\src\styles\studio-pro" />
-      <recent name="S:\WORDPRESS\blythefamily\wp-content\plugins\blythefamily\src\styles" />
-      <recent name="S:\WORDPRESS\blythefamily\wp-content\plugins\blythefamily\src" />
-      <recent name="S:\WORDPRESS\blythefamily\wp-content\plugins\blythefamily" />
-      <recent name="S:\WORDPRESS\blythefamily\wp-content\plugins\blythefamily\assets\src\scripts\admin\blocks\lyrics-section" />
     </key>
   </component>
   <component name="RunManager" selected="npm.build">
@@ -311,14 +321,12 @@
       <workItem from="1628017638063" duration="18619000" />
       <workItem from="1628094256803" duration="19635000" />
       <workItem from="1628174214753" duration="547000" />
-      <workItem from="1628180690215" duration="7845000" />
-    </task>
-    <task id="LOCAL-00025" summary="add pdf offloading permissions for WP Offload Media">
-      <created>1602262020617</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1602262020617</updated>
+      <workItem from="1628180690215" duration="8105000" />
+      <workItem from="1628266240214" duration="595000" />
+      <workItem from="1628871975335" duration="31000" />
+      <workItem from="1628953816622" duration="1946000" />
+      <workItem from="1628970330676" duration="6000" />
+      <workItem from="1629127936510" duration="3836000" />
     </task>
     <task id="LOCAL-00026" summary="add additional mime permissions">
       <created>1602262182943</created>
@@ -656,7 +664,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628207411970</updated>
     </task>
-    <option name="localTasksCounter" value="74" />
+    <task id="LOCAL-00074" summary="Improvements to the episode transcription template. Update plugin version number :)">
+      <created>1628207511098</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1628207511098</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -678,7 +693,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Changed the global downloads variable in custom woocommerce orders page" />
     <MESSAGE value="Fixed cast object to array issue" />
     <MESSAGE value="Yet another patch. My brain is too tired to be working" />
     <MESSAGE value="Another fix to woocommerce" />
@@ -703,7 +717,8 @@
     <MESSAGE value="More tweaks to the schedule email template" />
     <MESSAGE value="Improvements to the episode template.  Updates to the email template" />
     <MESSAGE value="Improvements to the episode transcription template" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improvements to the episode transcription template" />
+    <MESSAGE value="Improvements to the episode transcription template. Update plugin version number :)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improvements to the episode transcription template. Update plugin version number :)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Deployment" timestamp="1621872921823">
@@ -746,22 +761,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1628205773377" />
-    <state width="1877" height="346" key="GridCell.Tab.0.bottom" timestamp="1628123935309">
+    <state width="1877" height="280" key="GridCell.Tab.0.bottom" timestamp="1629131827256">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="346" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1628123935309" />
-    <state width="1877" height="346" key="GridCell.Tab.0.center" timestamp="1628123935309">
+    <state width="1877" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1629131827256" />
+    <state width="1877" height="280" key="GridCell.Tab.0.center" timestamp="1629131827256">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="346" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1628123935309" />
-    <state width="1877" height="346" key="GridCell.Tab.0.left" timestamp="1628123935309">
+    <state width="1877" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1629131827256" />
+    <state width="1877" height="280" key="GridCell.Tab.0.left" timestamp="1629131827256">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="346" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1628123935309" />
-    <state width="1877" height="346" key="GridCell.Tab.0.right" timestamp="1628123935309">
+    <state width="1877" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1629131827256" />
+    <state width="1877" height="280" key="GridCell.Tab.0.right" timestamp="1629131827256">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="346" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1628123935309" />
+    <state width="1877" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1629131827256" />
     <state width="1877" height="346" key="GridCell.Tab.1.bottom" timestamp="1628123935309">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -806,10 +821,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1626897424515" />
-    <state x="81" y="248" key="Vcs.Push.Dialog.v2" timestamp="1628207413514">
+    <state x="81" y="248" key="Vcs.Push.Dialog.v2" timestamp="1628207576667">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="81" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1628207413514" />
+    <state x="81" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1628207576667" />
     <state x="822" y="419" key="WebDeployment.AddServerDialog.v.1" timestamp="1621872860092">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -818,10 +833,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="968" height="528" key="XDebugger.FullValuePopup/0.0.1920.1040@0.0.1920.1040" timestamp="1627927597208" />
-    <state x="570" y="167" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1619810872328">
+    <state x="569" y="156" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1629129071430">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="570" y="167" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1619810872328" />
+    <state x="569" y="156" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1629129071430" />
+    <state x="769" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1628207544136">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="769" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1628207544136" />
     <state x="667" y="253" width="811" height="534" key="find.popup" timestamp="1628120481194">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -869,7 +888,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/../unity3-master/includes/modules/class-audio-transcription.php</url>
-          <line>264</line>
+          <line>276</line>
           <option name="timeStamp" value="95" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">

@@ -1,0 +1,13 @@
+.acf-field-blythe-simple-transcription-field-header {
+  .audio-wrapper {
+    margin-top: 20px;
+  }
+
+  .mejs-controls {
+    .mejs-duration-container,
+    .mejs-volume-button,
+    .mejs-horizontal-volume-slider {
+      display: none;
+    }
+  }
+}

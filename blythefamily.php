@@ -154,12 +154,7 @@ class BF {
     }
 
 	public function enqueue_admin() {
-//		wp_enqueue_script(
-//			'blythefamily-admin-js',
-//			BF::$url . "assets/dist/scripts/blythefamily-admin.js",
-//			array( 'wp-blocks', 'wp-element' ),
-//			filemtime( BF::$dir . 'assets/dist/scripts/blythefamily-admin.js' )
-//		);
+		wp_enqueue_style('blythe-editor-style');
 	}
 
 	public function my_custom_format_enqueue_assets_editor() {

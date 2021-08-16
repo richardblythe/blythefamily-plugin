@@ -72,9 +72,22 @@ class BF_Episode_Transcription_Editor  {
 				$prevBtn = '<a class="button' . ( $prev_url == '#' ? ' disabled' : '' ) . '" href="' . $prev_url . '" title="Previous Episode">Prev</a>';
 				$nextBtn = '<a class="button' . ( $next_url == '#' ? ' disabled' : '' ) . '" href="' . $next_url . '" title="Next Episode">Next</a>';
 
+
+
+				$mp3_player = '';
+				if ( $mp3_url = unity3_audio_transcription_src_url( $post->ID ) ) {
+					$mp3_player =
+						'<div class="audio-wrapper">' .
+							do_shortcode('[audio src="'. $mp3_url .'" preload="auto"]') .
+						'</div>';
+				} else {
+					$mp3_player = '<div class="audio-wrapper">No audio exists for this episode</div>';
+				}
+
+
 				$hidden = '<input type="hidden" name="aht_post_id" value="' . $post->ID . '" />';
 
-				$header_html = "{$episode_title} {$nextBtn} {$prevBtn}  {$hidden}";
+				$header_html = "{$episode_title} {$nextBtn} {$prevBtn} {$mp3_player} {$hidden}";
 			}
 
 		} else {

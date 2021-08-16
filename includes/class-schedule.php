@@ -335,7 +335,7 @@ class Blythe_Schedule {
 
 			$results['events'] = tribe_get_events(array(
 				'posts_per_page' => -1,
-				'start_date'     => 'now',
+				'ends_after' => 'now',
 
 				'tribe_geoloc'   => true,
 				'tribe_geoloc_lat' => $geo_loc_data['lat'],
