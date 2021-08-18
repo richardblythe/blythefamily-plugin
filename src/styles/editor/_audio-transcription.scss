@@ -1,13 +1,45 @@
-.acf-field-blythe-simple-transcription-field-header {
-  .audio-wrapper {
-    margin-top: 20px;
+
+.tools_page_aht-transcription {
+
+  #wpbody {
+    padding-top: 120px;
   }
 
-  .mejs-controls {
-    .mejs-duration-container,
-    .mejs-volume-button,
-    .mejs-horizontal-volume-slider {
-      display: none;
+  .audio-wrapper {
+    position: fixed;
+    display: block;
+    top: 46px;
+    left: 0;
+    width: 100%;
+    z-index: 99999;
+    background: #1d2327;
+    margin: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    .mejs-controls {
+      .mejs-duration-container,
+      .mejs-volume-button,
+      .mejs-horizontal-volume-slider {
+        display: none;
+      }
     }
+
   }
+
+  @media(min-width: 781px) {
+
+    #wpbody {
+      padding-top: 46px;
+    }
+
+    .audio-wrapper {
+      position: static;
+      margin-top: 20px;
+      padding: 0px;
+    }
+
+  }
+
 }
+

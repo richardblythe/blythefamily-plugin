@@ -21,8 +21,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee506010-b818-4dde-951c-064802f3fe80" name="Default Changelist" comment="Fixes issue with schedule's current event missing.  Added audio player to the simple transcription editor">
+      <change afterPath="$PROJECT_DIR$/src/scripts/admin/audio_transcription.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blythefamily.php" beforeDir="false" afterPath="$PROJECT_DIR$/blythefamily.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.asset.php" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.asset.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/editor/_audio-transcription.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/editor/_audio-transcription.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,8 +42,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="SCSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -135,19 +139,19 @@
     <property name="two.files.diff.last.used.file" value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.txt" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="S:\WORDPRESS\blythefamily\wp-content\plugins\blythefamily\src\styles\editor" />
-      <recent name="S:\WORDPRESS\blythefamily\wp-content\plugins\blythefamily\src\styles\studio-pro" />
-      <recent name="S:\WORDPRESS\blythefamily\wp-content\plugins\blythefamily\src\styles" />
-      <recent name="S:\WORDPRESS\blythefamily\wp-content\plugins\blythefamily\src" />
-      <recent name="S:\WORDPRESS\blythefamily\wp-content\plugins\blythefamily" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="S:\WORDPRESS\blythefamily\wp-content\plugins\blythefamily\includes" />
       <recent name="S:\WORDPRESS\blythefamily\wp-content\themes\corporate-pro" />
       <recent name="S:\WORDPRESS\blythefamily\wp-content\plugins\blythefamily\templates" />
       <recent name="S:\WORDPRESS\blythefamily\wp-content\plugins\blythefamily\src\blocks" />
       <recent name="S:\WORDPRESS\blythefamily\wp-content\plugins\blythefamily\src\blocks\lyrics-section" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="S:\WORDPRESS\blythefamily\wp-content\plugins\blythefamily\src\scripts\admin" />
+      <recent name="S:\WORDPRESS\blythefamily\wp-content\plugins\blythefamily\src\styles\editor" />
+      <recent name="S:\WORDPRESS\blythefamily\wp-content\plugins\blythefamily\src\styles\studio-pro" />
+      <recent name="S:\WORDPRESS\blythefamily\wp-content\plugins\blythefamily\src\styles" />
+      <recent name="S:\WORDPRESS\blythefamily\wp-content\plugins\blythefamily\src" />
     </key>
   </component>
   <component name="RunManager" selected="npm.build">
@@ -318,14 +322,8 @@
       <workItem from="1628871975335" duration="31000" />
       <workItem from="1628953816622" duration="1946000" />
       <workItem from="1628970330676" duration="6000" />
-      <workItem from="1629127936510" duration="4192000" />
-    </task>
-    <task id="LOCAL-00027" summary="updated styles for mobile menu">
-      <created>1602286719016</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1602286719016</updated>
+      <workItem from="1629127936510" duration="4867000" />
+      <workItem from="1629300426321" duration="3551000" />
     </task>
     <task id="LOCAL-00028" summary="Updated single episode template to only show podcast info for devotion term">
       <created>1602620769422</created>
@@ -663,7 +661,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629132058859</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="Fixes issue with schedule's current event missing.  Added audio player to the simple transcription editor">
+      <created>1629132223959</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1629132223959</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -753,22 +758,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1628205773377" />
-    <state width="1877" height="280" key="GridCell.Tab.0.bottom" timestamp="1629131827256">
+    <state width="1877" height="280" key="GridCell.Tab.0.bottom" timestamp="1629302741500">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1629131827256" />
-    <state width="1877" height="280" key="GridCell.Tab.0.center" timestamp="1629131827256">
+    <state width="1877" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1629302741500" />
+    <state width="1877" height="280" key="GridCell.Tab.0.center" timestamp="1629302741500">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1629131827256" />
-    <state width="1877" height="280" key="GridCell.Tab.0.left" timestamp="1629131827256">
+    <state width="1877" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1629302741500" />
+    <state width="1877" height="280" key="GridCell.Tab.0.left" timestamp="1629302741500">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1629131827256" />
-    <state width="1877" height="280" key="GridCell.Tab.0.right" timestamp="1629131827256">
+    <state width="1877" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1629302741500" />
+    <state width="1877" height="280" key="GridCell.Tab.0.right" timestamp="1629302741500">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1629131827256" />
+    <state width="1877" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1629302741500" />
     <state width="1877" height="346" key="GridCell.Tab.1.bottom" timestamp="1628123935309">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -813,10 +818,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1626897424515" />
-    <state x="81" y="248" key="Vcs.Push.Dialog.v2" timestamp="1629132061654">
+    <state x="81" y="248" key="Vcs.Push.Dialog.v2" timestamp="1629132261195">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="81" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1629132061654" />
+    <state x="81" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1629132261195" />
     <state x="822" y="419" key="WebDeployment.AddServerDialog.v.1" timestamp="1621872860092">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
