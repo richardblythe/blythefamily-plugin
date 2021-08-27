@@ -3,7 +3,7 @@
     Plugin Name: Blythe Family
     Plugin URI: http://www.blythefamily.com/
     Description: Structural components for the Blythe Family website
-    Version: 1.10.7
+    Version: 1.10.8
     Author: Richard Blythe
     Author URI: http://unity3software.com/richardblythe
     GitHub Plugin URI: https://github.com/richardblythe/blythefamily-plugin
@@ -91,6 +91,7 @@ class BF {
 	    require_once (BF::$dir . 'includes/woocommerce.php');
 
 	    require_once (BF::$dir . 'includes/powerpress.php');
+	    require_once (BF::$dir . 'includes/sheet-music-requests.php');
 
 	    wp_register_script('blythe-editor-script', BF::$url . 'build/index.js', null, filemtime( BF::$dir . 'build/index.js' ));
 	    wp_register_style( 'blythe-editor-style', BF::$url . 'build/index.css', null, filemtime( BF::$dir . 'build/index.css' ) );

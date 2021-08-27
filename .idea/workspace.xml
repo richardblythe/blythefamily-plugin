@@ -21,12 +21,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee506010-b818-4dde-951c-064802f3fe80" name="Default Changelist" comment="Fixes issue with schedule's current event missing.  Added audio player to the simple transcription editor">
-      <change afterPath="$PROJECT_DIR$/src/scripts/admin/audio_transcription.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blythefamily.php" beforeDir="false" afterPath="$PROJECT_DIR$/blythefamily.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/index.asset.php" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.asset.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/editor/_audio-transcription.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/editor/_audio-transcription.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -323,14 +319,8 @@
       <workItem from="1628953816622" duration="1946000" />
       <workItem from="1628970330676" duration="6000" />
       <workItem from="1629127936510" duration="4867000" />
-      <workItem from="1629300426321" duration="3551000" />
-    </task>
-    <task id="LOCAL-00028" summary="Updated single episode template to only show podcast info for devotion term">
-      <created>1602620769422</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1602620769422</updated>
+      <workItem from="1629300426321" duration="4251000" />
+      <workItem from="1630089456671" duration="201000" />
     </task>
     <task id="LOCAL-00029" summary="updated layout of single-blythe_episode">
       <created>1602778061380</created>
@@ -668,7 +658,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629132223959</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="Updates to the simple transcription editor. (made the audio player responsive and stick when viewing on mobile)">
+      <created>1629304860040</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1629304860041</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -690,7 +687,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Yet another patch. My brain is too tired to be working" />
     <MESSAGE value="Another fix to woocommerce" />
     <MESSAGE value="Added tracking information to woocommerce orders" />
     <MESSAGE value="Fixed css on print" />
@@ -715,7 +711,8 @@
     <MESSAGE value="Improvements to the episode transcription template" />
     <MESSAGE value="Improvements to the episode transcription template. Update plugin version number :)" />
     <MESSAGE value="Fixes issue with schedule's current event missing.  Added audio player to the simple transcription editor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixes issue with schedule's current event missing.  Added audio player to the simple transcription editor" />
+    <MESSAGE value="Updates to the simple transcription editor. (made the audio player responsive and stick when viewing on mobile)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updates to the simple transcription editor. (made the audio player responsive and stick when viewing on mobile)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="552" y="178" key="#Deployment" timestamp="1621872921823">
@@ -758,22 +755,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1628205773377" />
-    <state width="1877" height="280" key="GridCell.Tab.0.bottom" timestamp="1629302741500">
+    <state width="1877" height="280" key="GridCell.Tab.0.bottom" timestamp="1629310396488">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1629302741500" />
-    <state width="1877" height="280" key="GridCell.Tab.0.center" timestamp="1629302741500">
+    <state width="1877" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1629310396488" />
+    <state width="1877" height="280" key="GridCell.Tab.0.center" timestamp="1629310396487">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1629302741500" />
-    <state width="1877" height="280" key="GridCell.Tab.0.left" timestamp="1629302741500">
+    <state width="1877" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1629310396487" />
+    <state width="1877" height="280" key="GridCell.Tab.0.left" timestamp="1629310396487">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1629302741500" />
-    <state width="1877" height="280" key="GridCell.Tab.0.right" timestamp="1629302741500">
+    <state width="1877" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1629310396487" />
+    <state width="1877" height="280" key="GridCell.Tab.0.right" timestamp="1629310396488">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1629302741500" />
+    <state width="1877" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1629310396488" />
     <state width="1877" height="346" key="GridCell.Tab.1.bottom" timestamp="1628123935309">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -818,10 +815,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1626897424515" />
-    <state x="81" y="248" key="Vcs.Push.Dialog.v2" timestamp="1629132261195">
+    <state x="81" y="248" key="Vcs.Push.Dialog.v2" timestamp="1629304862861">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="81" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1629132261195" />
+    <state x="81" y="248" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1629304862861" />
     <state x="822" y="419" key="WebDeployment.AddServerDialog.v.1" timestamp="1621872860092">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
