@@ -17,6 +17,9 @@ class BF_Lyrics {
 		if (is_admin()) {
 
 			add_action( 'save_post', array(&$this, 'save') );
+			add_filter( 'parse_query',  array(&$this, 'admin_posts_filter') );
+			add_action( 'restrict_manage_posts', 'admin_restrict_manage_posts' );
+
 
 		} else {
 
@@ -107,6 +110,45 @@ class BF_Lyrics {
 	}
 
 
+	function admin_restrict_manage_posts()
+	{
+		//make sure we're filtering the lyrics post type only
+		if ( !isset($_GET['post_type']) || self::POST_TYPE != $_GET['post_type'] ) {
+			return;
+		}
+		$values = array(
+			'Unregistered' => 'unregistered', //Replace label1 with name and value1 with the value of custom field
+			'Registered' => 'registered', //Replace label2 with name and value2 with another value of custom field
+		);
+		?>
+		<select name="ccli">
+			<option value=""><?php _e('Filter By CCLI', 'blythe'); ?></option>
+			<?php $current_v = isset($_GET['ccli'])? $_GET['ccli']:''; foreach ($values as $label => $value) {
+				printf
+				(
+					'<option value="%s"%s>%s</option>',
+					$value,
+					$value == $current_v? ' selected="selected"':'',
+					$label
+				);
+			}
+			?>
+		</select>
+		<?php
+	}
+
+	function admin_posts_filter( $query )
+	{
+		global $pagenow;
+		if ( $pagenow=='edit.php' && isset($_GET['ccli']) && $_GET['ccli'] != '') {
+			$query->query_vars['meta_key'] = $_GET['ccli_song'];
+			$query->query_vars['meta_value'] = null;
+			$query->query_vars['meta_compare'] = $_GET['ccli'] == 'registered' ? 'EXISTS' : 'NOT EXISTS';
+		}
+
+	}
+
+
 	/* When the post is saved, saves our custom data */
 	function save( $post_id ) {
 		// verify if this is an auto save routine.
@@ -128,6 +170,7 @@ class BF_Lyrics {
 		//delete the transient that is storing the alphabet letters
 		delete_transient( BF_Lyrics::TRANS_ARCHIVE);
 	}
+
 
 	function template_include( $template ) {
 		if ( is_post_type_archive( BF_Lyrics::POST_TYPE ) ||

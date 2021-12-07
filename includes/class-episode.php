@@ -18,6 +18,13 @@ class BF_Episode extends Unity3_Post_Group {
 			),
 			'drag_sort_posts' => false,
 			'group_rewrite' => array( 'base' => 'episodes' ),
+			'admin_columns' => array(
+				'cb'    => array('header' => '<input type="checkbox" />'),
+				'featured_image' => array('header' => '', 'image_size' => 'medium', 'link' => 'POST_EDIT' ),
+				'title' => array('header' => 'Title'),
+				'author' => array('header' => 'Author'),
+				'date' => array('header' => 'Date'),
+			),
 		));
 
 		add_action( 'registered_post_type', array(&$this, 'block_template'), 100, 2 );
