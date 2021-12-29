@@ -3,7 +3,7 @@
     Plugin Name: Blythe Family
     Plugin URI: http://www.blythefamily.com/
     Description: Structural components for the Blythe Family website
-    Version: 1.10.9
+    Version: 1.10.10
     Author: Richard Blythe
     Author URI: http://unity3software.com/richardblythe
     GitHub Plugin URI: https://github.com/richardblythe/blythefamily-plugin
@@ -117,6 +117,7 @@ class BF {
 
 		    //Documents
 		    'pdf' => 'application/pdf',
+		    "csv" => "text/csv",
 
 		    //Videos
 		    'mpeg|mpg|mpe' => 'video/mpeg',

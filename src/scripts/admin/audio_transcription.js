@@ -1,20 +1,29 @@
 jQuery(document).ready(function($){
 
-    var $audio_wrapper = $('.tools_page_aht-transcription .audio-wrapper');
-    var top = $audio_wrapper.css('top');
-    top = parseInt( top.substr(0, top.indexOf('px')) );
+    const $adminBar = $('#wpadminbar');
+    const $adminMenu = $('#adminmenu');
+    const $audio_wrapper = $('.tools_page_aht-transcription .audio-wrapper');
+    // var top = $audio_wrapper.position().top;
 
-    if ( !( top > 0) ) {
-        top = 46;
-    }
 
     const scrollFunc = function() {
+
+        const adminBottom = $adminBar.position().top + $adminBar.outerHeight(true);
+
         $audio_wrapper.css({
-            top: Math.max(top - this.window.scrollY, 0)
+            "top": Math.max(adminBottom - this.window.scrollY, adminBottom)
+        });
+
+        $audio_wrapper.css({
+            "left": $adminMenu.width()
         });
     }
 
     $(window).scroll(function(){
+        scrollFunc();
+    })
+
+    $(window).resize(function(){
         scrollFunc();
     })
 

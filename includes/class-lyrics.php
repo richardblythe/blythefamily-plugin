@@ -14,11 +14,13 @@ class BF_Lyrics {
 		//add_filter( 'get_the_archive_title', array(&$this, 'archive_title') );
 //		add_filter( 'post_type_archive_title', array(&$this, 'archive_title'), 99, 2);
 
+
+		add_filter( 'parse_query',  array(&$this, 'admin_posts_filter') );
+
 		if (is_admin()) {
 
 			add_action( 'save_post', array(&$this, 'save') );
-			add_filter( 'parse_query',  array(&$this, 'admin_posts_filter') );
-			add_action( 'restrict_manage_posts', 'admin_restrict_manage_posts' );
+			add_action( 'restrict_manage_posts', array(&$this, 'admin_restrict_manage_posts') );
 
 
 		} else {
@@ -64,9 +66,9 @@ class BF_Lyrics {
 					'query_var'    => true,
 					'with_front' => false,
 				),
-                'show_ui' => false,
-                'show_tagcloud' => false,
-                'show_in_nav_menus' => false,
+				'show_ui' => false,
+				'show_tagcloud' => false,
+				'show_in_nav_menus' => false,
 			));
 
 			unity3_register_post_type(
@@ -140,10 +142,10 @@ class BF_Lyrics {
 	function admin_posts_filter( $query )
 	{
 		global $pagenow;
-		if ( $pagenow=='edit.php' && isset($_GET['ccli']) && $_GET['ccli'] != '') {
-			$query->query_vars['meta_key'] = $_GET['ccli_song'];
-			$query->query_vars['meta_value'] = null;
-			$query->query_vars['meta_compare'] = $_GET['ccli'] == 'registered' ? 'EXISTS' : 'NOT EXISTS';
+		if ( isset($_GET['ccli']) && $_GET['ccli'] != '') {
+			$query->query_vars['meta_key'] = 'ccli_song';
+			//=$query->query_vars['meta_value'] = '';
+			$query->query_vars['meta_compare'] = ($_GET['ccli'] == 'registered' ? 'EXISTS' : 'NOT EXISTS');
 		}
 
 	}
@@ -174,7 +176,7 @@ class BF_Lyrics {
 
 	function template_include( $template ) {
 		if ( is_post_type_archive( BF_Lyrics::POST_TYPE ) ||
-			 $this->is_lyrics_tax() ) {
+		     $this->is_lyrics_tax() ) {
 			$template = BF::$dir . '/templates/lyrics.php';
 		}
 
@@ -184,7 +186,7 @@ class BF_Lyrics {
 	function genesis_init() {
 		remove_action( 'genesis_archive_title_descriptions', 'genesis_do_archive_headings_headline', 10, 3 );
 		add_action( 'genesis_archive_title_descriptions', array(&$this, 'archive_headings_headline'), 10, 3 );
-        remove_post_type_support( self::POST_TYPE, 'genesis-entry-meta-before-content' );
+		remove_post_type_support( self::POST_TYPE, 'genesis-entry-meta-before-content' );
 	}
 
 	function filter_pagetitle($title) {
