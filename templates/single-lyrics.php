@@ -1,4 +1,4 @@
-<?php
+f<?php
 //add_filter( 'genesis_pre_get_option_site_layout', '__genesis_return_content_sidebar', 99 );
 //
 //function cd_change_genesis_sidebar() {
@@ -64,24 +64,41 @@ add_action( 'genesis_after_content', function() {
         <h3 id="lyric-resources">Resources</h3>
         <ul>
         <?php
+        //**************************
+        // ALBUM
         if ( $album_id = get_post_meta( get_the_ID(), 'album_id', true) ) {
-            echo ( '<li><i class="fas fa-compact-disc"></i>' . sprintf('<a href="%s">', get_permalink( $album_id ) ) . ' View Project</a></li>' );
+            echo ( '<li><i class="fas fa-compact-disc"></i>&nbsp;' . sprintf('<a href="%s">', get_permalink( $album_id ) ) . ' View Project</a></li>' );
         }
 
+        //**************************
+        // SOUND TRACK
         if ( $sound_track_id = get_post_meta( get_the_ID(), 'sound_track_id', true) ) {
-            echo ( '<li><i class="fas fa-microphone-alt"></i>' . sprintf('<a href="%s">', get_permalink( $sound_track_id ) ) . ' Soundtrack Available!</a></li>' );
+            echo ( '<li><i class="fas fa-microphone-alt"></i>&nbsp;' . sprintf('<a href="%s">', get_permalink( $sound_track_id ) ) . ' Soundtrack Available!</a></li>' );
         }
 
-        $sheet_music = get_post_meta( get_the_ID(), 'sheet_music', true);
-        $permalink = '';
-        if ( $sheet_music ) {
-	        $permalink = get_permalink( $sheet_music );
-        } else {
-	        $page = get_page_by_path( 'sheet-music-request' );
-	        $permalink = add_query_arg ('song_title', get_the_title(), get_permalink ( $page )) ;
+        //only output the next two fields if we hold the copyright
+        if ( $copyright  = get_post_meta( get_the_ID(), 'copyright', true) ) {
+	        //**************************
+	        // SHEET MUSIC
+	        $permalink = '';
+	        if ( $sheet_music = get_post_meta( get_the_ID(), 'sheet_music', true) ) {
+		        $permalink = get_permalink( $sheet_music );
+	        } else {
+		        $page = get_page_by_path( 'sheet-music-request' );
+		        $permalink = add_query_arg ('song_title', get_the_title(), get_permalink ( $page )) ;
+	        }
+
+	        echo ( '<li><i class="fas fa-book-open"></i>&nbsp;' . sprintf('<a href="%s">', $permalink ) . ( $sheet_music ? ' Sheet Music Available!' : 'Request Sheet Music' ) . '</a></li>' );
+
+
+
+	        //**************************
+	        // MECHANICAL LICENSE
+            $permalink = 'https://publishing.blythefamily.com/';
+	        echo ( '<li><i class="fas fa-file-contract"></i>&nbsp;' . sprintf('<a href="%s">', $permalink ) . ( 'Recording License' ) . '</a></li>' );
         }
 
-        echo ( '<li><i class="fas fa-book-open"></i>' . sprintf('<a href="%s">', $permalink ) . ( $sheet_music ? ' Sheet Music Available!' : 'Request Sheet Music' ) . '</a></li>' );
+
         echo '</ul>';
         ?>
 

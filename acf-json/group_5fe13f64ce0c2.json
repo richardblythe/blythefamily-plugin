@@ -1,6 +1,6 @@
 {
     "key": "group_5fe13f64ce0c2",
-    "title": "Shipping Info",
+    "title": "Order Info",
     "fields": [
         {
             "key": "field_5fe14ff3c6ecc",
@@ -43,6 +43,25 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_61fab6d12f86a",
+            "label": "Order Resolved",
+            "name": "blythe_woo_order_resolved",
+            "type": "true_false",
+            "instructions": "Use this field if the order required offsite intervention that has been resolved",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -62,5 +81,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1608602108
+    "modified": 1643820928
 }

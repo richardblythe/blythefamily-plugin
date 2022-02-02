@@ -160,7 +160,7 @@
             "label": "Copyright",
             "name": "copyright",
             "type": "text",
-            "instructions": "",
+            "instructions": "Enter the copyright year and publishing company:\r\n{YEAR} Blythe Music Group\/BMI",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -168,8 +168,8 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Blythe Music Group\/BMI",
-            "placeholder": "",
+            "default_value": "",
+            "placeholder": "{YEAR} Blythe Music Group\/BMI",
             "prepend": "",
             "append": "",
             "maxlength": ""
@@ -216,5 +216,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1623087953
+    "modified": 1643820681
 }

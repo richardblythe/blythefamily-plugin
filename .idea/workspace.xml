@@ -22,13 +22,18 @@
   <component name="ChangeListManager">
     <list default="true" id="ee506010-b818-4dde-951c-064802f3fe80" name="Default Changelist" comment="Fixes issue with schedule's current event missing.  Added audio player to the simple transcription editor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/acf-json/group_5f135464842f9.json" beforeDir="false" afterPath="$PROJECT_DIR$/acf-json/group_5f135464842f9.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/acf-json/group_5fe13f64ce0c2.json" beforeDir="false" afterPath="$PROJECT_DIR$/acf-json/group_5fe13f64ce0c2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets_OLD/src/styles/editor/blythe-editor.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets_OLD/src/styles/editor/blythe-editor.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blythefamily.php" beforeDir="false" afterPath="$PROJECT_DIR$/blythefamily.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/index.asset.php" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.asset.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/class-episode-transcription-editor.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/class-episode-transcription-editor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/class-lyrics.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/class-lyrics.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/admin/audio_transcription.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/admin/audio_transcription.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/editor/_audio-transcription.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/editor/_audio-transcription.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/style-index.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/style-index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/includes/woocommerce.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/woocommerce.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/single-lyrics.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/single-lyrics.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,6 +129,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
@@ -156,7 +162,7 @@
       <recent name="S:\WORDPRESS\blythefamily\wp-content\plugins\blythefamily\src" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.packages-update">
     <configuration default="true" type="js.build_tools.gulp">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -221,8 +227,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="npm.build" />
-        <item itemvalue="npm.start" />
         <item itemvalue="npm.packages-update" />
+        <item itemvalue="npm.start" />
         <item itemvalue="Gulp.js.build" />
         <item itemvalue="Gulp.js.styles" />
       </list>
@@ -333,14 +339,12 @@
       <workItem from="1634135976675" duration="24000" />
       <workItem from="1635609395493" duration="6589000" />
       <workItem from="1638901163362" duration="5049000" />
-      <workItem from="1640799875299" duration="394000" />
-    </task>
-    <task id="LOCAL-00031" summary="Updated CSS from referencing term: &quot;devotions&quot; to &quot;at-his-table&quot;">
-      <created>1604439179334</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1604439179334</updated>
+      <workItem from="1640799875299" duration="569000" />
+      <workItem from="1643642240052" duration="2206000" />
+      <workItem from="1643748708877" duration="12000" />
+      <workItem from="1643815888611" duration="2373000" />
+      <workItem from="1643819266556" duration="168000" />
+      <workItem from="1643819866112" duration="3725000" />
     </task>
     <task id="LOCAL-00032" summary="Fixed CSS">
       <created>1604439641504</created>
@@ -678,7 +682,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638904069325</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="Included access for CSV files. Changes to audio transcription. Lyrics page.">
+      <created>1640800364688</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1640800364688</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -700,8 +711,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="Fixed css on print" />
-    <MESSAGE value="Updated styles for front page" />
     <MESSAGE value="More updated styles for front page" />
     <MESSAGE value="Updated sheet music request link in single-lyrics.php template" />
     <MESSAGE value="Add initial integration code for The Events Calendar.  Want to hide it from the front end for right now" />
@@ -725,29 +734,27 @@
     <MESSAGE value="Updates to the simple transcription editor. (made the audio player responsive and stick when viewing on mobile)" />
     <MESSAGE value="Load the sheet music request file" />
     <MESSAGE value="Updated Lyrics and Episode classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Lyrics and Episode classes" />
+    <MESSAGE value="Included access for CSV files" />
+    <MESSAGE value="Included access for CSV files. Changes to audio transcription. Lyrics page." />
+    <option name="LAST_COMMIT_MESSAGE" value="Included access for CSV files. Changes to audio transcription. Lyrics page." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="740" y="261" key="FileChooserDialogImpl" timestamp="1634135998750">
+    <state width="1877" height="280" key="GridCell.Tab.0.bottom" timestamp="1643820254418">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="740" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1634135998750" />
-    <state width="1877" height="280" key="GridCell.Tab.0.bottom" timestamp="1635623312199">
+    <state width="1877" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1643820254418" />
+    <state width="1877" height="280" key="GridCell.Tab.0.center" timestamp="1643820254418">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1635623312199" />
-    <state width="1877" height="280" key="GridCell.Tab.0.center" timestamp="1635623312199">
+    <state width="1877" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1643820254418" />
+    <state width="1877" height="280" key="GridCell.Tab.0.left" timestamp="1643820254418">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1635623312199" />
-    <state width="1877" height="280" key="GridCell.Tab.0.left" timestamp="1635623312199">
+    <state width="1877" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1643820254418" />
+    <state width="1877" height="280" key="GridCell.Tab.0.right" timestamp="1643820254418">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1635623312199" />
-    <state width="1877" height="280" key="GridCell.Tab.0.right" timestamp="1635623312199">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1635623312199" />
+    <state width="1877" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1643820254418" />
     <state width="1877" height="346" key="GridCell.Tab.1.bottom" timestamp="1635611226809">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -780,14 +787,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="346" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1635611226809" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1638904072060">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1640800427774">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1638904072060" />
-    <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1631375074735">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1640800427774" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1643642987518">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1631375074735" />
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1643642987518" />
   </component>
   <component name="WordPressConfiguration" doNotAskConfigAgain="true" enabled="true">
     <wordpressPath>E:\WORDPRESS\blythefamily</wordpressPath>
@@ -803,7 +810,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/templates/single-lyrics.php</url>
-          <line>92</line>
+          <line>109</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
@@ -863,12 +870,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/../../../wp-includes/script-loader.php</url>
-          <line>1047</line>
+          <line>1046</line>
           <option name="timeStamp" value="189" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/../../../wp-includes/script-loader.php</url>
-          <line>1037</line>
+          <line>1036</line>
           <option name="timeStamp" value="190" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">

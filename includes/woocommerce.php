@@ -106,49 +106,59 @@ function blythe_woo_custom_column_value( $column ) {
 
 
     if ( $column == 'blythe_delivery_status' ) {
-        $order    = wc_get_order( $post->ID );
 
-        //--------------------------------
-	    //       Shipping Status
-	    //--------------------------------
-        $shipping_status = null;
-        $shipping_methods = $order->get_shipping_methods();
-        if ( is_array($shipping_methods) && count($shipping_methods) ) {
-	        $provider = 'usps'; //todo Add other shipping providers?
-        	$tracking = get_post_meta( $post->ID, 'blythe_woo_shipping_provider_tracking', true );
-	        if ( $tracking) {
-		        $tracking_url = '';
-		        if ( 'usps' == $provider) {
-		        	$tracking_url = "https://tools.usps.com/go/TrackConfirmAction_input?qtc_tLabels1={$tracking}";
-		        }
-	        	$shipping_status = "<a href='{$tracking_url}' target='_blank' >Shipped</a>";
-	        } else {
-		        $shipping_status = '<strong>Ship</strong>';
-	        }
-        }
+	    $order = wc_get_order( $post->ID );
+	    $download_status = null;
+	    $shipping_status = null;
+
+    	$order_resolved = ( $order->get_status() == 'refunded' ) ||
+	         get_post_meta($post->ID, 'blythe_woo_order_resolved', true );
+
+    	if ( ! $order_resolved ) {
+
+		    //--------------------------------
+		    //       Shipping Status
+		    //--------------------------------
+		    $shipping_methods = $order->get_shipping_methods();
+		    if ( is_array( $shipping_methods ) && count( $shipping_methods ) ) {
+			    $provider = 'usps'; //todo Add other shipping providers?
+			    $tracking = get_post_meta( $post->ID, 'blythe_woo_shipping_provider_tracking', true );
+			    if ( $tracking ) {
+				    $tracking_url = '';
+				    if ( 'usps' == $provider ) {
+					    $tracking_url = "https://tools.usps.com/go/TrackConfirmAction_input?qtc_tLabels1={$tracking}";
+				    }
+				    $shipping_status = "<a href='{$tracking_url}' target='_blank' >Shipped</a>";
+			    } else {
+				    $shipping_status = '<strong>Ship</strong>';
+			    }
+		    }
 
 
-        //---------------------------------
-	    //     Global Downloads Variable
-        if (!isset($blythe_woo_downloads)) {
-            $blythe_woo_downloads = $wpdb->get_results( "
+		    //---------------------------------
+		    //     Global Downloads Variable
+		    if ( ! isset( $blythe_woo_downloads ) ) {
+			    $blythe_woo_downloads = $wpdb->get_results( "
 						SELECT order_id, SUM(download_count) AS dl FROM {$wpdb->prefix}woocommerce_downloadable_product_permissions
 						GROUP BY order_id;
 					", OBJECT_K );
-        }
+		    }
 
 
-        ///----------------------------------
-	    //      Download Status
-	    $download_status = null;
-	    if ( isset($blythe_woo_downloads[$post->ID]) ) {
-	    	$value = (array)$blythe_woo_downloads[$post->ID];
-	    	$download_status = (0 == $value['dl'] ? '<strong>DL Pending</strong>' : 'Downloaded');
+		    ///----------------------------------
+		    //      Download Status
+
+		    if ( isset( $blythe_woo_downloads[ $post->ID ] ) ) {
+			    $value           = (array) $blythe_woo_downloads[ $post->ID ];
+			    $download_status = ( 0 == $value['dl'] ? '<strong>DL Pending</strong>' : 'Downloaded' );
+		    }
 	    }
 
         //----------------------------------
 	    //Column Display
-	    if ( $download_status ) {
+	    if ( $order_resolved ) {
+	    	echo 'Resolved';
+	    } else if ( $download_status ) {
 		    echo $download_status . ( $shipping_status ? " / {$shipping_status}" : '' );
 	    } else {
 	    	echo $shipping_status;
