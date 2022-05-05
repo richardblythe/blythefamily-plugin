@@ -93,7 +93,7 @@ add_action( 'genesis_after_content', function() {
 
 
 	        //**************************
-	        // MECHANICAL LICENSE
+	        // RECORDING LICENSE
             $permalink = 'https://publishing.blythefamily.com/';
 	        echo ( '<li><i class="fas fa-file-contract"></i>&nbsp;' . sprintf('<a href="%s">', $permalink ) . ( 'Recording License' ) . '</a></li>' );
         }

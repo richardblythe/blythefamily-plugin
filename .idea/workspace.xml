@@ -22,17 +22,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ee506010-b818-4dde-951c-064802f3fe80" name="Default Changelist" comment="Fixes issue with schedule's current event missing.  Added audio player to the simple transcription editor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/acf-json/group_5f135464842f9.json" beforeDir="false" afterPath="$PROJECT_DIR$/acf-json/group_5f135464842f9.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/acf-json/group_5fe13f64ce0c2.json" beforeDir="false" afterPath="$PROJECT_DIR$/acf-json/group_5fe13f64ce0c2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets_OLD/src/styles/editor/blythe-editor.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets_OLD/src/styles/editor/blythe-editor.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blythefamily.php" beforeDir="false" afterPath="$PROJECT_DIR$/blythefamily.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/index.asset.php" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.asset.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/style-index.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/style-index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/includes/woocommerce.php" beforeDir="false" afterPath="$PROJECT_DIR$/includes/woocommerce.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/single-lyrics.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/single-lyrics.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -142,7 +133,7 @@
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+    <property name="settings.editor.selected.configurable" value="sshConfigs" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2020.1.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="two.files.diff.last.used.file" value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.txt" />
   </component>
@@ -344,14 +335,10 @@
       <workItem from="1643748708877" duration="12000" />
       <workItem from="1643815888611" duration="2373000" />
       <workItem from="1643819266556" duration="168000" />
-      <workItem from="1643819866112" duration="3725000" />
-    </task>
-    <task id="LOCAL-00032" summary="Fixed CSS">
-      <created>1604439641504</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1604439641504</updated>
+      <workItem from="1643819866112" duration="5204000" />
+      <workItem from="1643908512063" duration="4442000" />
+      <workItem from="1644078747594" duration="580000" />
+      <workItem from="1651789181718" duration="657000" />
     </task>
     <task id="LOCAL-00033" summary="Updates to the episode post type">
       <created>1604525444935</created>
@@ -689,7 +676,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640800364688</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="Updated Lyrics section: Recording License. Updated Woocommerce order info: Resolved option">
+      <created>1643823733426</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1643823733426</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -711,7 +705,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
-    <MESSAGE value="More updated styles for front page" />
     <MESSAGE value="Updated sheet music request link in single-lyrics.php template" />
     <MESSAGE value="Add initial integration code for The Events Calendar.  Want to hide it from the front end for right now" />
     <MESSAGE value="Additional integration with The Events Calendar and Ninja Forms" />
@@ -736,25 +729,34 @@
     <MESSAGE value="Updated Lyrics and Episode classes" />
     <MESSAGE value="Included access for CSV files" />
     <MESSAGE value="Included access for CSV files. Changes to audio transcription. Lyrics page." />
-    <option name="LAST_COMMIT_MESSAGE" value="Included access for CSV files. Changes to audio transcription. Lyrics page." />
+    <MESSAGE value="Updated Lyrics section: Recording License. Updated Woocommerce order info: Resolved option" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Lyrics section: Recording License. Updated Woocommerce order info: Resolved option" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="280" key="GridCell.Tab.0.bottom" timestamp="1643820254418">
+    <state x="552" y="178" key="#Deployment" timestamp="1643825262699">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1643820254418" />
-    <state width="1877" height="280" key="GridCell.Tab.0.center" timestamp="1643820254418">
+    <state x="552" y="178" key="#Deployment/0.0.1920.1040@0.0.1920.1040" timestamp="1643825262699" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1643825617164">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1643820254418" />
-    <state width="1877" height="280" key="GridCell.Tab.0.left" timestamp="1643820254418">
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1643825617164" />
+    <state width="1877" height="280" key="GridCell.Tab.0.bottom" timestamp="1643825955675">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1643820254418" />
-    <state width="1877" height="280" key="GridCell.Tab.0.right" timestamp="1643820254418">
+    <state width="1877" height="280" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1643825955675" />
+    <state width="1877" height="280" key="GridCell.Tab.0.center" timestamp="1643825955675">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1643820254418" />
+    <state width="1877" height="280" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1643825955675" />
+    <state width="1877" height="280" key="GridCell.Tab.0.left" timestamp="1643825955674">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="280" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1643825955674" />
+    <state width="1877" height="280" key="GridCell.Tab.0.right" timestamp="1643825955675">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="280" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1643825955675" />
     <state width="1877" height="346" key="GridCell.Tab.1.bottom" timestamp="1635611226809">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -787,10 +789,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="346" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1635611226809" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1640800427774">
+    <state x="461" y="165" key="SettingsEditor" timestamp="1643825909680">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1640800427774" />
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1643825909680" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1643823737827">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1643823737827" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1643642987518">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -164,6 +164,10 @@ function blythe_woo_custom_column_value( $column ) {
 	    	echo $shipping_status;
 	    }
 
+	    if ( $order->get_customer_note() ) {
+	    	echo " (*)";
+	    }
+
     }
 }
 
